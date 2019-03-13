@@ -1,0 +1,19 @@
+{
+  "name": "b32",
+  "version": "0.1.0",
+  "description": "Signature collection of contract method and event",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vechain/b32.git"
+  },
+  "author": "qian bin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vechain/b32/issues"
+  },
+  "homepage": "https://github.com/vechain/b32#readme"
+}
