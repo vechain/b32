@@ -4,6 +4,7 @@
   "description": "Signature collection of contract method and event",
   "main": "index.js",
   "scripts": {
+    "build": "ts-node main.ts && cp public/index.html dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/vechain/b32/issues"
   },
-  "homepage": "https://github.com/vechain/b32#readme"
+  "homepage": "https://github.com/vechain/b32#readme",
+  "devDependencies": {
+    "@types/node": "^11.11.3",
+    "thor-devkit": "^0.8.2",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3333"
+  }
 }
