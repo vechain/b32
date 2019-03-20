@@ -20,7 +20,7 @@
   "homepage": "https://github.com/vechain/b32#readme",
   "devDependencies": {
     "@types/node": "^11.11.3",
-    "thor-devkit": "^0.9.1",
+    "thor-devkit": "^0.10.1",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3333"
   }
