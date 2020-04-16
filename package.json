@@ -4,7 +4,7 @@
   "description": "Signature collection of contract method and event",
   "main": "index.js",
   "scripts": {
-    "build": "ts-node main.ts && cp public/index.html dist/",
+    "build": "rm -rf dist;ts-node main.ts && cp public/index.html dist/ && cp ABIs/* dist/c/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist"
   },
@@ -20,8 +20,8 @@
   "homepage": "https://github.com/vechain/b32#readme",
   "devDependencies": {
     "@types/node": "^11.11.3",
-    "thor-devkit": "^0.10.1",
     "ts-node": "^8.0.3",
-    "typescript": "^3.3.3333"
+    "typescript": "^3.3.3333",
+    "thor-devkit": "^1.2.3"
   }
 }
