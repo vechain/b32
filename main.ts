@@ -1,5 +1,5 @@
 import { readdirSync, readFileSync, existsSync, writeFileSync, mkdirSync } from 'fs'
-import { resolve } from 'path'
+import { resolve, extname } from 'path'
 import { abi } from 'thor-devkit';
 
 
@@ -21,11 +21,12 @@ entries.forEach(v => {
         throw new Error('ABI expected array')
     }
 
-    abiJSONArray.forEach(abiJSON => save(abiJSON))
+    abiJSONArray.forEach(abiJSON => save(abiJSON, v.name.slice(0, -extname(v.name).length)))
 })
 
 
-function save(jsonABI: any) {
+function save(jsonABI: any, contractName: string) {
+    jsonABI = { ...jsonABI, $contractName: contractName }
     let sig = ''
     if (jsonABI.type === 'event') {
         const ev = new abi.Event(jsonABI)
@@ -42,9 +43,6 @@ function save(jsonABI: any) {
     const path = resolve(outputDir, sig + '.json')
     if (existsSync(path)) {
         const exist = JSON.parse(readFileSync(path, fsOpt)) as any[]
-        if (exist.some(e => e.name === jsonABI.name)) {
-            return
-        }
         exist.push(jsonABI)
         writeFileSync(path, JSON.stringify(exist), fsOpt)
     } else {
