@@ -4,7 +4,7 @@
   "description": "Signature collection of contract method and event",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf dist;ts-node main.ts && cp public/index.html dist/",
+    "build": "rm -rf dist;ts-node main.ts && cp public/index.html dist/ && cp ABIs/* dist/c/",
     "test": "echo \"Error: no test specified\" && exit 1",
     "clean": "rm -rf dist"
   },

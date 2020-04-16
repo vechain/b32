@@ -4,26 +4,34 @@ import { abi } from 'thor-devkit';
 
 
 const baseDir = resolve(__dirname, 'ABIs')
-const outputDir = resolve(__dirname, 'dist', 'q')
+const distDir = resolve(__dirname, 'dist')
+const qDir = resolve(distDir, 'q')
+const cDir = resolve(distDir, 'c')
+
 const entries = readdirSync(baseDir, { withFileTypes: true })
 
 const fsOpt = { encoding: 'utf8' }
 
-mkdirSync(outputDir, { recursive: true })
+mkdirSync(qDir, { recursive: true })
+mkdirSync(cDir, { recursive: true })
 
-entries.forEach(v => {
-    if (!v.isFile() || v.name.startsWith('.')) {
-        return
-    }
-    const str = readFileSync(resolve(baseDir, v.name), fsOpt)
-    const abiJSONArray = JSON.parse(str)
-    if (!Array.isArray(abiJSONArray)) {
-        throw new Error('ABI expected array')
-    }
+writeFileSync(
+    resolve(distDir, 'contracts.json'),
+    JSON.stringify(entries.map(v => {
+        if (!v.isFile() || v.name.startsWith('.')) {
+            return
+        }
+        const str = readFileSync(resolve(baseDir, v.name), fsOpt)
+        const abiJSONArray = JSON.parse(str)
+        if (!Array.isArray(abiJSONArray)) {
+            throw new Error('ABI expected array')
+        }
 
-    abiJSONArray.forEach(abiJSON => save(abiJSON, v.name.slice(0, -extname(v.name).length)))
-})
-
+        const contractName = v.name.slice(0, -extname(v.name).length)
+        abiJSONArray.forEach(abiJSON => save(abiJSON, contractName))
+        return v.name
+    })),
+    fsOpt)
 
 function save(jsonABI: any, contractName: string) {
     jsonABI = { ...jsonABI, $contractName: contractName }
@@ -40,7 +48,7 @@ function save(jsonABI: any, contractName: string) {
         sig = fn.signature
     }
 
-    const path = resolve(outputDir, sig + '.json')
+    const path = resolve(qDir, sig + '.json')
     if (existsSync(path)) {
         const exist = JSON.parse(readFileSync(path, fsOpt)) as any[]
         exist.push(jsonABI)
