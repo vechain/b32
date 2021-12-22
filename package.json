@@ -22,6 +22,6 @@
     "@types/node": "^11.11.3",
     "ts-node": "^8.0.3",
     "typescript": "^3.3.3333",
-    "thor-devkit": "^1.2.3"
+    "thor-devkit": "^2.0.3"
   }
 }
