@@ -5,6 +5,11 @@
                 "internalType": "address",
                 "name": "_feeToSetter",
                 "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "_weth",
+                "type": "address"
             }
         ],
         "payable": false,
@@ -41,6 +46,21 @@
         ],
         "name": "PairCreated",
         "type": "event"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "WETH",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
     },
     {
         "constant": true,
