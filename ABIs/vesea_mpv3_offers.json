@@ -17,13 +17,13 @@
       {
         "indexed": true,
         "internalType": "address",
-        "name": "seller",
+        "name": "buyer",
         "type": "address"
       },
       {
         "indexed": false,
         "internalType": "address",
-        "name": "buyer",
+        "name": "seller",
         "type": "address"
       },
       {
@@ -60,13 +60,13 @@
       {
         "indexed": false,
         "internalType": "address",
-        "name": "seller",
+        "name": "buyer",
         "type": "address"
       },
       {
         "indexed": true,
         "internalType": "address",
-        "name": "buyer",
+        "name": "seller",
         "type": "address"
       },
       {
