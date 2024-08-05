@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"},{"internalType":"address","name":"distributorAddress","type":"address"}],"name":"X2EarnNonexistentRewardDistributor","type":"error","$contractName":"VeBetterDAO-x-2-earns-apps"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"endTime","type":"uint256"},{"internalType":"bytes32","name":"topicHash","type":"bytes32"},{"internalType":"bytes32","name":"yesHash","type":"bytes32"},{"internalType":"bytes32","name":"noHash","type":"bytes32"}],"name":"newBinaryVote","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":""}]

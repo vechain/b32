@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"id","type":"bytes32"},{"internalType":"uint256","name":"_gk","type":"uint256"},{"internalType":"uint8","name":"_gkPrefix","type":"uint8"}],"name":"setAuthPubKey","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":""}]

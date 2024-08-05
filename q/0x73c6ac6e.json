@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"sender","type":"address"}],"name":"ERC721InvalidSender","type":"error","$contractName":"VeBetterDAO-galaxy-member"}]

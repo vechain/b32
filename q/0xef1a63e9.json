@@ -1,0 +1,1 @@
+[{"stateMutability":"view","type":"function","name":"getHeadArmor","inputs":[{"name":"tokenId","type":"uint256"}],"outputs":[{"name":"","type":"string"}],"$contractName":"veLoot_utility"}]

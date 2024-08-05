@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"signer","type":"address"},{"internalType":"address","name":"owner","type":"address"}],"name":"ERC2612InvalidSigner","type":"error","$contractName":"VeBetterDAO-vot3"}]

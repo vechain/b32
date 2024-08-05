@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"burnEnabled","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"vesea_nft"},{"inputs":[],"name":"burnEnabled","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"vesea_nftv3"}]

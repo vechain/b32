@@ -1,0 +1,450 @@
+[
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            }
+        ],
+        "name": "getDataset",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "uid",
+                "type": "bytes32"
+            }
+        ],
+        "name": "accountByUID",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "initialOwner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "_manager",
+                "type": "address"
+            },
+            {
+                "name": "_companyId",
+                "type": "bytes32"
+            }
+        ],
+        "name": "init",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "manager",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "name": "datasetAddr",
+                "type": "address"
+            }
+        ],
+        "name": "setDataset",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "name": "newValue",
+                "type": "bytes32"
+            }
+        ],
+        "name": "isAllowedToWrite",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            }
+        ],
+        "name": "resetPolicy",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "name": "newValue",
+                "type": "bytes32"
+            }
+        ],
+        "name": "set",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "companyId",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "name": "acc",
+                "type": "address"
+            }
+        ],
+        "name": "setAccount",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "acc",
+                "type": "address"
+            }
+        ],
+        "name": "uidByAccount",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "name": "policy",
+                "type": "address"
+            }
+        ],
+        "name": "appendPolicy",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "get",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "name": "datasetId",
+                "type": "uint8"
+            }
+        ],
+        "name": "getPolicies",
+        "outputs": [
+            {
+                "name": "",
+                "type": "address[]"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": false,
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "name": "addr",
+                "type": "address"
+            }
+        ],
+        "name": "DatasetRegistered",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "name": "datasetId",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "name": "policy",
+                "type": "address"
+            }
+        ],
+        "name": "PolicyAdded",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "name": "datasetId",
+                "type": "uint8"
+            }
+        ],
+        "name": "PolicyReset",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "setId",
+                "type": "uint8"
+            },
+            {
+                "indexed": true,
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "name": "value",
+                "type": "bytes32"
+            }
+        ],
+        "name": "KeyChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "account",
+                "type": "address"
+            }
+        ],
+        "name": "NewAccount",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "uid",
+                "type": "bytes32"
+            },
+            {
+                "indexed": true,
+                "name": "account",
+                "type": "address"
+            }
+        ],
+        "name": "DelAccount",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    }
+]

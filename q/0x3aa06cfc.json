@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"addr","type":"address"}],"name":"X2EarnInvalidAddress","type":"error","$contractName":"VeBetterDAO-x-2-earns-apps"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"id","type":"bytes32"},{"internalType":"uint256","name":"i","type":"uint256"}],"name":"getVoter","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":""}]

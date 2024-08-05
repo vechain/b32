@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256[]","name":"b3trToUpgradeToLevel","type":"uint256[]"}],"name":"B3TRtoUpgradeToLevelUpdated","type":"event","$contractName":"VeBetterDAO-galaxy-member"}]

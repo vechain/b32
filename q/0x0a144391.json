@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"approvers","outputs":[{"name":"identity","type":"bytes32"},{"name":"inPower","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"executor"}]

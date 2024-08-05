@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"uint256","name":"oldPercentage","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newPercentage","type":"uint256"}],"name":"TeamAllocationPercentageUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

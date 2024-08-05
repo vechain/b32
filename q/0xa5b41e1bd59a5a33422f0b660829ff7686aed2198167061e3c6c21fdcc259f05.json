@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldVotingThreshold","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newVotingThreshold","type":"uint256"}],"name":"VotingThresholdSet","type":"event","$contractName":"VeBetterDAO-x-allocations-voting"}]

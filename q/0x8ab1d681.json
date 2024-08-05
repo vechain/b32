@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_proposer","type":"address"}],"name":"removeFromWhitelist","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"all-stakeholder-vote"}]
