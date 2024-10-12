@@ -267,6 +267,22 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "explanation",
+        "type": "string"
+      }
+    ],
+    "name": "GovernorPersonhoodVerificationFailed",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "GovernorQueueNotImplemented",
     "type": "error"
@@ -547,6 +563,19 @@
     "anonymous": false,
     "inputs": [
       {
+        "indexed": true,
+        "internalType": "bool",
+        "name": "disabled",
+        "type": "bool"
+      }
+    ],
+    "name": "QuadraticVotingToggled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
         "indexed": false,
         "internalType": "uint256",
         "name": "oldNumerator",
@@ -680,6 +709,25 @@
       }
     ],
     "name": "Upgraded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "oldVeBetterPassport",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newVeBetterPassport",
+        "type": "address"
+      }
+    ],
+    "name": "VeBetterPassportSet",
     "type": "event"
   },
   {
@@ -1381,6 +1429,19 @@
   {
     "inputs": [
       {
+        "internalType": "contract IVeBetterPassport",
+        "name": "_veBetterPassport",
+        "type": "address"
+      }
+    ],
+    "name": "initializeV4",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "target",
         "type": "address"
@@ -1392,6 +1453,38 @@
       }
     ],
     "name": "isFunctionWhitelisted",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "isQuadraticVotingDisabledForCurrentRound",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "isQuadraticVotingDisabledForRound",
     "outputs": [
       {
         "internalType": "bool",
@@ -2035,6 +2128,19 @@
   {
     "inputs": [
       {
+        "internalType": "contract IVeBetterPassport",
+        "name": "newVeBetterPassport",
+        "type": "address"
+      }
+    ],
+    "name": "setVeBetterPassport",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "contract IVoterRewards",
         "name": "newVoterRewards",
         "type": "address"
@@ -2189,6 +2295,13 @@
   },
   {
     "inputs": [],
+    "name": "toggleQuadraticVoting",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "token",
     "outputs": [
       {
@@ -2249,6 +2362,19 @@
     "name": "upgradeToAndCall",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "veBetterPassport",
+    "outputs": [
+      {
+        "internalType": "contract IVeBetterPassport",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
