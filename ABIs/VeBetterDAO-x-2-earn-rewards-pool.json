@@ -131,6 +131,25 @@
     "inputs": [
       {
         "indexed": false,
+        "internalType": "string",
+        "name": "reason",
+        "type": "string"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes",
+        "name": "lowLevelData",
+        "type": "bytes"
+      }
+    ],
+    "name": "RegisterActionFailed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
         "internalType": "uint256",
         "name": "amount",
         "type": "uint256"
@@ -698,6 +717,19 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "_veBetterPassport",
+        "type": "address"
+      }
+    ],
+    "name": "initializeV3",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "",
         "type": "address"
       },
@@ -871,6 +903,19 @@
   {
     "inputs": [
       {
+        "internalType": "contract IVeBetterPassport",
+        "name": "_veBetterPassport",
+        "type": "address"
+      }
+    ],
+    "name": "setVeBetterPassport",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "contract IX2EarnApps",
         "name": "_x2EarnApps",
         "type": "address"
@@ -916,6 +961,19 @@
     "name": "upgradeToAndCall",
     "outputs": [],
     "stateMutability": "payable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "veBetterPassport",
+    "outputs": [
+      {
+        "internalType": "contract IVeBetterPassport",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
