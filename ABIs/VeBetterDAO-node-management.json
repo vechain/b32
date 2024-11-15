@@ -37,11 +37,6 @@
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "CheckpointUnorderedInsertion",
-    "type": "error"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -68,29 +63,44 @@
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "NotInitializing",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "ReentrancyGuardReentrantCall",
-    "type": "error"
-  },
-  {
     "inputs": [
       {
-        "internalType": "uint8",
-        "name": "bits",
-        "type": "uint8"
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
       },
       {
-        "internalType": "uint256",
-        "name": "value",
-        "type": "uint256"
+        "internalType": "address",
+        "name": "delegatee",
+        "type": "address"
       }
     ],
-    "name": "SafeCastOverflowedUintDowncast",
+    "name": "NodeManagementNodeAlreadyDelegated",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NodeManagementNodeNotDelegated",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NodeManagementNonNodeHolder",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NodeManagementSelfDelegation",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NodeManagementZeroAddress",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NotInitializing",
     "type": "error"
   },
   {
@@ -113,44 +123,6 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "address",
-        "name": "newAddress",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "oldAddress",
-        "type": "address"
-      }
-    ],
-    "name": "EmissionsAddressUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "newAddress",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "oldAddress",
-        "type": "address"
-      }
-    ],
-    "name": "GalaxyMemberAddressUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
         "indexed": false,
         "internalType": "uint64",
         "name": "version",
@@ -166,55 +138,23 @@
       {
         "indexed": true,
         "internalType": "uint256",
-        "name": "level",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "multiplier",
-        "type": "uint256"
-      }
-    ],
-    "name": "LevelToMultiplierSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bool",
-        "name": "disabled",
-        "type": "bool"
-      }
-    ],
-    "name": "QuadraticRewardingToggled",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "cycle",
+        "name": "nodeId",
         "type": "uint256"
       },
       {
         "indexed": true,
         "internalType": "address",
-        "name": "voter",
+        "name": "delegatee",
         "type": "address"
       },
       {
         "indexed": false,
-        "internalType": "uint256",
-        "name": "reward",
-        "type": "uint256"
+        "internalType": "bool",
+        "name": "delegated",
+        "type": "bool"
       }
     ],
-    "name": "RewardClaimed",
+    "name": "NodeDelegated",
     "type": "event"
   },
   {
@@ -309,45 +249,20 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
+        "indexed": false,
         "internalType": "address",
-        "name": "voter",
+        "name": "oldContractAddress",
         "type": "address"
       },
       {
         "indexed": false,
-        "internalType": "uint256",
-        "name": "votes",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "rewardWeightedVote",
-        "type": "uint256"
+        "internalType": "address",
+        "name": "newContractAddress",
+        "type": "address"
       }
     ],
-    "name": "VoteRegistered",
+    "name": "VechainNodeContractSet",
     "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "CONTRACTS_ADDRESS_MANAGER_ROLE",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [],
@@ -357,19 +272,6 @@
         "internalType": "bytes32",
         "name": "",
         "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "SCALING_FACTOR",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -402,126 +304,32 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "VOTE_REGISTRAR_ROLE",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "b3tr",
-    "outputs": [
-      {
-        "internalType": "contract IB3TR",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
         "internalType": "address",
-        "name": "voter",
+        "name": "delegatee",
         "type": "address"
       }
     ],
-    "name": "claimReward",
+    "name": "delegateNode",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "clock",
-    "outputs": [
-      {
-        "internalType": "uint48",
-        "name": "",
-        "type": "uint48"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      }
-    ],
-    "name": "cycleToTotal",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
       {
         "internalType": "address",
-        "name": "voter",
+        "name": "user",
         "type": "address"
       }
     ],
-    "name": "cycleToVoterToTotal",
+    "name": "getNodeIds",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "uint256[]",
         "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "emissions",
-    "outputs": [
-      {
-        "internalType": "contract IEmissions",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "galaxyMember",
-    "outputs": [
-      {
-        "internalType": "contract IGalaxyMember",
-        "name": "",
-        "type": "address"
+        "type": "uint256[]"
       }
     ],
     "stateMutability": "view",
@@ -531,21 +339,16 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
+        "name": "nodeId",
         "type": "uint256"
       }
     ],
-    "name": "getMultiplier",
+    "name": "getNodeLevel",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "enum VechainNodesDataTypes.NodeStrengthLevel",
         "name": "",
-        "type": "uint256"
+        "type": "uint8"
       }
     ],
     "stateMutability": "view",
@@ -555,21 +358,16 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "cycle",
+        "name": "nodeId",
         "type": "uint256"
-      },
+      }
+    ],
+    "name": "getNodeManager",
+    "outputs": [
       {
         "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      }
-    ],
-    "name": "getReward",
-    "outputs": [
-      {
-        "internalType": "uint256",
         "name": "",
-        "type": "uint256"
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -597,6 +395,38 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "getUsersNodeLevels",
+    "outputs": [
+      {
+        "internalType": "enum VechainNodesDataTypes.NodeStrengthLevel[]",
+        "name": "",
+        "type": "uint8[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getVechainNodesContract",
+    "outputs": [
+      {
+        "internalType": "contract ITokenAuction",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes32",
         "name": "role",
         "type": "bytes32"
@@ -610,30 +440,6 @@
     "name": "grantRole",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
-        "type": "uint256"
-      }
-    ],
-    "name": "hasNodeVoted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -663,68 +469,19 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
-        "type": "uint256"
-      }
-    ],
-    "name": "hasTokenVoted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
-        "name": "admin",
+        "name": "_vechainNodesContract",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "upgrader",
+        "name": "_admin",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "contractsAddressManager",
+        "name": "_upgrader",
         "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_emissions",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_galaxyMember",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_b3tr",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "levels",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "multipliers",
-        "type": "uint256[]"
       }
     ],
     "name": "initialize",
@@ -735,49 +492,22 @@
   {
     "inputs": [
       {
-        "internalType": "uint48",
-        "name": "blockNumber",
-        "type": "uint48"
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
       }
     ],
-    "name": "isQuadraticRewardingDisabledAtBlock",
+    "name": "isNodeManager",
     "outputs": [
       {
         "internalType": "bool",
         "name": "",
         "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "isQuadraticRewardingDisabledForCurrentCycle",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "level",
-        "type": "uint256"
-      }
-    ],
-    "name": "levelToMultiplier",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -797,29 +527,8 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "votes",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "votePower",
-        "type": "uint256"
-      }
-    ],
-    "name": "registerVote",
+    "inputs": [],
+    "name": "removeNodeDelegation",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -864,42 +573,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_emissions",
+        "name": "vechainNodesContract",
         "type": "address"
       }
     ],
-    "name": "setEmissions",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_galaxyMember",
-        "type": "address"
-      }
-    ],
-    "name": "setGalaxyMember",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "level",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "multiplier",
-        "type": "uint256"
-      }
-    ],
-    "name": "setLevelToMultiplier",
+    "name": "setVechainNodesContract",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -921,13 +599,6 @@
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "toggleQuadraticRewarding",
-    "outputs": [],
-    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
