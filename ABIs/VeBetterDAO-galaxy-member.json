@@ -37,6 +37,11 @@
     "type": "error"
   },
   {
+    "inputs": [],
+    "name": "CheckpointUnorderedInsertion",
+    "type": "error"
+  },
+  {
     "inputs": [
       {
         "internalType": "address",
@@ -204,6 +209,22 @@
   {
     "inputs": [],
     "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "bits",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "SafeCastOverflowedUintDowncast",
     "type": "error"
   },
   {
@@ -610,6 +631,19 @@
   },
   {
     "inputs": [],
+    "name": "CLOCK_MODE",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "CONTRACTS_ADDRESS_MANAGER_ROLE",
     "outputs": [
       {
@@ -817,6 +851,19 @@
     "name": "burn",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "clock",
+    "outputs": [
+      {
+        "internalType": "uint48",
+        "name": "",
+        "type": "uint48"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1067,6 +1114,30 @@
       }
     ],
     "name": "getSelectedTokenId",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint48",
+        "name": "blockNumber",
+        "type": "uint48"
+      }
+    ],
+    "name": "getSelectedTokenIdAtBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1578,6 +1649,24 @@
       }
     ],
     "name": "select",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "owner",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "tokenID",
+        "type": "uint256"
+      }
+    ],
+    "name": "selectFor",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
