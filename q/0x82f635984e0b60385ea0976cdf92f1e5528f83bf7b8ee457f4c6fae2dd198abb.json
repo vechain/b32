@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"address","name":"moderator","type":"address"}],"name":"ModeratorRemovedFromApp","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

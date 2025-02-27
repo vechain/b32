@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"self","type":"address"},{"name":"user","type":"address"}],"name":"native_removeUser","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"prototype-native"}]

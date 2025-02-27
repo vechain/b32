@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"},{"internalType":"uint256","name":"nodeId","type":"uint256"}],"name":"endorseApp","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-apps"}]

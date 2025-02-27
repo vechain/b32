@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IVeBetterPassport","name":"_veBetterPassport","type":"address"}],"name":"initializeV4","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

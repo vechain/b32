@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"length","type":"uint256"}],"name":"ECDSAInvalidSignatureLength","type":"error","$contractName":"VeBetterDAO-vot3"}]

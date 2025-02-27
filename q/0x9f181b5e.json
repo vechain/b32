@@ -1,0 +1,1 @@
+[{"name":"tokenCount","outputs":[{"type":"uint256","name":"out"}],"inputs":[],"constant":true,"payable":false,"type":"function","gas":783,"$contractName":"factory"}]

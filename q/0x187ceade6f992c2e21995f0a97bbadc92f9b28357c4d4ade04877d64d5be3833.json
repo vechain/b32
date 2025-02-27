@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"minter","type":"address"},{"indexed":false,"internalType":"uint256","name":"randomSeed","type":"uint256"}],"name":"MintedWithRandomNumber","type":"event","$contractName":"exoworld"}]

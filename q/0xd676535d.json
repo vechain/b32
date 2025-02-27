@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_x2EarnCreatorContract","type":"address"}],"name":"setX2EarnCreatorContract","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-apps"}]

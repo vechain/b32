@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_veBetterPassportContract","type":"address"}],"name":"setVeBetterPassportContract","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-apps"}]

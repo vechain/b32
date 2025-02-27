@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"remainingNFT","outputs":[{"internalType":"uint256","name":"result","type":"uint256"}],"stateMutability":"view","type":"function","constant":true,"$contractName":"vpunks"}]

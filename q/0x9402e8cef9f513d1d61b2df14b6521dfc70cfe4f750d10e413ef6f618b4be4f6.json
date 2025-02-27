@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"address","name":"oldTeamWalletAddress","type":"address"},{"indexed":false,"internalType":"address","name":"newTeamWalletAddress","type":"address"}],"name":"TeamWalletAddressUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

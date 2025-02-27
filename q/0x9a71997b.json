@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"duration","type":"uint256"}],"name":"DurationTooShort","type":"error","$contractName":"vet-domains-registrarController"}]

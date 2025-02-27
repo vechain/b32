@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_id","type":"uint256"},{"name":"_claimerAddr","type":"address"},{"name":"_signature","type":"bytes"}],"name":"claimEnvelope","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"lucky-airdrop"}]

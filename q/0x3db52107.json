@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_proposalId","type":"uint256"},{"name":"_target","type":"address"}],"name":"accessProposal","outputs":[{"name":"isAccess","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"vevote"}]
