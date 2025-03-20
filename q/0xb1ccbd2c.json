@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256[]","name":"b3trToUpgradeToLevel","type":"uint256[]"}],"name":"setB3TRtoUpgradeToLevel","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

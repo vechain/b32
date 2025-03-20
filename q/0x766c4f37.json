@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_self","type":"address"}],"name":"sponsor","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"prototype"}]

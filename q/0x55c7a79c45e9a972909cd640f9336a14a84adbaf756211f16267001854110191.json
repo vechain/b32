@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldGracePeriod","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newGracePeriod","type":"uint256"}],"name":"GracePeriodUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

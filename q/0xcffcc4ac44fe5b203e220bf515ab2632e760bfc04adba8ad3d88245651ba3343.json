@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"string","name":"oldMetadataURI","type":"string"},{"indexed":false,"internalType":"string","name":"newMetadataURI","type":"string"}],"name":"AppMetadataURIUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

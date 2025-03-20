@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_newPercent","type":"uint8"}],"name":"FeePercentUpdated","type":"event","$contractName":"thornode-clockauction"}]

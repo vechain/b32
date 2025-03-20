@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldThreshold","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newThreshold","type":"uint256"}],"name":"EndorsementScoreThresholdUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

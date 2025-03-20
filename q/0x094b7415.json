@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"feeToSetter","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"uniswap-v2-factory"}]

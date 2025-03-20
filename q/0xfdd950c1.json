@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"uint256","name":"_platformFee","type":"uint256"}],"name":"setDefaultPlatformFee","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"DThorswapV2Factory"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"bool","name":"endorsed","type":"bool"}],"name":"AppEndorsementStatusUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earns-apps"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"_newGracePeriod","type":"uint48"}],"name":"updateGracePeriod","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-apps"}]

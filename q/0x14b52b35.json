@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"addr","type":"address"}],"name":"vthoBalance","outputs":[{"internalType":"uint256","name":"amount","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"vvet"}]

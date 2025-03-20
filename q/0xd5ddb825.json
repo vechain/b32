@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"proposalId","type":"uint256"}],"name":"GovernorNotQueuedProposal","type":"error","$contractName":"VeBetterDAO-b3tr-governor"}]

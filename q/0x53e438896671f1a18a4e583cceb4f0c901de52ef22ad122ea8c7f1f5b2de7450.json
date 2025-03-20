@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldLevel","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newLevel","type":"uint256"}],"name":"MaxLevelUpdated","type":"event","$contractName":"VeBetterDAO-galaxy-member"}]

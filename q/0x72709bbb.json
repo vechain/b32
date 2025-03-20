@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"percentage","type":"uint256"}],"name":"X2EarnInvalidAllocationPercentage","type":"error","$contractName":"VeBetterDAO-x-2-earns-apps"}]

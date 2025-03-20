@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newMinVotingDelay","type":"uint256"}],"name":"setMinVotingDelay","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

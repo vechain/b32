@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"_id","type":"uint256"},{"indexed":true,"name":"player","type":"address"},{"indexed":false,"name":"award","type":"uint256"}],"name":"_withdraw","type":"event","signature":"0x491234459cc5c2ddc7327952ccf826b06930abbe200441971916f5e393da8872","$contractName":"bet-match"}]

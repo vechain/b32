@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"_appId","type":"bytes32"},{"internalType":"string","name":"_newMetadataURI","type":"string"}],"name":"updateAppMetadata","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-apps"}]

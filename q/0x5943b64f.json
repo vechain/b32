@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_id","type":"uint256"}],"name":"getEnvelopeReveal","outputs":[{"name":"","type":"address"},{"name":"","type":"uint64"},{"name":"","type":"uint64"},{"name":"","type":"uint256"},{"name":"","type":"uint256"},{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"lucky-airdrop"}]

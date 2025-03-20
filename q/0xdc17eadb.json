@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"profileAddress","type":"address"},{"internalType":"string","name":"key","type":"string"}],"name":"getDaoValue","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","$contractName":"vesea_profiles"}]

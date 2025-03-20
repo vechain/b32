@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"},{"internalType":"string","name":"reason","type":"string"}],"name":"resetUserSignalsByAppAdminWithReason","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

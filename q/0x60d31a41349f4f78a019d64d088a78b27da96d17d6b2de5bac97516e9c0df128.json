@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"reason","type":"string"},{"indexed":false,"internalType":"bytes","name":"lowLevelData","type":"bytes"}],"name":"RegisterActionFailed","type":"event","$contractName":"VeBetterDAO-x-2-earn-rewards-pool"}]

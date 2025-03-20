@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getOwners","outputs":[{"internalType":"address[]","name":"","type":"address[]"}],"stateMutability":"view","type":"function","$contractName":"multi-sig-wallet"}]
