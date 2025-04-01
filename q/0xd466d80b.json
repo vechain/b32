@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"getUsersNodeLevels","outputs":[{"internalType":"enum VechainNodesDataTypes.NodeStrengthLevel[]","name":"","type":"uint8[]"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-node-management"}]

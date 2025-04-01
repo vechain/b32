@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"oldComplianceRole","type":"address"},{"indexed":true,"internalType":"address","name":"newComplianceRole","type":"address"}],"name":"ComplianceRoleSet","type":"event","$contractName":"abcd_test_v1"}]

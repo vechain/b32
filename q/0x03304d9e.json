@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"proposerList","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"all-stakeholder-vote"}]

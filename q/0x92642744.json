@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"numberOfNfts","type":"uint256"}],"name":"mintNFT","outputs":[{"internalType":"bool[]","name":"results","type":"bool[]"}],"stateMutability":"payable","type":"function","payable":true,"$contractName":"vpunks"}]
