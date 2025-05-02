@@ -777,6 +777,19 @@
   },
   {
     "inputs": [],
+    "name": "RESET_SIGNALER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "ROLE_GRANTER",
     "outputs": [
       {
@@ -1605,6 +1618,11 @@
             "internalType": "address",
             "name": "actionScoreManager",
             "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "resetSignaler",
+            "type": "address"
           }
         ],
         "internalType": "struct PassportTypes.InitializationRoleData",
@@ -1613,6 +1631,19 @@
       }
     ],
     "name": "initialize",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "_resetSignaler",
+        "type": "address"
+      }
+    ],
+    "name": "initializeV4",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2177,7 +2208,7 @@
         "type": "string"
       }
     ],
-    "name": "resetUserSignalsByAppAdminWithReason",
+    "name": "resetUserSignalsByAppWithReason",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
