@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"owner","type":"address"}],"name":"removeOwner","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"multi-sig-wallet"}]

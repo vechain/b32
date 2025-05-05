@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_vseaAddress","type":"address"}],"name":"setVSeaAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_recycler"}]

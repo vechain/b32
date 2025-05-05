@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"sponsor","type":"address"}],"name":"isSponsor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"energy-station"}]

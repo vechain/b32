@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"newDuration","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"oldDuration","type":"uint256"}],"name":"EmissionCycleDurationUpdated","type":"event","$contractName":"VeBetterDAO-emissions"}]

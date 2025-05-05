@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"accountAddress","type":"address"},{"internalType":"uint256","name":"targetVersion","type":"uint256"}],"name":"upgradeRequiredForAccount","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"social-login-smart-account-factory"}]

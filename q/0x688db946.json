@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"limit","type":"uint256"}],"name":"setTotalMintsForGiveaway","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"exoworld"}]

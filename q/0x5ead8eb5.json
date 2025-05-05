@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"operationId","type":"bytes32"},{"internalType":"bytes32","name":"expectedStates","type":"bytes32"}],"name":"TimelockUnexpectedOperationState","type":"error","$contractName":"VeBetterDAO-timelock"}]

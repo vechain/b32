@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"addr","type":"address"},{"name":"amount","type":"uint256"}],"name":"native_add","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"energy-native"}]

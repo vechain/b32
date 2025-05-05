@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"blocksPerReward","outputs":[{"internalType":"uint96","name":"","type":"uint96"}],"stateMutability":"view","type":"function","$contractName":"vesea_staking"}]
