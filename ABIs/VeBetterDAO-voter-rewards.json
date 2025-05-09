@@ -133,6 +133,37 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
+        "name": "cycle",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "level",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "multiplier",
+        "type": "uint256"
+      }
+    ],
+    "name": "GMVoteRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
         "internalType": "address",
         "name": "newAddress",
         "type": "address"
@@ -158,6 +189,25 @@
       }
     ],
     "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "level",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "multiplier",
+        "type": "uint256"
+      }
+    ],
+    "name": "LevelToMultiplierPending",
     "type": "event"
   },
   {
@@ -215,6 +265,37 @@
       }
     ],
     "name": "RewardClaimed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "cycle",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "reward",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "gmReward",
+        "type": "uint256"
+      }
+    ],
+    "name": "RewardClaimedV2",
     "type": "event"
   },
   {
@@ -483,6 +564,49 @@
         "internalType": "uint256",
         "name": "cycle",
         "type": "uint256"
+      }
+    ],
+    "name": "cycleToTotalGMWeight",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "cycle",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      }
+    ],
+    "name": "cycleToVoterToGMWeight",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "cycle",
+        "type": "uint256"
       },
       {
         "internalType": "address",
@@ -522,6 +646,30 @@
         "internalType": "contract IGalaxyMember",
         "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "cycle",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      }
+    ],
+    "name": "getGMReward",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -735,6 +883,24 @@
   {
     "inputs": [
       {
+        "internalType": "uint256[]",
+        "name": "levels",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "multipliers",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "initializeV5",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint48",
         "name": "blockNumber",
         "type": "uint48"
@@ -900,6 +1066,24 @@
       }
     ],
     "name": "setLevelToMultiplier",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "level",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "multiplier",
+        "type": "uint256"
+      }
+    ],
+    "name": "setLevelToMultiplierNow",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

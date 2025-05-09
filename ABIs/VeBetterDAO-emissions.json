@@ -142,6 +142,62 @@
       "anonymous": false,
       "inputs": [
         {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "cycle",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "xAllocations",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "vote2Earn",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "treasury",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "gm",
+          "type": "uint256"
+        }
+      ],
+      "name": "EmissionDistributedV2",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "newPercentage",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "oldPercentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "GMPercentageUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
           "indexed": false,
           "internalType": "uint64",
           "name": "version",
@@ -571,26 +627,24 @@
       "name": "emissions",
       "outputs": [
         {
-          "components": [
-            {
-              "internalType": "uint256",
-              "name": "xAllocations",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "vote2Earn",
-              "type": "uint256"
-            },
-            {
-              "internalType": "uint256",
-              "name": "treasury",
-              "type": "uint256"
-            }
-          ],
-          "internalType": "struct Emissions.Emission",
-          "name": "",
-          "type": "tuple"
+          "internalType": "uint256",
+          "name": "xAllocationsAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vote2EarnAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "treasuryAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "gmAmount",
+          "type": "uint256"
         }
       ],
       "stateMutability": "view",
@@ -599,6 +653,25 @@
     {
       "inputs": [],
       "name": "getCurrentCycle",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "cycle",
+          "type": "uint256"
+        }
+      ],
+      "name": "getGMAmount",
       "outputs": [
         {
           "internalType": "uint256",
@@ -701,6 +774,19 @@
         }
       ],
       "name": "getXAllocationAmount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gmPercentage",
       "outputs": [
         {
           "internalType": "uint256",
@@ -849,6 +935,32 @@
     {
       "inputs": [
         {
+          "internalType": "bool",
+          "name": "_isEmissionsNotAligned",
+          "type": "bool"
+        }
+      ],
+      "name": "initializeV2",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_gmPercentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "initializeV3",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
           "internalType": "uint256",
           "name": "cycle",
           "type": "uint256"
@@ -874,6 +986,19 @@
         }
       ],
       "name": "isCycleEnded",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "isEmissionsNotAligned",
       "outputs": [
         {
           "internalType": "bool",
@@ -994,6 +1119,19 @@
         }
       ],
       "name": "setCycleDuration",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_percentage",
+          "type": "uint256"
+        }
+      ],
+      "name": "setGmPercentage",
       "outputs": [],
       "stateMutability": "nonpayable",
       "type": "function"
@@ -1315,4 +1453,4 @@
       "stateMutability": "view",
       "type": "function"
     }
-  ]
+]
