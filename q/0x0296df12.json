@@ -1,0 +1,1 @@
+[{"name":"adjust_swap_fee","outputs":[{"type":"bool","name":"out"}],"inputs":[{"type":"uint256","name":"_new_swap_fee"}],"constant":false,"payable":false,"type":"function","gas":37197,"$contractName":"exchange"}]

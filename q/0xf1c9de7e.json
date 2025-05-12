@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"x2EarnRewardsPool","outputs":[{"internalType":"contract IX2EarnRewardsPool","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"L2Ev12ListA"}]

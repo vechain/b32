@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"address","name":"nftAddress","type":"address"},{"internalType":"uint256","name":"price","type":"uint256"}],"name":"editOffer","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_mpv3_offers"}]

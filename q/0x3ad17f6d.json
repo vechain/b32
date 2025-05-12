@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"getWinnerAndBestMinorty","outputs":[{"name":"","type":"address"},{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"arbitration"}]

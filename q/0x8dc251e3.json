@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"newAddress","type":"address"}],"name":"setRoyaltyReceiver","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_nft"}]

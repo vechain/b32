@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"_newBaseMetadataURI","type":"string"}],"name":"setBaseMetadataURI","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vip210-mintable_v6"}]

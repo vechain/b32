@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IVoterRewards","name":"newVoterRewards","type":"address"}],"name":"setVoterRewardsAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

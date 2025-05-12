@@ -1,0 +1,1 @@
+[{"name":"setOwner","outputs":[],"inputs":[{"type":"address","name":"_owner"}],"constant":false,"payable":false,"type":"function","gas":36905,"$contractName":"exchange"},{"name":"setOwner","outputs":[],"inputs":[{"type":"address","name":"_owner"}],"constant":false,"payable":false,"type":"function","gas":35645,"$contractName":"factory"}]

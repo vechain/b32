@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"_id","type":"uint256"}],"name":"_cancel","type":"event","signature":"0x4efae47c6e6478ccc4dce1a2eefdbc93ba85a2822602ec18860a9ea5ce841c5b","$contractName":"bet-match"}]

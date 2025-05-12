@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldTimelock","type":"address"},{"indexed":false,"internalType":"address","name":"newTimelock","type":"address"}],"name":"TimelockChange","type":"event","$contractName":"VeBetterDAO-b3tr-governor"}]

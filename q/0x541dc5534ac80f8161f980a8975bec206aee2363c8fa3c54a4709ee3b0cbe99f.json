@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bool","name":"disabled","type":"bool"}],"name":"QuadraticRewardingToggled","type":"event","$contractName":"VeBetterDAO-voter-rewards"}]

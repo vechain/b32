@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"_proposer","type":"address"}],"name":"RemoveFromProposerList","type":"event","$contractName":"all-stakeholder-vote"}]

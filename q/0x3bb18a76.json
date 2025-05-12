@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"xAllocationVoting_","type":"address"}],"name":"setXAllocationVotingAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocation-pool"}]

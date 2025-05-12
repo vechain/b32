@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address[]","name":"nftAddresses","type":"address[]"},{"internalType":"uint256[]","name":"tokenIds","type":"uint256[]"}],"name":"depositMulti","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_recycler"}]

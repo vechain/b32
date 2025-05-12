@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"index","type":"uint8"},{"internalType":"address[]","name":"list","type":"address[]"}],"name":"addWhiteList","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"exoworld"}]
