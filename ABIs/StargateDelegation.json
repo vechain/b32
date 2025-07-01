@@ -45,6 +45,27 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "account",
+        "type": "address"
+      }
+    ],
+    "name": "AddressInsufficientBalance",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ArrayCannotBeEmpty",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "DelegationExitAlreadyRequested",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "implementation",
         "type": "address"
       }
@@ -63,76 +84,147 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "balance",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "required",
+        "type": "uint256"
+      }
+    ],
+    "name": "InsufficientVthoBalanceForRewardsClaim",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidDelegationPeriod",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "InvalidInitialization",
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "NodeManagementInvalidNodeId",
-    "type": "error"
-  },
-  {
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "tokenId",
         "type": "uint256"
       },
       {
-        "internalType": "address",
-        "name": "delegatee",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "level",
+        "type": "uint256"
       }
     ],
-    "name": "NodeManagementNodeAlreadyDelegated",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "NodeManagementNodeNotDelegated",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "NodeManagementNonNodeHolder",
+    "name": "InvalidNFTLevel",
     "type": "error"
   },
   {
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "level",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
         "type": "uint256"
       }
     ],
-    "name": "NodeManagementNotNodeOwner",
+    "name": "InvalidVthoRewardPerBlock",
     "type": "error"
   },
   {
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "tokenId",
         "type": "uint256"
       }
     ],
-    "name": "NodeManagementNotNodeOwnerOrManager",
+    "name": "NFTAlreadyDelegated",
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "NodeManagementSelfDelegation",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NFTNotDelegated",
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "NodeManagementZeroAddress",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NFTUnderMaturityPeriod",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NoRewardsToClaim",
     "type": "error"
   },
   {
     "inputs": [],
     "name": "NotInitializing",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ReentrancyGuardReentrantCall",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "RewardsAccumulationPeriodEnded",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint8",
+        "name": "bits",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "value",
+        "type": "uint256"
+      }
+    ],
+    "name": "SafeCastOverflowedUintDowncast",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "token",
+        "type": "address"
+      }
+    ],
+    "name": "SafeERC20FailedOperation",
     "type": "error"
   },
   {
@@ -152,6 +244,120 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "UnauthorizedUser",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "VthoTransferFailed",
+    "type": "error"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "delegationEndBlock",
+        "type": "uint256"
+      }
+    ],
+    "name": "DelegationExitRequested",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewards",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "claimer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "recipient",
+        "type": "address"
+      }
+    ],
+    "name": "DelegationRewardsClaimed",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "delegator",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "rewardsAccumulationStartBlock",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "bool",
+        "name": "isDelegationForever",
+        "type": "bool"
+      },
+      {
+        "indexed": false,
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "DelegationSimulationStarted",
+    "type": "event"
+  },
+  {
     "anonymous": false,
     "inputs": [
       {
@@ -168,25 +374,13 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "delegatee",
-        "type": "address"
-      },
-      {
         "indexed": false,
-        "internalType": "bool",
-        "name": "delegated",
-        "type": "bool"
+        "internalType": "uint256",
+        "name": "rewardsAccumulationEndBlock",
+        "type": "uint256"
       }
     ],
-    "name": "NodeDelegated",
+    "name": "RewardsAccumulationEndBlockSet",
     "type": "event"
   },
   {
@@ -268,25 +462,6 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "StargateNftSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
         "indexed": true,
         "internalType": "address",
         "name": "implementation",
@@ -297,27 +472,34 @@
     "type": "event"
   },
   {
-    "anonymous": false,
-    "inputs": [
+    "inputs": [],
+    "name": "CLOCK_MODE",
+    "outputs": [
       {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
+        "internalType": "string",
+        "name": "",
+        "type": "string"
       }
     ],
-    "name": "VechainNodeContractSet",
-    "type": "event"
+    "stateMutability": "view",
+    "type": "function"
   },
   {
     "inputs": [],
     "name": "DEFAULT_ADMIN_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "OPERATOR_ROLE",
     "outputs": [
       {
         "internalType": "bytes32",
@@ -357,17 +539,31 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "delegatee",
-        "type": "address"
-      },
-      {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "_tokenId",
         "type": "uint256"
       }
     ],
-    "name": "delegateNode",
+    "name": "accumulatedRewards",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "claimRewards",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -376,11 +572,80 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "_tokenId",
         "type": "uint256"
       }
     ],
-    "name": "exists",
+    "name": "claimableRewards",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "clock",
+    "outputs": [
+      {
+        "internalType": "uint48",
+        "name": "",
+        "type": "uint48"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "currentDelegationPeriodEndBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bool",
+        "name": "_delegateForever",
+        "type": "bool"
+      }
+    ],
+    "name": "delegate",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDelegationDetails",
     "outputs": [
       {
         "internalType": "bool",
@@ -388,9 +653,19 @@
         "type": "bool"
       },
       {
-        "internalType": "enum VechainNodesDataTypes.NodeSource",
+        "internalType": "uint256",
         "name": "",
-        "type": "uint8"
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -399,12 +674,38 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
       }
     ],
-    "name": "getDirectNodeOwnership",
+    "name": "getDelegationEndBlock",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getDelegationPeriod",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRewardsAccumulationEndBlock",
     "outputs": [
       {
         "internalType": "uint256",
@@ -418,112 +719,17 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "getDirectNodesOwnership",
-    "outputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "",
-        "type": "uint256[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "getNodeIds",
-    "outputs": [
-      {
-        "internalType": "uint256[]",
-        "name": "",
-        "type": "uint256[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "_tokenId",
         "type": "uint256"
       }
     ],
-    "name": "getNodeLevel",
+    "name": "getRewardsAccumulationStartBlock",
     "outputs": [
-      {
-        "internalType": "uint8",
-        "name": "levelId",
-        "type": "uint8"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "getNodeManager",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "nodeManager",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "getNodeOwner",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "nodeOwner",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "getNodesDelegatedTo",
-    "outputs": [
-      {
-        "internalType": "uint256[]",
         "name": "",
-        "type": "uint256[]"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -550,7 +756,7 @@
   },
   {
     "inputs": [],
-    "name": "getStargateNft",
+    "name": "getStargateNFTContract",
     "outputs": [
       {
         "internalType": "contract IStargateNFT",
@@ -564,124 +770,17 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "_level",
+        "type": "uint256"
       }
     ],
-    "name": "getUserNodes",
+    "name": "getVthoRewardPerBlock",
     "outputs": [
       {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "nodeId",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint8",
-            "name": "nodeLevel",
-            "type": "uint8"
-          },
-          {
-            "internalType": "address",
-            "name": "xNodeOwner",
-            "type": "address"
-          },
-          {
-            "internalType": "bool",
-            "name": "isXNodeHolder",
-            "type": "bool"
-          },
-          {
-            "internalType": "bool",
-            "name": "isXNodeDelegated",
-            "type": "bool"
-          },
-          {
-            "internalType": "bool",
-            "name": "isXNodeDelegator",
-            "type": "bool"
-          },
-          {
-            "internalType": "bool",
-            "name": "isXNodeDelegatee",
-            "type": "bool"
-          },
-          {
-            "internalType": "address",
-            "name": "delegatee",
-            "type": "address"
-          }
-        ],
-        "internalType": "struct NodeManagementV3.NodeInfo[]",
+        "internalType": "uint256",
         "name": "",
-        "type": "tuple[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "getUserStargateNFTsInfo",
-    "outputs": [
-      {
-        "components": [
-          {
-            "internalType": "uint256",
-            "name": "tokenId",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint8",
-            "name": "levelId",
-            "type": "uint8"
-          },
-          {
-            "internalType": "uint64",
-            "name": "mintedAtBlock",
-            "type": "uint64"
-          },
-          {
-            "internalType": "uint256",
-            "name": "vetAmountStaked",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint48",
-            "name": "lastVthoClaimTimestamp",
-            "type": "uint48"
-          }
-        ],
-        "internalType": "struct DataTypes.Token[]",
-        "name": "tokens",
-        "type": "tuple[]"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "getUsersNodeLevels",
-    "outputs": [
-      {
-        "internalType": "uint8[]",
-        "name": "",
-        "type": "uint8[]"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -689,10 +788,35 @@
   },
   {
     "inputs": [],
-    "name": "getVechainNodesContract",
+    "name": "getVthoRewardsPerBlock",
     "outputs": [
       {
-        "internalType": "contract ITokenAuction",
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "levelId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardPerBlock",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct StargateDelegation.VthoRewardPerBlock[]",
+        "name": "vthoRewardPerBlock",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getVthoToken",
+    "outputs": [
+      {
+        "internalType": "contract IERC20",
         "name": "",
         "type": "address"
       }
@@ -745,19 +869,58 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_vechainNodesContract",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_admin",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_upgrader",
-        "type": "address"
+        "components": [
+          {
+            "internalType": "address",
+            "name": "upgrader",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "admin",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "operator",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "stargateNFT",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "vthoToken",
+            "type": "address"
+          },
+          {
+            "components": [
+              {
+                "internalType": "uint256",
+                "name": "levelId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "rewardPerBlock",
+                "type": "uint256"
+              }
+            ],
+            "internalType": "struct StargateDelegation.VthoRewardPerBlock[]",
+            "name": "vthoRewardPerBlock",
+            "type": "tuple[]"
+          },
+          {
+            "internalType": "uint256",
+            "name": "delegationPeriod",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct StargateDelegation.StargateDelegationInitParams",
+        "name": "_initParams",
+        "type": "tuple"
       }
     ],
     "name": "initialize",
@@ -766,139 +929,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "initializeV2",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_stargateNft",
-        "type": "address"
-      }
-    ],
-    "name": "initializeV3",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "isDirectNodeOwner",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "isOwner",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "nodeId",
+        "name": "_tokenId",
         "type": "uint256"
       }
     ],
-    "name": "isLegacyNode",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "isLegacy",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "isNodeDelegated",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "isNodeDelegator",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      }
-    ],
-    "name": "isNodeHolder",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "isNodeManager",
+    "name": "isDelegationActive",
     "outputs": [
       {
         "internalType": "bool",
@@ -925,19 +963,6 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "removeNodeDelegation",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "bytes32",
         "name": "role",
         "type": "bytes32"
@@ -949,6 +974,19 @@
       }
     ],
     "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "requestDelegationExit",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -974,12 +1012,12 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "stargateNft",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "_rewardsAccumulationEndBlock",
+        "type": "uint256"
       }
     ],
-    "name": "setStargateNft",
+    "name": "setRewardsAccumulationEndBlock",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -987,12 +1025,42 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "vechainNodesContract",
-        "type": "address"
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "levelId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardPerBlock",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct StargateDelegation.VthoRewardPerBlock[]",
+        "name": "_vthoRewardPerBlock",
+        "type": "tuple[]"
       }
     ],
-    "name": "setVechainNodesContract",
+    "name": "setVthoRewardPerBlockForAllLevels",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "_level",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_vthoRewardPerBlock",
+        "type": "uint256"
+      }
+    ],
+    "name": "setVthoRewardPerBlockForLevel",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1039,9 +1107,9 @@
     "name": "version",
     "outputs": [
       {
-        "internalType": "string",
+        "internalType": "uint256",
         "name": "",
-        "type": "string"
+        "type": "uint256"
       }
     ],
     "stateMutability": "pure",
