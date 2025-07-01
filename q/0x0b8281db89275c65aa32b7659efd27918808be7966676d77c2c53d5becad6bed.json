@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldContractAddress","type":"address"},{"indexed":false,"internalType":"address","name":"newContractAddress","type":"address"},{"indexed":false,"internalType":"string","name":"contractName","type":"string"}],"name":"ContractAddressUpdated","type":"event","$contractName":"StargateNFT"}]

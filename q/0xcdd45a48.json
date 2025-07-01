@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"offerAuthor","type":"address"},{"internalType":"uint256","name":"offset","type":"uint256"},{"internalType":"uint256","name":"pageSize","type":"uint256"}],"name":"getCreatedOffers","outputs":[{"internalType":"uint256[]","name":"","type":"uint256[]"}],"stateMutability":"view","type":"function","$contractName":""}]

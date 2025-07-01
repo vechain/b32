@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getVthoToken","outputs":[{"internalType":"contract IERC20","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"StargateDelegation"}]

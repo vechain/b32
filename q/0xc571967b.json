@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address[]","name":"tokens","type":"address[]"},{"internalType":"bool[]","name":"isAllowed","type":"bool[]"}],"name":"setWhitelistedTokens","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"gas-pump"}]

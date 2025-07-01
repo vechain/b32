@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"self","type":"address"},{"name":"newMaster","type":"address"}],"name":"native_setMaster","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"prototype-native"}]

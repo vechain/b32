@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"_t1","type":"uint48"},{"internalType":"uint48","name":"_t2","type":"uint48"},{"internalType":"uint256","name":"_vetAmount","type":"uint256"}],"name":"calculateVTHO","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"pure","type":"function","$contractName":"StargateNFT"}]

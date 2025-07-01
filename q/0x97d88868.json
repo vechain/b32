@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_threshold","type":"uint256"}],"name":"setWhitelistThreshold","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

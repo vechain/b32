@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_owner","type":"address"}],"name":"ownsNormalToken","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"StargateNFT"}]

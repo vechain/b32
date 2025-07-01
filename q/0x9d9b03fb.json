@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"address","name":"_addr","type":"address"},{"internalType":"bool","name":"_enable","type":"bool"}],"name":"setInBoundList","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"kvstorage"}]
