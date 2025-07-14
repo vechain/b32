@@ -265,6 +265,35 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "totalRewards",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "endorsersScores",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalEndorsersScore",
+        "type": "uint256"
+      }
+    ],
+    "name": "calculateEndorserRewards",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "rewardAmounts",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "distributeRewards",
     "outputs": [],
@@ -294,6 +323,29 @@
         "internalType": "address",
         "name": "",
         "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getEndorsersAndScores",
+    "outputs": [
+      {
+        "internalType": "address[]",
+        "name": "endorsers",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "endorsersScores",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256",
+        "name": "totalEndorsersScore",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -333,7 +385,39 @@
   },
   {
     "inputs": [],
+    "name": "getRoundToDistribute",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "getStartRound",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTotalEndorsersRewards",
     "outputs": [
       {
         "internalType": "uint256",
@@ -389,54 +473,74 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_upgrader",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_admin",
-        "type": "address"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "_appId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "_allocationVotingGovernor",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_rewardsPool",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_x2earnApps",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_allocationPool",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_startRound",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "_rewardsPercentage",
-        "type": "uint256"
+        "components": [
+          {
+            "internalType": "address",
+            "name": "upgrader",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "admin",
+            "type": "address"
+          },
+          {
+            "internalType": "bytes32",
+            "name": "appId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "address",
+            "name": "allocationVotingGovernor",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "rewardsPool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "x2earnApps",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "allocationPool",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "startRound",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "rewardsPercentage",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct EndorsersRewardDistributor.InitParams",
+        "name": "_params",
+        "type": "tuple"
       }
     ],
     "name": "initialize",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "pure",
     "type": "function"
   },
   {
