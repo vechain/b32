@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_burnRatio","type":"uint256"}],"name":"setBurnRatio","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_recycler"}]

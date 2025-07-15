@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"_cooldownPeriod","type":"uint48"},{"internalType":"address","name":"_xAllocationVotingGovernor","type":"address"}],"name":"initializeV3","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earns-appsv3"}]

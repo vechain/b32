@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"feeMultiplier","type":"uint256"}],"name":"SetFee","type":"event","$contractName":"vearn-trader"}]

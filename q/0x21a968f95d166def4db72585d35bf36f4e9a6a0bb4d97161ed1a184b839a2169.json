@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint8","name":"datasetId","type":"uint8"},{"indexed":false,"internalType":"address","name":"policy","type":"address"}],"name":"PolicyAdded","type":"event","$contractName":"databusV5"}]

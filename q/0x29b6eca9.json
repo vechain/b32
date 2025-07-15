@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IVeBetterPassport","name":"_veBetterPassport","type":"address"}],"name":"initializeV2","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

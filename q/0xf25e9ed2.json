@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_target","type":"address"}],"name":"getMaster","outputs":[{"name":"listed","type":"bool"},{"name":"endorsor","type":"address"},{"name":"identity","type":"bytes32"},{"name":"active","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"all-stakeholder-vote"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_cycleDuration","type":"uint256"}],"name":"setCycleDuration","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-emissions"}]

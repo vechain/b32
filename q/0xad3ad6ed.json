@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"nodeMaster","type":"address"}],"name":"native_next","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"authority-native"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"newImplementationV3","type":"address"},{"internalType":"address","name":"b3trToken","type":"address"}],"name":"initializeV3","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"social-login-smart-account-factory"}]

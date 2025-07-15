@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"_baseuri","type":"string"}],"name":"BaseURIChanged","type":"event","$contractName":"vip181-simple"}]

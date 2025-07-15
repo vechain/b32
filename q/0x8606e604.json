@@ -1,0 +1,1 @@
+[{"stateMutability":"nonpayable","type":"function","name":"changeNftContract","inputs":[{"name":"newOwner","type":"address"}],"outputs":[],"$contractName":"veLoot_utility"}]

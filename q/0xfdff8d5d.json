@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_start","type":"uint256"},{"name":"_end","type":"uint256"}],"name":"canClaimReward","outputs":[{"name":"","type":"uint8"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"arbitration"}]

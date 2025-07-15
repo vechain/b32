@@ -1,0 +1,54 @@
+[
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "quantity",
+                "type": "uint256"
+            }
+        ],
+        "name": "buyFullTicket",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "name": "quantity",
+                "type": "uint256"
+            }
+        ],
+        "name": "buyXNodeTicket",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": true,
+        "stateMutability": "payable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [],
+        "name": "isX",
+        "outputs": [
+            {
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"minimumGalaxyMemberLevel","type":"uint256"}],"name":"MinimumGalaxyMemberLevelSet","type":"event","$contractName":"VeBetterDAO-ve-better-passport"}]

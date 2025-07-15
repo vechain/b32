@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"entity","type":"address"},{"indexed":true,"internalType":"address","name":"passport","type":"address"}],"name":"LinkRemoved","type":"event","$contractName":"VeBetterDAO-ve-better-passport"}]

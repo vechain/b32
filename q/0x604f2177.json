@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"_levelId","type":"uint8"}],"name":"stake","outputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"stateMutability":"payable","type":"function","$contractName":"StargateNFT"}]

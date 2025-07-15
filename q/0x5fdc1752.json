@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"level","type":"uint256"}],"name":"levelToMultiplier","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-voter-rewards"}]

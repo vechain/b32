@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes","name":"message","type":"bytes"},{"internalType":"bytes","name":"extraData","type":"bytes"},{"internalType":"address","name":"signedFor","type":"address"}],"name":"updateValueWithProof","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"oracle.vechain.energy"}]

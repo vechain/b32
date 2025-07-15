@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_newMaxClaims","type":"uint256"}],"name":"setMaxTotalClaims","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"L2Ev12ListA"}]

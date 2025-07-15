@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_operator","type":"address"}],"name":"addOperator","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"thornode-tokenauction"}]

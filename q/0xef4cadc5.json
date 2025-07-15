@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"SCALING_FACTOR","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-emissions"},{"inputs":[],"name":"SCALING_FACTOR","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-voter-rewards"}]

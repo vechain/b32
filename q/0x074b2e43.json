@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"FLASHLOAN_PREMIUM_TOTAL","outputs":[{"internalType":"uint128","name":"","type":"uint128"}],"stateMutability":"view","type":"function","$contractName":"juicy-finance-pool-proxy"}]
