@@ -37,11 +37,6 @@
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "CheckpointUnorderedInsertion",
-    "type": "error"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -55,6 +50,16 @@
   {
     "inputs": [],
     "name": "ERC1967NonPayable",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "EnforcedPause",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ExpectedPause",
     "type": "error"
   },
   {
@@ -75,22 +80,6 @@
   {
     "inputs": [],
     "name": "ReentrancyGuardReentrantCall",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint8",
-        "name": "bits",
-        "type": "uint8"
-      },
-      {
-        "internalType": "uint256",
-        "name": "value",
-        "type": "uint256"
-      }
-    ],
-    "name": "SafeCastOverflowedUintDowncast",
     "type": "error"
   },
   {
@@ -121,66 +110,17 @@
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "totalAmount",
+        "name": "amount",
         "type": "uint256"
       },
       {
         "indexed": true,
-        "internalType": "address",
-        "name": "recipient",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "caller",
-        "type": "address"
-      },
-      {
-        "indexed": false,
         "internalType": "uint256",
-        "name": "unallocatedAmount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "teamAllocationAmount",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "rewardsAllocationAmount",
+        "name": "roundId",
         "type": "uint256"
       }
     ],
-    "name": "AllocationRewardsClaimed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "EmissionsContractSet",
+    "name": "FundsDistributedToApp",
     "type": "event"
   },
   {
@@ -200,13 +140,13 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "bool",
-        "name": "isDisabled",
-        "type": "bool"
+        "indexed": false,
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
       }
     ],
-    "name": "QuadraticFundingToggled",
+    "name": "Paused",
     "type": "event"
   },
   {
@@ -290,36 +230,11 @@
       {
         "indexed": false,
         "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
+        "name": "account",
         "type": "address"
       }
     ],
-    "name": "TreasuryContractSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "UnallocatedFundsReceiverSet",
+    "name": "Unpaused",
     "type": "event"
   },
   {
@@ -336,70 +251,6 @@
     "type": "event"
   },
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "X2EarnAppsContractSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "XAllocationVotingSet",
-    "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "CLOCK_MODE",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "CONTRACTS_ADDRESS_MANAGER_ROLE",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "DEFAULT_ADMIN_ROLE",
     "outputs": [
@@ -414,12 +265,12 @@
   },
   {
     "inputs": [],
-    "name": "PERCENTAGE_PRECISION_SCALING_FACTOR",
+    "name": "DISTRIBUTOR_ROLE",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "bytes32",
         "name": "",
-        "type": "uint256"
+        "type": "bytes32"
       }
     ],
     "stateMutability": "view",
@@ -452,25 +303,6 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "allFundsClaimed",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [],
     "name": "b3tr",
     "outputs": [
@@ -484,14 +316,8 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "baseAllocationAmount",
+    "inputs": [],
+    "name": "b3trBalance",
     "outputs": [
       {
         "internalType": "uint256",
@@ -506,73 +332,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "claim",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "claimableAmount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "totalAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "unallocatedAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "teamAllocationAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "x2EarnRewardsPoolAmount",
+        "name": "_roundId",
         "type": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "claimed",
+    "name": "canDistributeDBARewards",
     "outputs": [
       {
         "internalType": "bool",
@@ -584,70 +348,27 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "clock",
-    "outputs": [
-      {
-        "internalType": "uint48",
-        "name": "",
-        "type": "uint48"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "currentRoundEarnings",
-    "outputs": [
-      {
         "internalType": "uint256",
-        "name": "",
+        "name": "_roundId",
         "type": "uint256"
+      },
+      {
+        "internalType": "bytes32[]",
+        "name": "_appIds",
+        "type": "bytes32[]"
       }
     ],
-    "stateMutability": "view",
+    "name": "distributeDBARewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "emissions",
+    "name": "distributionStartRound",
     "outputs": [
-      {
-        "internalType": "contract IEmissions",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "getAppShares",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
       {
         "internalType": "uint256",
         "name": "",
@@ -661,11 +382,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "roundId",
+        "name": "_roundId",
         "type": "uint256"
       }
     ],
-    "name": "getMaxAppAllocation",
+    "name": "fundsForRound",
     "outputs": [
       {
         "internalType": "uint256",
@@ -740,39 +461,41 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_admin",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "upgrader",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "contractsAddressManager",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_b3trAddress",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_treasury",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_x2EarnApps",
-        "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_x2EarnRewardsPool",
-        "type": "address"
+        "components": [
+          {
+            "internalType": "address",
+            "name": "admin",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "x2EarnApps",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "xAllocationPool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "x2earnRewardsPool",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "b3tr",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "distributionStartRound",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct DBAPool.InitializeV1Params",
+        "name": "params",
+        "type": "tuple"
       }
     ],
     "name": "initialize",
@@ -783,24 +506,12 @@
   {
     "inputs": [
       {
-        "internalType": "uint256[]",
-        "name": "roundIds",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "amounts",
-        "type": "uint256[]"
+        "internalType": "uint256",
+        "name": "_roundId",
+        "type": "uint256"
       }
     ],
-    "name": "initializeV7",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "isQuadraticFundingDisabledForCurrentRound",
+    "name": "isDBARewardsDistributed",
     "outputs": [
       {
         "internalType": "bool",
@@ -812,14 +523,15 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "isQuadraticFundingDisabledForRound",
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "paused",
     "outputs": [
       {
         "internalType": "bool",
@@ -883,69 +595,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      }
-    ],
-    "name": "roundEarnings",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "totalAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "unallocatedAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "teamAllocationAmount",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "x2EarnRewardsPoolAmount",
+        "name": "_distributionStartRound",
         "type": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "scaledAppSharesCap",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "emissions_",
-        "type": "address"
-      }
-    ],
-    "name": "setEmissionsAddress",
+    "name": "setDistributionStartRound",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -953,12 +607,12 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_receiverAddress",
+        "internalType": "contract IX2EarnApps",
+        "name": "_x2EarnApps",
         "type": "address"
       }
     ],
-    "name": "setUnallocatedFundsReceiverAddress",
+    "name": "setX2EarnApps",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -966,12 +620,12 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "x2EarnApps_",
+        "internalType": "contract IX2EarnRewardsPool",
+        "name": "_x2EarnRewardsPool",
         "type": "address"
       }
     ],
-    "name": "setX2EarnAppsAddress",
+    "name": "setX2EarnRewardsPool",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -979,12 +633,12 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "xAllocationVoting_",
+        "internalType": "contract IXAllocationPool",
+        "name": "_xAllocationPool",
         "type": "address"
       }
     ],
-    "name": "setXAllocationVotingAddress",
+    "name": "setXAllocationPool",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1010,41 +664,9 @@
   },
   {
     "inputs": [],
-    "name": "toggleQuadraticFunding",
+    "name": "unpause",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "unallocatedFunds",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "unallocatedFundsReceiver",
-    "outputs": [
-      {
-        "internalType": "contract ITreasury",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1093,10 +715,23 @@
   },
   {
     "inputs": [],
-    "name": "xAllocationVoting",
+    "name": "x2EarnRewardsPool",
     "outputs": [
       {
-        "internalType": "contract IXAllocationVotingGovernor",
+        "internalType": "contract IX2EarnRewardsPool",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "xAllocationPool",
+    "outputs": [
+      {
+        "internalType": "contract IXAllocationPool",
         "name": "",
         "type": "address"
       }
