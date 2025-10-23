@@ -37,11 +37,6 @@
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "CheckpointUnorderedInsertion",
-    "type": "error"
-  },
-  {
     "inputs": [
       {
         "internalType": "address",
@@ -68,6 +63,33 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "parameter",
+        "type": "string"
+      }
+    ],
+    "name": "InvalidParameter",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NoRewardsToClaim",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "NotInitializing",
     "type": "error"
@@ -80,17 +102,55 @@
   {
     "inputs": [
       {
-        "internalType": "uint8",
-        "name": "bits",
-        "type": "uint8"
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      }
+    ],
+    "name": "RelayerAlreadyRegistered",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      }
+    ],
+    "name": "RelayerNotRegistered",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
       },
       {
         "internalType": "uint256",
-        "name": "value",
+        "name": "roundId",
         "type": "uint256"
       }
     ],
-    "name": "SafeCastOverflowedUintDowncast",
+    "name": "RewardsAlreadyClaimed",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "RoundNotEnded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "TransferFailed",
     "type": "error"
   },
   {
@@ -125,38 +185,45 @@
         "type": "address"
       }
     ],
-    "name": "EmissionsAddressUpdated",
+    "name": "B3TRAddressUpdated",
     "type": "event"
   },
   {
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
+        "indexed": false,
         "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "level",
+        "name": "newWeight",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "multiplier",
+        "name": "oldWeight",
         "type": "uint256"
       }
     ],
-    "name": "GMVoteRegistered",
+    "name": "ClaimWeightUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newBlocks",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldBlocks",
+        "type": "uint256"
+      }
+    ],
+    "name": "EarlyAccessBlocksUpdated",
     "type": "event"
   },
   {
@@ -175,7 +242,57 @@
         "type": "address"
       }
     ],
-    "name": "GalaxyMemberAddressUpdated",
+    "name": "EmissionsAddressUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "userCount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newTotalActions",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newTotalWeightedActions",
+        "type": "uint256"
+      }
+    ],
+    "name": "ExpectedActionsReduced",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "FeeCapUpdated",
     "type": "event"
   },
   {
@@ -196,18 +313,74 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "indexed": true,
         "internalType": "uint256",
-        "name": "level",
+        "name": "roundId",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "multiplier",
+        "name": "actionCount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "weight",
         "type": "uint256"
       }
     ],
-    "name": "LevelToMultiplierPending",
+    "name": "RelayerActionRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newDenominator",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldDenominator",
+        "type": "uint256"
+      }
+    ],
+    "name": "RelayerFeeDenominatorUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newFee",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldFee",
+        "type": "uint256"
+      }
+    ],
+    "name": "RelayerFeePercentageUpdated",
     "type": "event"
   },
   {
@@ -215,31 +388,12 @@
     "inputs": [
       {
         "indexed": true,
-        "internalType": "uint256",
-        "name": "level",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "multiplier",
-        "type": "uint256"
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
       }
     ],
-    "name": "LevelToMultiplierSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "bool",
-        "name": "disabled",
-        "type": "bool"
-      }
-    ],
-    "name": "QuadraticRewardingToggled",
+    "name": "RelayerRegistered",
     "type": "event"
   },
   {
@@ -252,25 +406,19 @@
         "type": "address"
       },
       {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
         "indexed": false,
         "internalType": "uint256",
-        "name": "fee",
+        "name": "amount",
         "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
       }
     ],
-    "name": "RelayerFeeTaken",
+    "name": "RelayerRewardsClaimed",
     "type": "event"
   },
   {
@@ -279,17 +427,11 @@
       {
         "indexed": true,
         "internalType": "address",
-        "name": "newAddress",
-        "type": "address"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "oldAddress",
+        "name": "relayer",
         "type": "address"
       }
     ],
-    "name": "RelayerRewardsPoolAddressUpdated",
+    "name": "RelayerUnregistered",
     "type": "event"
   },
   {
@@ -298,54 +440,23 @@
       {
         "indexed": true,
         "internalType": "uint256",
-        "name": "cycle",
+        "name": "roundId",
         "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "reward",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalRewards",
         "type": "uint256"
       }
     ],
-    "name": "RewardClaimed",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "reward",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "gmReward",
-        "type": "uint256"
-      }
-    ],
-    "name": "RewardClaimedV2",
+    "name": "RewardsDeposited",
     "type": "event"
   },
   {
@@ -428,6 +539,43 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalAutoVoteUsers",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalActions",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "totalWeightedActions",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "numRelayers",
+        "type": "uint256"
+      }
+    ],
+    "name": "TotalAutoVotingActionsSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
         "internalType": "address",
         "name": "implementation",
         "type": "address"
@@ -440,31 +588,19 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": true,
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "indexed": true,
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      },
-      {
         "indexed": false,
         "internalType": "uint256",
-        "name": "votes",
+        "name": "newWeight",
         "type": "uint256"
       },
       {
         "indexed": false,
         "internalType": "uint256",
-        "name": "rewardWeightedVote",
+        "name": "oldWeight",
         "type": "uint256"
       }
     ],
-    "name": "VoteRegistered",
+    "name": "VoteWeightUpdated",
     "type": "event"
   },
   {
@@ -475,23 +611,16 @@
         "internalType": "address",
         "name": "newAddress",
         "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "oldAddress",
+        "type": "address"
       }
     ],
     "name": "XAllocationVotingAddressUpdated",
     "type": "event"
-  },
-  {
-    "inputs": [],
-    "name": "CONTRACTS_ADDRESS_MANAGER_ROLE",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
   },
   {
     "inputs": [],
@@ -508,12 +637,12 @@
   },
   {
     "inputs": [],
-    "name": "SCALING_FACTOR",
+    "name": "POOL_ADMIN_ROLE",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "bytes32",
         "name": "",
-        "type": "uint256"
+        "type": "bytes32"
       }
     ],
     "stateMutability": "view",
@@ -546,26 +675,19 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "VOTE_REGISTRAR_ROLE",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
+        "internalType": "uint256",
+        "name": "totalReward",
+        "type": "uint256"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "b3tr",
+    "name": "calculateRelayerFee",
     "outputs": [
       {
-        "internalType": "contract IB3TR",
+        "internalType": "uint256",
         "name": "",
-        "type": "address"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -575,109 +697,97 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "cycle",
+        "name": "roundId",
         "type": "uint256"
       },
       {
         "internalType": "address",
-        "name": "voter",
+        "name": "relayer",
         "type": "address"
       }
     ],
-    "name": "claimReward",
+    "name": "claimRewards",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "claimableRewards",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "completedWeightedActions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "deposit",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
   },
   {
     "inputs": [],
-    "name": "clock",
+    "name": "getB3trAddress",
     "outputs": [
-      {
-        "internalType": "uint48",
-        "name": "",
-        "type": "uint48"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      }
-    ],
-    "name": "cycleToTotal",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      }
-    ],
-    "name": "cycleToTotalGMWeight",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
       {
         "internalType": "address",
-        "name": "voter",
+        "name": "",
         "type": "address"
       }
     ],
-    "name": "cycleToVoterToGMWeight",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
     "stateMutability": "view",
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      }
-    ],
-    "name": "cycleToVoterToTotal",
+    "inputs": [],
+    "name": "getClaimWeight",
     "outputs": [
       {
         "internalType": "uint256",
@@ -690,10 +800,23 @@
   },
   {
     "inputs": [],
-    "name": "emissions",
+    "name": "getEarlyAccessBlocks",
     "outputs": [
       {
-        "internalType": "contract IEmissions",
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getEmissionsAddress",
+    "outputs": [
+      {
+        "internalType": "address",
         "name": "",
         "type": "address"
       }
@@ -703,31 +826,7 @@
   },
   {
     "inputs": [],
-    "name": "galaxyMember",
-    "outputs": [
-      {
-        "internalType": "contract IGalaxyMember",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      }
-    ],
-    "name": "getGMReward",
+    "name": "getFeeCap",
     "outputs": [
       {
         "internalType": "uint256",
@@ -742,16 +841,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
+        "name": "roundId",
         "type": "uint256"
       }
     ],
-    "name": "getMultiplier",
+    "name": "getMissedAutoVotingUsersCount",
     "outputs": [
       {
         "internalType": "uint256",
@@ -763,19 +857,21 @@
     "type": "function"
   },
   {
-    "inputs": [
+    "inputs": [],
+    "name": "getRegisteredRelayers",
+    "outputs": [
       {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
+        "internalType": "address[]",
+        "name": "",
+        "type": "address[]"
       }
     ],
-    "name": "getRelayerFee",
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getRelayerFeeDenominator",
     "outputs": [
       {
         "internalType": "uint256",
@@ -787,19 +883,8 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "cycle",
-        "type": "uint256"
-      },
-      {
-        "internalType": "address",
-        "name": "voter",
-        "type": "address"
-      }
-    ],
-    "name": "getReward",
+    "inputs": [],
+    "name": "getRelayerFeePercentage",
     "outputs": [
       {
         "internalType": "uint256",
@@ -832,6 +917,51 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTotalRewards",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getVoteWeight",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getXAllocationVotingAddress",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "bytes32",
         "name": "role",
         "type": "bytes32"
@@ -845,30 +975,6 @@
     "name": "grantRole",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
-        "type": "uint256"
-      }
-    ],
-    "name": "hasNodeVoted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -898,30 +1004,6 @@
   {
     "inputs": [
       {
-        "internalType": "uint256",
-        "name": "tokenId",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "proposalId",
-        "type": "uint256"
-      }
-    ],
-    "name": "hasTokenVoted",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "address",
         "name": "admin",
         "type": "address"
@@ -933,33 +1015,18 @@
       },
       {
         "internalType": "address",
-        "name": "contractsAddressManager",
+        "name": "b3trAddress",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_emissions",
+        "name": "emissionsAddress",
         "type": "address"
       },
       {
         "internalType": "address",
-        "name": "_galaxyMember",
+        "name": "xAllocationVotingAddress",
         "type": "address"
-      },
-      {
-        "internalType": "address",
-        "name": "_b3tr",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "levels",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "multipliers",
-        "type": "uint256[]"
       }
     ],
     "name": "initialize",
@@ -970,48 +1037,12 @@
   {
     "inputs": [
       {
-        "internalType": "uint256[]",
-        "name": "levels",
-        "type": "uint256[]"
-      },
-      {
-        "internalType": "uint256[]",
-        "name": "multipliers",
-        "type": "uint256[]"
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
       }
     ],
-    "name": "initializeV5",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "contract IXAllocationVotingGovernor",
-        "name": "_xAllocationVoting",
-        "type": "address"
-      },
-      {
-        "internalType": "contract IRelayerRewardsPool",
-        "name": "_relayerRewardsPool",
-        "type": "address"
-      }
-    ],
-    "name": "initializeV6",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint48",
-        "name": "blockNumber",
-        "type": "uint48"
-      }
-    ],
-    "name": "isQuadraticRewardingDisabledAtBlock",
+    "name": "isClaimEarlyAccessActive",
     "outputs": [
       {
         "internalType": "bool",
@@ -1023,8 +1054,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "isQuadraticRewardingDisabledForCurrentCycle",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      }
+    ],
+    "name": "isRegisteredRelayer",
     "outputs": [
       {
         "internalType": "bool",
@@ -1039,16 +1076,35 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "level",
+        "name": "roundId",
         "type": "uint256"
       }
     ],
-    "name": "levelToMultiplier",
+    "name": "isRewardClaimable",
     "outputs": [
       {
-        "internalType": "uint256",
+        "internalType": "bool",
         "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
         "type": "uint256"
+      }
+    ],
+    "name": "isVoteEarlyAccessActive",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
       }
     ],
     "stateMutability": "view",
@@ -1071,8 +1127,39 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "proposalId",
+        "name": "roundId",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "userCount",
+        "type": "uint256"
+      }
+    ],
+    "name": "reduceExpectedActionsForRound",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      }
+    ],
+    "name": "registerRelayer",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
       },
       {
         "internalType": "address",
@@ -1081,31 +1168,18 @@
       },
       {
         "internalType": "uint256",
-        "name": "votes",
+        "name": "roundId",
         "type": "uint256"
       },
       {
-        "internalType": "uint256",
-        "name": "votePower",
-        "type": "uint256"
+        "internalType": "enum RelayerAction",
+        "name": "action",
+        "type": "uint8"
       }
     ],
-    "name": "registerVote",
+    "name": "registerRelayerAction",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "relayerRewardsPool",
-    "outputs": [
-      {
-        "internalType": "contract IRelayerRewardsPool",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1148,24 +1222,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_emissions",
+        "name": "b3trAddress",
         "type": "address"
       }
     ],
-    "name": "setEmissions",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_galaxyMember",
-        "type": "address"
-      }
-    ],
-    "name": "setGalaxyMember",
+    "name": "setB3TRAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1174,16 +1235,94 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "level",
+        "name": "newWeight",
+        "type": "uint256"
+      }
+    ],
+    "name": "setClaimWeight",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "blocks",
+        "type": "uint256"
+      }
+    ],
+    "name": "setEarlyAccessBlocks",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "emissionsAddress",
+        "type": "address"
+      }
+    ],
+    "name": "setEmissionsAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newFeeCap",
+        "type": "uint256"
+      }
+    ],
+    "name": "setFeeCap",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newDenominator",
+        "type": "uint256"
+      }
+    ],
+    "name": "setRelayerFeeDenominator",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newFeePercentage",
+        "type": "uint256"
+      }
+    ],
+    "name": "setRelayerFeePercentage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
         "type": "uint256"
       },
       {
         "internalType": "uint256",
-        "name": "multiplier",
+        "name": "totalAutoVotingUsers",
         "type": "uint256"
       }
     ],
-    "name": "setLevelToMultiplier",
+    "name": "setTotalActionsForRound",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1192,16 +1331,11 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "level",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "multiplier",
+        "name": "newWeight",
         "type": "uint256"
       }
     ],
-    "name": "setLevelToMultiplierNow",
+    "name": "setVoteWeight",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1210,24 +1344,11 @@
     "inputs": [
       {
         "internalType": "address",
-        "name": "_relayerRewardsPool",
+        "name": "xAllocationVotingAddress",
         "type": "address"
       }
     ],
-    "name": "setRelayerRewardsPool",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_xAllocationVoting",
-        "type": "address"
-      }
-    ],
-    "name": "setXAllocationVoting",
+    "name": "setXAllocationVotingAddress",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1252,8 +1373,100 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "toggleQuadraticRewarding",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalActions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalRelayerActions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalRelayerWeightedActions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "totalWeightedActions",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "relayer",
+        "type": "address"
+      }
+    ],
+    "name": "unregisterRelayer",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1277,6 +1490,52 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "validateClaimDuringEarlyAccess",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "caller",
+        "type": "address"
+      }
+    ],
+    "name": "validateVoteDuringEarlyAccess",
+    "outputs": [],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "version",
     "outputs": [
@@ -1287,19 +1546,6 @@
       }
     ],
     "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "xAllocationVoting",
-    "outputs": [
-      {
-        "internalType": "contract IXAllocationVotingGovernor",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   }
 ]
