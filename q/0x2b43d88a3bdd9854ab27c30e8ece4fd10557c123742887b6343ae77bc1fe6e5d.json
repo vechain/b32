@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bool","name":"isDisabled","type":"bool"}],"name":"QuadraticFundingToggled","type":"event","$contractName":"VeBetterDAO-x-allocation-pool"}]

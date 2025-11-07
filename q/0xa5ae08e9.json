@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"voter","type":"address"},{"internalType":"uint256","name":"roundId","type":"uint256"}],"name":"castVoteOnBehalfOf","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

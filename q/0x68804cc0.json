@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"person","type":"address"}],"name":"XAllocationVotingPersonhoodVerificationFailed","type":"error","$contractName":"VeBetterDAO-x-allocations-voting"}]

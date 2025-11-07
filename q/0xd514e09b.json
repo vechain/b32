@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_level","type":"uint256"},{"internalType":"uint256","name":"_vthoRewardPerBlock","type":"uint256"}],"name":"setVthoRewardPerBlockForLevel","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"StargateDelegation"}]

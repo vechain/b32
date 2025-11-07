@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"totalStake","outputs":[{"internalType":"uint256","name":"totalVET","type":"uint256"},{"internalType":"uint256","name":"totalWeight","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"staker"}]

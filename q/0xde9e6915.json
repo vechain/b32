@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newMinPrice","type":"uint256"}],"name":"setMinOfferPriceForAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":""}]

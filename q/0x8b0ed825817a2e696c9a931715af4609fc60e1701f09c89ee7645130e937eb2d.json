@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"validator","type":"address"},{"indexed":false,"internalType":"uint256","name":"added","type":"uint256"}],"name":"StakeIncreased","type":"event","$contractName":"staker"}]

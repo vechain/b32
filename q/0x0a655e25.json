@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_amount","type":"uint256"}],"name":"fillEnergy","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"energy-station"}]

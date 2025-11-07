@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_oldDisputeEnds","type":"uint256"},{"indexed":false,"name":"_newDisputeEnds","type":"uint256"}],"name":"DisputeEndsAdjusted","type":"event","$contractName":"arbitration"}]

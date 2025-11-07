@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getTotalAutoVotingUsersAtRoundStart","outputs":[{"internalType":"uint208","name":"","type":"uint208"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

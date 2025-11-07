@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"tbaAddress","type":"address"}],"name":"getLockedSupportedB3TRBalanceByAddress","outputs":[{"internalType":"uint256","name":"totalDeposits","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"veDelegate-ProposalPreference"}]

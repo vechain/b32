@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_roundId","type":"uint256"},{"internalType":"bytes32[]","name":"_appIds","type":"bytes32[]"}],"name":"distributeDBARewards","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-dynamic-base-allocations-pool"}]

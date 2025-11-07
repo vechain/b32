@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"newMinVotingDuration","type":"uint48"}],"name":"setMinVotingDuration","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vote"}]

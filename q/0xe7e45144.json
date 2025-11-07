@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"voteDuration","type":"uint48"},{"internalType":"uint48","name":"minVotingDuration","type":"uint48"},{"internalType":"uint48","name":"maxVotingDuration","type":"uint48"}],"name":"VeVoteInvalidVoteDuration","type":"error","$contractName":"vote"}]

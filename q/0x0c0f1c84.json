@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"_levelId","type":"uint8"}],"name":"getLevelSupply","outputs":[{"internalType":"uint208","name":"circulating","type":"uint208"},{"internalType":"uint32","name":"cap","type":"uint32"}],"stateMutability":"view","type":"function","$contractName":"StargateNFT"}]

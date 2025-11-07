@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"_levelId","type":"uint8"},{"internalType":"uint32","name":"_cap","type":"uint32"}],"name":"updateLevelCap","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"StargateNFT"}]

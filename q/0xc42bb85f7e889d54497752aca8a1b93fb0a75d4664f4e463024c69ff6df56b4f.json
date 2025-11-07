@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"validator","type":"address"}],"name":"ValidationSignaledExit","type":"event","$contractName":"staker"}]

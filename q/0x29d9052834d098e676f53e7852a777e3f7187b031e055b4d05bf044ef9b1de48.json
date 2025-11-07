@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"roundId","type":"uint256"}],"name":"FundsDistributedToApp","type":"event","$contractName":"VeBetterDAO-dynamic-base-allocations-pool"}]

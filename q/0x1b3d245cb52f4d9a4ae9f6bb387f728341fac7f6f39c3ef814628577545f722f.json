@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint48","name":"oldVthoGenerationEndTimestamp","type":"uint48"},{"indexed":false,"internalType":"uint48","name":"newVthoGenerationEndTimestamp","type":"uint48"}],"name":"VthoGenerationEndTimestampSet","type":"event","$contractName":"StargateNFT"}]
