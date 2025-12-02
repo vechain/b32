@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"nodeTokenId","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"NodeDetached","type":"event","$contractName":"VeBetterDAO-galaxy-member"}]

@@ -1,0 +1,766 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "badgeName",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "badgeSet",
+				"type": "string"
+			}
+		],
+		"name": "BadgeAdded",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "badgeName",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "badgeSet",
+				"type": "string"
+			}
+		],
+		"name": "BadgeRemoved",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "ProfileCreated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "ProfileDeleted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "kvpType",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			}
+		],
+		"name": "ProfileKvpRemoved",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "kvpType",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "value",
+				"type": "string"
+			}
+		],
+		"name": "ProfileKvpSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "ProfileUpdated",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "previousAdminRole",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "newAdminRole",
+				"type": "bytes32"
+			}
+		],
+		"name": "RoleAdminChanged",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "RoleGranted",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"internalType": "bytes32",
+				"name": "role",
+				"type": "bytes32"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "account",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "sender",
+				"type": "address"
+			}
+		],
+		"name": "RoleRevoked",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "badgeSet",
+				"type": "string"
+			}
+		],
+		"name": "badgeBySet",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "set",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockCreated",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.Badge[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"name": "badges",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "set",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "blockCreated",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "getBadges",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "set",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockCreated",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.Badge[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "getDaoKvps",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "value",
+						"type": "string"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.ProfileKeyValue[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			}
+		],
+		"name": "getDaoValue",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "getOwnerKvps",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "value",
+						"type": "string"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.ProfileKeyValue[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			}
+		],
+		"name": "getOwnerValue",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "getProfile",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "profileAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "blacklisted",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "payWithVSea",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "profileTypeId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "pfpContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pfpTokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockCreated",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.Profile",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			}
+		],
+		"name": "getProfileByName",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "address",
+						"name": "profileAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "blacklisted",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "verified",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "payWithVSea",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "profileTypeId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "pfpContract",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "pfpTokenId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockCreated",
+						"type": "uint256"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.Profile",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			}
+		],
+		"name": "getVeSeaKvps",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "value",
+						"type": "string"
+					}
+				],
+				"internalType": "struct VeSeaProfiles.ProfileKeyValue[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			}
+		],
+		"name": "getVeSeaValue",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "badgeName",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "badgeSet",
+				"type": "string"
+			}
+		],
+		"name": "hasBadge",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "contractAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "tokenId",
+				"type": "uint256"
+			}
+		],
+		"name": "setPfp",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "uint256",
+				"name": "profileTypeId",
+				"type": "uint256"
+			}
+		],
+		"name": "setProfileType",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "key",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "value",
+				"type": "string"
+			}
+		],
+		"name": "setVeSeaValue",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "bytes4",
+				"name": "interfaceId",
+				"type": "bytes4"
+			}
+		],
+		"name": "supportsInterface",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "profileAddress",
+				"type": "address"
+			},
+			{
+				"internalType": "bool",
+				"name": "verified",
+				"type": "bool"
+			}
+		],
+		"name": "verify",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]

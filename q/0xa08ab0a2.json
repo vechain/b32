@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bool","name":"_enabled","type":"bool"}],"name":"toggleClaiming","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"L2Ev12ListA"}]

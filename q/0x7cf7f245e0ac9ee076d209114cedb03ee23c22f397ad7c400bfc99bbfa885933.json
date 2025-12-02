@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"account","type":"address"},{"indexed":false,"internalType":"uint256","name":"reserveBalance","type":"uint256"}],"name":"Config","type":"event","$contractName":"vearn-trader"}]

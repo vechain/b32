@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"reverseRegistrar","outputs":[{"internalType":"contract ReverseRegistrar","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-registrarController"}]

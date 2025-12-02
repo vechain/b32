@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"tokenId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"revocationDate","type":"uint256"},{"indexed":false,"internalType":"string","name":"reason","type":"string"}],"name":"DegreeRevoked","type":"event","$contractName":"DiplomaToken"}]

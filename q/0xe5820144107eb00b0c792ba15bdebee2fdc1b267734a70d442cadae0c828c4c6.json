@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"newAddress","type":"address"}],"name":"XAllocationVotingAddressUpdated","type":"event","$contractName":"VeBetterDAO-voter-rewards"}]

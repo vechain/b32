@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_id","type":"uint256"}],"name":"finish","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xd353a1cb","$contractName":"bet-match"}]

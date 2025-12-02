@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"RESERVE_TREASURY_ADDRESS","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"juicy-finance-atoken"}]

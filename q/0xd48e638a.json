@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"getCreator","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vip210-mintable_v6"}]

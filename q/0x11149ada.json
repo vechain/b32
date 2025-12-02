@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"actionId","type":"uint256"}],"name":"getProof","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","$contractName":"L2Ev12ListA"}]

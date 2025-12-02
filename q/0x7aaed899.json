@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_addr","type":"address"},{"name":"_lvl","type":"uint8"},{"name":"_onUpgrade","type":"bool"},{"name":"_applyUpgradeTime","type":"uint64"},{"name":"_applyUpgradeBlockno","type":"uint64"}],"name":"addToken","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"thornode-tokenauction"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_classicPolicy","type":"address"},{"name":"_operatorUid","type":"bytes32"}],"name":"addOperator","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"databusV2"}]

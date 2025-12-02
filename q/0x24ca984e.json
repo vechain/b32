@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"router","type":"address"}],"name":"addRouter","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"gas-pump"}]

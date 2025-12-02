@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IXAllocationPool","name":"_xAllocationPool","type":"address"}],"name":"setXAllocationPool","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-dynamic-base-allocations-pool"}]

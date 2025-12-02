@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"quantity","type":"uint256"}],"name":"buyFullTicket","outputs":[{"name":"","type":"bool"}],"payable":true,"stateMutability":"payable","type":"function","$contractName":"ticket"}]

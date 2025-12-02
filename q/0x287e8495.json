@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_level","type":"uint8"}],"name":"getTokenParams","outputs":[{"name":"","type":"uint256"},{"name":"","type":"uint64"},{"name":"","type":"uint64"},{"name":"","type":"uint64"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"thornode-tokenauction"}]

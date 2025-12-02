@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"proposalId","type":"uint256"}],"name":"ProposalExecuted","type":"event","$contractName":"VeBetterDAO-b3tr-governor"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"newAddress","type":"address"},{"indexed":true,"internalType":"address","name":"oldAddress","type":"address"}],"name":"B3trGovernorAddressUpdated","type":"event","$contractName":"VeBetterDAO-galaxy-member"}]

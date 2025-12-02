@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32[]","name":"appIds","type":"bytes32[]"}],"name":"setUserVotingPreferences","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

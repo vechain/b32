@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bool","name":"isEnabled","type":"bool"}],"name":"setIsFunctionRestrictionEnabled","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

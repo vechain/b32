@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"optionId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"timeLength","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"multiplier","type":"uint256"}],"name":"OptionAdded","type":"event","$contractName":"veDelegate-Lock2Earn"}]

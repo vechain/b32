@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"nodeId","type":"uint256"}],"name":"getIdAttachedToNode","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

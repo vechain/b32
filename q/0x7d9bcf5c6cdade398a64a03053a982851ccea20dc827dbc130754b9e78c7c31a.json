@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalID","type":"bytes32"},{"indexed":false,"name":"action","type":"bytes32"}],"name":"Proposal","type":"event","$contractName":"executor"}]

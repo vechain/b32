@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_token","type":"address"},{"internalType":"uint256","name":"_id","type":"uint256"}],"name":"getERC1155TokenBalance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-treasury"}]

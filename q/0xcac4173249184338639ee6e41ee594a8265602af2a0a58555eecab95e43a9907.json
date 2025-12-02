@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldFeeTo","type":"address"},{"indexed":false,"internalType":"address","name":"newFeeTo","type":"address"}],"name":"PlatformFeeToChanged","type":"event","$contractName":"DThorswapV2Factory"}]

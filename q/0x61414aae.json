@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"creditPlan","outputs":[{"name":"credit","type":"uint256"},{"name":"recoveryRate","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"energy-station"}]

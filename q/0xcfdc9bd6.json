@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_pct","type":"uint8"}],"name":"setTipPct","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"lucky-airdrop"}]

@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"EIP712_REVISION","outputs":[{"internalType":"bytes","name":"","type":"bytes"}],"stateMutability":"view","type":"function","$contractName":"juicy-finance-atoken"}]

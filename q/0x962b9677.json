@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"string","name":"newMetadata","type":"string"}],"name":"updateDegreeInfo","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"DiplomaToken"}]

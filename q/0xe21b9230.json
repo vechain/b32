@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"contractName","type":"string"}],"name":"InvalidContractAddress","type":"error","$contractName":"VeBetterDAO-x-allocations-voting"}]

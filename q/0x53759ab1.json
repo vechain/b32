@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"t1","type":"uint48"},{"internalType":"uint48","name":"t2","type":"uint48"},{"internalType":"uint104","name":"vetAmount","type":"uint104"}],"name":"calculateVTHO","outputs":[{"internalType":"uint104","name":"vtho","type":"uint104"}],"stateMutability":"pure","type":"function","$contractName":"vvet"}]

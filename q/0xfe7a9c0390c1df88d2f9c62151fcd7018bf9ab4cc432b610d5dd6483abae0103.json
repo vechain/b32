@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalId","type":"uint256"},{"indexed":true,"name":"visitor","type":"address"}],"name":"ProposalWhitelist","type":"event","$contractName":"vevote"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalId","type":"uint256"},{"indexed":false,"name":"sender","type":"address"},{"indexed":true,"name":"endorser","type":"address"},{"indexed":true,"name":"tokenId","type":"uint256"},{"indexed":false,"name":"options","type":"uint32"}],"name":"NewVote","type":"event","$contractName":"all-stakeholder-vote"}]

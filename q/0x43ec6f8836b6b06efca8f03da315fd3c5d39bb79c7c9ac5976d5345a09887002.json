@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldContractAddress","type":"address"},{"indexed":false,"internalType":"address","name":"newContractAddress","type":"address"}],"name":"NodeManagementContractSet","type":"event","$contractName":"vote"}]

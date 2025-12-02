@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"newDecay","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"oldDecay","type":"uint256"}],"name":"Vote2EarnDecayUpdated","type":"event","$contractName":"VeBetterDAO-emissions"}]

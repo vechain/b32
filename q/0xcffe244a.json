@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string[]","name":"names","type":"string[]"}],"name":"getAddresses","outputs":[{"internalType":"address[]","name":"addresses","type":"address[]"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-resolveUtilities"}]

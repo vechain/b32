@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"currentOwner","type":"address"},{"indexed":true,"internalType":"address","name":"proposedOwner","type":"address"}],"name":"OwnershipTransferProposed","type":"event","$contractName":"abcd_test_v1"}]

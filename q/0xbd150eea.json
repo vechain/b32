@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"key","type":"bytes32"}],"name":"native_get","outputs":[{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"params-native"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"tokenA","type":"address"},{"internalType":"address","name":"tokenB","type":"address"}],"name":"pairFor","outputs":[{"internalType":"address","name":"pair","type":"address"}],"stateMutability":"view","type":"function","constant":true,"$contractName":"DThorswapV2Router03"}]

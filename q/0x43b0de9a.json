@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"validator","type":"address"}],"name":"increaseStake","outputs":[],"stateMutability":"payable","type":"function","$contractName":"staker"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_nodeMaster","type":"address"}],"name":"revoke","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"authority"}]

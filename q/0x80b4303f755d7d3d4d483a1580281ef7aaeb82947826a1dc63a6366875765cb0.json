@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bool","name":"restricted","type":"bool"}],"name":"ListingRestricted","type":"event","$contractName":"exo_coord_market"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bool","name":"restricted","type":"bool"}],"name":"ListingRestricted","type":"event","$contractName":"exoworld-mp"}]

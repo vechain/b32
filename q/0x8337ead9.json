@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"name":"getLockedSupportedB3TRBalance","outputs":[{"internalType":"uint256","name":"totalDeposits","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"veDelegate-ProposalPreference"}]

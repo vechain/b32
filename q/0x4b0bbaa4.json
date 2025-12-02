@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"reserveBalance","type":"uint256"}],"name":"saveConfig","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vearn-trader"}]

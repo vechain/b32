@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint48","name":"oldMaxVotingDuration","type":"uint48"},{"indexed":false,"internalType":"uint48","name":"newMaxVotingDuration","type":"uint48"}],"name":"MaxVotingDurationSet","type":"event","$contractName":"vote"}]

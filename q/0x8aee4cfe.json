@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"newFeeMultiplier","type":"uint8"}],"name":"setFeeMultiplier","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vearn-trader"}]

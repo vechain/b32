@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"},{"internalType":"uint48","name":"timepoint","type":"uint48"}],"name":"isPersonAtTimepoint","outputs":[{"internalType":"bool","name":"person","type":"bool"},{"internalType":"string","name":"reason","type":"string"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

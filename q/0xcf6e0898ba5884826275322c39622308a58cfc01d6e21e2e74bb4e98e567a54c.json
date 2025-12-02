@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint32","name":"maxClaimablePeriods","type":"uint32"}],"name":"MaxClaimablePeriodsSet","type":"event","$contractName":"Stargate"}]

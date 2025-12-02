@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"optionId","type":"uint256"}],"name":"OptionRemoved","type":"event","$contractName":"veDelegate-Lock2Earn"}]

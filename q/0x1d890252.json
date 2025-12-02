@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"model","type":"bytes32"},{"name":"EFBL","type":"uint256"},{"name":"EFPL","type":"uint256"},{"name":"OFPL","type":"uint256"},{"name":"LEy","type":"uint256"}],"name":"setEmissionFactors","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"carbon-reduction-calc"}]

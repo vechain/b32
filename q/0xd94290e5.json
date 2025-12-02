@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newWeight","type":"uint256"}],"name":"setClaimWeight","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

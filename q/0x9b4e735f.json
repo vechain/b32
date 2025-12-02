@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"delegator","type":"address"}],"name":"getDelegatee","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

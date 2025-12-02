@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenID","type":"uint256"}],"name":"select","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

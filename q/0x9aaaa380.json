@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"},{"internalType":"bool","name":"enable","type":"bool"}],"name":"toggleRewardsPoolBalance","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earn-rewards-pool"}]

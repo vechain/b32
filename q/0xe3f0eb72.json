@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"address","name":"_pair","type":"address"},{"internalType":"uint256","name":"_swapFee","type":"uint256"}],"name":"setSwapFeeForPair","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"DThorswapV2Factory"}]

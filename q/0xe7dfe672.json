@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"roundId","type":"uint256"},{"internalType":"uint256","name":"userCount","type":"uint256"}],"name":"reduceExpectedActionsForRound","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

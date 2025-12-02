@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"enum PassportTypes.APP_SECURITY","name":"security","type":"uint8"}],"name":"securityMultiplier","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

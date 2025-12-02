@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IRouter[2]","name":"routers_","type":"address[2]"}],"stateMutability":"nonpayable","type":"constructor","$contractName":"vearn-trader"}]

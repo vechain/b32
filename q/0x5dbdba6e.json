@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IRelayerRewardsPool","name":"newRelayerRewardsPool","type":"address"}],"name":"setRelayerRewardsPoolAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

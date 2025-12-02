@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_newAddr","type":"address"}],"name":"setDevAddress","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"lucky-airdrop"}]

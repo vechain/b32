@@ -1,0 +1,1 @@
+[{"name":"createExchange","outputs":[{"type":"address","name":"out"}],"inputs":[{"type":"address","name":"token"}],"constant":false,"payable":false,"type":"function","gas":189092,"$contractName":"factory"}]

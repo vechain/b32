@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"index","type":"uint8"}],"name":"getBlockLimit","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"exoworld"}]

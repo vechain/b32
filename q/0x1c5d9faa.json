@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"nickname","type":"string"}],"name":"setNickname","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"profile.vechain.energy"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"key","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Set","type":"event","$contractName":"params"}]

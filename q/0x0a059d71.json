@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"commitment","type":"bytes32"}],"name":"UnexpiredCommitmentExists","type":"error","$contractName":"vet-domains-registrarController"}]

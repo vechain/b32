@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"tradeType","type":"int8"},{"indexed":true,"name":"_trader","type":"address"},{"indexed":false,"name":"_sellAmount","type":"uint256"},{"indexed":false,"name":"_return","type":"uint256"},{"indexed":false,"name":"_conversionFee","type":"uint256"}],"name":"Conversion","type":"event","$contractName":"energy-station"}]

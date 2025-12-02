@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"delegator","type":"address"},{"indexed":true,"internalType":"address","name":"delegatee","type":"address"}],"name":"DelegationPending","type":"event","$contractName":"VeBetterDAO-ve-better-passport"}]

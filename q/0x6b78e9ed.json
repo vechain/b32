@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"levelId","type":"uint8"},{"internalType":"uint256","name":"required","type":"uint256"},{"internalType":"uint256","name":"provided","type":"uint256"}],"name":"VetAmountMismatch","type":"error","$contractName":"Stargate"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"newComplianceRole","type":"address"}],"name":"setComplianceRole","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"abcd_test_v1"}]

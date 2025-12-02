@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"proposalId","type":"uint256"},{"internalType":"enum VeVoteTypes.ProposalState","name":"state","type":"uint8"},{"internalType":"bytes32","name":"expectedState","type":"bytes32"}],"name":"VeVoteUnexpectedProposalState","type":"error","$contractName":"vote"}]

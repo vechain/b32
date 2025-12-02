@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getIncentivesController","outputs":[{"internalType":"contract IAaveIncentivesController","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"juicy-finance-atoken"}]

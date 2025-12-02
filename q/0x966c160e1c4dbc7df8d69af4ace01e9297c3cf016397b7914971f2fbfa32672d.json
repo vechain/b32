@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_op","type":"address"},{"indexed":false,"name":"_enabled","type":"bool"}],"name":"OperatorUpdated","type":"event","$contractName":"thornode-tokenauction"}]

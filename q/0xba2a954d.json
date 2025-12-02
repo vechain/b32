@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"cancelUpgrade","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"thornode-tokenauction"}]

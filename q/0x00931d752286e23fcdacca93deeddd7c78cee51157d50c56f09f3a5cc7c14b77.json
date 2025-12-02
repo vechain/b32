@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"},{"indexed":false,"internalType":"bool","name":"enable","type":"bool"}],"name":"RewardsPoolBalanceEnabled","type":"event","$contractName":"VeBetterDAO-x-2-earn-rewards-pool"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"user","type":"address"},{"indexed":true,"internalType":"address","name":"whitelistedBy","type":"address"}],"name":"UserWhitelisted","type":"event","$contractName":"VeBetterDAO-ve-better-passport"}]

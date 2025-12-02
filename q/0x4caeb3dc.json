@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_rewardsPercentage","type":"uint256"}],"name":"setRewardsPercentage","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vbd-endorsers-distributor"}]

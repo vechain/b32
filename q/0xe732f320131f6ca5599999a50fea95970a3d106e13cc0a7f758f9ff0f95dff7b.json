@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint96","name":"newFee","type":"uint96"}],"name":"MarketFeeUpdate","type":"event","$contractName":"exoworld-mp"}]

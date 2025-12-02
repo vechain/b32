@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"","type":"bytes32"}],"name":"recordVersions","outputs":[{"internalType":"uint64","name":"","type":"uint64"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-publicResolver"}]

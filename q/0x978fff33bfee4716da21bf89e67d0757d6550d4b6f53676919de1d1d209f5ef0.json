@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"_party","type":"address"},{"indexed":false,"name":"_dispersal","type":"uint256[]"}],"name":"ContractDisputed","type":"event","$contractName":"arbitration"}]

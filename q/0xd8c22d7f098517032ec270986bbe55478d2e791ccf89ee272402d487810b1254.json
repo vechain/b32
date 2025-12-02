@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"signaler","type":"address"},{"indexed":true,"internalType":"bytes32","name":"app","type":"bytes32"}],"name":"SignalerAssignedToApp","type":"event","$contractName":"VeBetterDAO-ve-better-passport"}]

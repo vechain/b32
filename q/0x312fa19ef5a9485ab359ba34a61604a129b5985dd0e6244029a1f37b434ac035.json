@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_newFeePoolAddr","type":"address"}],"name":"FeePoolAddressUpdated","type":"event","$contractName":"thornode-clockauction"}]

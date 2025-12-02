@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"toggleAutoVoting","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

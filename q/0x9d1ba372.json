@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"model","type":"bytes32"}],"name":"getEmissionFactors","outputs":[{"name":"","type":"uint8"},{"name":"","type":"uint256"},{"name":"","type":"uint256"},{"name":"","type":"uint256"},{"name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"carbon-reduction-calc"}]

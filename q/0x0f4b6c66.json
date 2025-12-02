@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"delegationID","type":"uint256"}],"name":"getDelegationPeriodDetails","outputs":[{"internalType":"uint32","name":"startPeriod","type":"uint32"},{"internalType":"uint32","name":"endPeriod","type":"uint32"}],"stateMutability":"view","type":"function","$contractName":"staker"}]

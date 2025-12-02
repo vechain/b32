@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"level","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"multiplier","type":"uint256"}],"name":"LevelToMultiplierPending","type":"event","$contractName":"VeBetterDAO-voter-rewards"}]

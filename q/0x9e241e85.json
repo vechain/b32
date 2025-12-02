@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"checkBalances","outputs":[{"internalType":"uint256","name":"balance","type":"uint256"}],"stateMutability":"view","type":"function","constant":true,"$contractName":"vpunks"}]

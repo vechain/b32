@@ -1,0 +1,1 @@
+[{"name":"getTokenWithId","outputs":[{"type":"address","name":"out"}],"inputs":[{"type":"uint256","name":"token_id"}],"constant":true,"payable":false,"type":"function","gas":856,"$contractName":"factory"}]

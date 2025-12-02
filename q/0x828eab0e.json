@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"defaultResolver","outputs":[{"internalType":"contract NameResolver","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-reverseRegistrar"}]

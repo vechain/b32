@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getAuthorisedKeys","outputs":[{"components":[{"internalType":"uint256","name":"pubKeyX","type":"uint256"},{"internalType":"uint256","name":"pubKeyY","type":"uint256"}],"internalType":"struct PassKeyId[]","name":"knownKeys","type":"tuple[]"}],"stateMutability":"view","type":"function","$contractName":"passkeyswallet_v1"}]

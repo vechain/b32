@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_proposalId","type":"uint256"},{"name":"_options","type":"uint32"},{"name":"_master","type":"address"}],"name":"cast","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"all-stakeholder-vote"}]

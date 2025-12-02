@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"credit","type":"uint256"},{"indexed":false,"name":"recoveryRate","type":"uint256"}],"name":"$CreditPlan","type":"event","$contractName":"prototype-event"}]

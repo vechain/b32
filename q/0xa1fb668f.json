@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_contract","type":"address"}],"name":"attachVotingContract","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"executor"}]

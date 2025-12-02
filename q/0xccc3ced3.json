@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"enum PassportTypes.CheckType","name":"check","type":"uint8"}],"name":"isCheckEnabled","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

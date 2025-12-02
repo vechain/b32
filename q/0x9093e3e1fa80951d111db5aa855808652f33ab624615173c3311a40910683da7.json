@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"minter","type":"address"},{"indexed":true,"internalType":"uint8","name":"amount","type":"uint8"},{"indexed":false,"internalType":"uint256","name":"pendingId","type":"uint256"}],"name":"AddPendingMint","type":"event","$contractName":"exoworld"}]

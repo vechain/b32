@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"address","name":"_target","type":"address"},{"internalType":"uint256","name":"_amount","type":"uint256"}],"name":"burnToken","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"vip180-mintable"}]

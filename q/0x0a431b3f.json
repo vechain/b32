@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256[]","name":"levels","type":"uint256[]"},{"internalType":"uint256[]","name":"multipliers","type":"uint256[]"}],"name":"initializeV5","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-voter-rewards"}]

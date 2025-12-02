@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"b3trAddress","type":"address"}],"name":"setB3TRAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

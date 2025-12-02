@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_feeWallet","type":"address"}],"name":"setFeeWallet","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"vesea_recycler"}]

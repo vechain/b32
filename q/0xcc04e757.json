@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"isQuadraticFundingDisabledForCurrentRound","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-x-allocation-pool"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"uint256","name":"proposalId","type":"uint256"},{"internalType":"uint256","name":"termTokenId","type":"uint256"}],"name":"depositFor","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"veDelegate-Lock2Earn"}]

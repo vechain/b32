@@ -1,0 +1,1 @@
+[{"type":"function","name":"initialize","constant":false,"payable":false,"inputs":[{"type":"address","name":"ensAddr"},{"type":"address","name":"resolveUtilsAddress"},{"type":"string","name":"_domainName"}],"outputs":[],"$contractName":"veworld-subdomain-claimer"}]

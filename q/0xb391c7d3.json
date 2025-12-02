@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"id","type":"bytes32"},{"internalType":"uint128","name":"value","type":"uint128"},{"internalType":"uint128","name":"timestamp","type":"uint128"}],"name":"updateValue","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"oracle.vechain.energy"}]

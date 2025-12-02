@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"_blockNumber","type":"uint48"}],"name":"getLevelsCirculatingSuppliesAtBlock","outputs":[{"internalType":"uint208[]","name":"","type":"uint208[]"}],"stateMutability":"view","type":"function","$contractName":"StargateNFT"}]

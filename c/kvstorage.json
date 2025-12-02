@@ -1,0 +1,386 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "addr",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bool",
+                "name": "enable",
+                "type": "bool"
+            }
+        ],
+        "name": "InboundChanged",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes",
+                "name": "value",
+                "type": "bytes"
+            }
+        ],
+        "name": "KeyChanged",
+        "type": "event"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "contractName",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "num",
+                "type": "uint256"
+            }
+        ],
+        "name": "decreaseBy",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getBytes",
+        "outputs": [
+            {
+                "internalType": "bytes",
+                "name": "",
+                "type": "bytes"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getBytes32",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getString",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "",
+                "type": "string"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            }
+        ],
+        "name": "getUInt256",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "name": "inboundList",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "num",
+                "type": "uint256"
+            }
+        ],
+        "name": "increaseBy",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes",
+                "name": "initData",
+                "type": "bytes"
+            }
+        ],
+        "name": "init",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "initialized",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "address",
+                "name": "newValue",
+                "type": "address"
+            }
+        ],
+        "name": "setAddress",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes",
+                "name": "newValue",
+                "type": "bytes"
+            }
+        ],
+        "name": "setBytes",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "bytes32",
+                "name": "newValue",
+                "type": "bytes32"
+            }
+        ],
+        "name": "setBytes32",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_addr",
+                "type": "address"
+            },
+            {
+                "internalType": "bool",
+                "name": "_enable",
+                "type": "bool"
+            }
+        ],
+        "name": "setInBoundList",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "newValue",
+                "type": "string"
+            }
+        ],
+        "name": "setString",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": false,
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "key",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "newValue",
+                "type": "uint256"
+            }
+        ],
+        "name": "setUInt256",
+        "outputs": [],
+        "payable": false,
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "constant": true,
+        "inputs": [],
+        "name": "version",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "payable": false,
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

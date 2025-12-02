@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"description","type":"string"},{"internalType":"uint48","name":"startBlock","type":"uint48"},{"internalType":"uint48","name":"voteDuration","type":"uint48"}],"name":"propose","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function","$contractName":"vote"}]

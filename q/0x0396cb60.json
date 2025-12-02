@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint32","name":"unstakeDelaySec","type":"uint32"}],"name":"addStake","outputs":[],"stateMutability":"payable","type":"function","$contractName":"entrypoint_v0.6"}]

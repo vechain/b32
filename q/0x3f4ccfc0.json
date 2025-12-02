@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"profileAddress","type":"address"},{"internalType":"string","name":"badgeName","type":"string"},{"internalType":"string","name":"badgeSet","type":"string"}],"name":"hasBadge","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"vesea_profiles"}]

@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"currentAccountImplementationAddress","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"social-login-smart-account-factory"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"previousMinStake","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newMinStake","type":"uint256"}],"name":"MinStakedAmountUpdated","type":"event","$contractName":"vote"}]

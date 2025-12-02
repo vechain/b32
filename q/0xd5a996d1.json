@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"enum IStargate.DelegationStatus","name":"status","type":"uint8"}],"name":"InvalidDelegationStatus","type":"error","$contractName":"Stargate"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"bytes32","name":"key","type":"bytes32"},{"internalType":"string","name":"newValue","type":"string"}],"name":"setString","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"kvstorage"}]

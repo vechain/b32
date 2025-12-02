@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newDepositThreshold","type":"uint256"}],"name":"setDepositThresholdPercentage","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

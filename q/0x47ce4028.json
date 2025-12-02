@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_proposalId","type":"uint256"},{"name":"_options","type":"uint16"}],"name":"cast","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"vevote"}]

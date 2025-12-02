@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"rewardsAccumulationEndBlock","type":"uint256"}],"name":"RewardsAccumulationEndBlockSet","type":"event","$contractName":"StargateDelegation-Deprecated"}]

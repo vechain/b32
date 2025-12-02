@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"bool","name":"autoRenew","type":"bool"}],"name":"setAutoRenew","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"veDelegate-Lock2Earn"}]

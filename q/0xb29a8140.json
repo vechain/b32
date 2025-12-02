@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"address","name":"token","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"recoverToken","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"DThorswapV2Pair"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"termId","type":"uint256"},{"internalType":"uint256","name":"balance","type":"uint256"}],"name":"VDTermHasBalance","type":"error","$contractName":"veDelegate-Lock2Earn"}]

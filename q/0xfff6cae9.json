@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[],"name":"sync","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"DThorswapV2Pair"},{"constant":false,"inputs":[],"name":"sync","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"uniswap-v2-pair"}]

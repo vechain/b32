@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"pauser","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"databusV2"}]

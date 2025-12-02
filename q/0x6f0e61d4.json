@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IDexWrapper","name":"router","type":"address"},{"internalType":"enum GasStationV2.SwapType","name":"","type":"uint8"}],"name":"gasAmountByRouters","outputs":[{"internalType":"uint256","name":"gasAmount","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"gas-pump"}]

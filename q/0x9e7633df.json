@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"index","type":"uint8"},{"internalType":"uint256","name":"tsBlock","type":"uint256"}],"name":"setBlockLimit","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"exoworld"}]

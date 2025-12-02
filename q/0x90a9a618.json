@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"predecessorId","type":"bytes32"}],"name":"TimelockUnexecutedPredecessor","type":"error","$contractName":"VeBetterDAO-timelock"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_proposalID","type":"bytes32"}],"name":"execute","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"executor"}]

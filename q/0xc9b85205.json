@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"native_txExpiration","outputs":[{"name":"","type":"uint32"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"extension-native"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"label","type":"string"}],"name":"LabelTooLong","type":"error","$contractName":"vet-domains-nameWrapper"}]

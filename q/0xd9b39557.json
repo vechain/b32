@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"proposer","type":"address"}],"name":"GovernorRestrictedProposer","type":"error","$contractName":"VeBetterDAO-b3tr-governor"}]
