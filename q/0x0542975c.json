@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"ADDRESSES_PROVIDER","outputs":[{"internalType":"contract IPoolAddressesProvider","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"juicy-finance-pool-proxy"}]

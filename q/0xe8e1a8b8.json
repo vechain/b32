@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"queuedStake","outputs":[{"internalType":"uint256","name":"queuedVET","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"staker"}]

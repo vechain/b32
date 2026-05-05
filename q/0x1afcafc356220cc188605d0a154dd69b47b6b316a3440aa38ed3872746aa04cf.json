@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"tier1","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"tier2","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"tier3","type":"uint256"}],"name":"FreshnessMultipliersSet","type":"event","$contractName":"VeBetterDAO-voter-rewards"}]

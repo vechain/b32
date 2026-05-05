@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256[]","name":"updatedMultipliers","type":"uint256[]"}],"name":"VoteMultipliersUpdated","type":"event","$contractName":"vote"}]

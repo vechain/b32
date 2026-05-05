@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract IGrantsManager","name":"newGrantsManager","type":"address"}],"name":"setGrantsManager","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32[]","name":"_appIds","type":"bytes32[]"},{"internalType":"uint8[]","name":"_percentages","type":"uint8[]"}],"name":"castVotes","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"veDelegate-VotePreference"}]

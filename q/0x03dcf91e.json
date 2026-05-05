@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"nodeId","type":"uint256"},{"internalType":"address","name":"delegatee","type":"address"}],"name":"NodeManagementNodeAlreadyDelegated","type":"error","$contractName":"VeBetterDAO-node-management"}]

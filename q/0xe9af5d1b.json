@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"proposalId","type":"uint256"},{"internalType":"uint256","name":"milestoneIndex","type":"uint256"}],"name":"milestoneState","outputs":[{"internalType":"enum IGrantsManager.MilestoneState","name":"","type":"uint8"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-grants-manager"}]

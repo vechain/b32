@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldValue","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newValue","type":"uint256"}],"name":"MaxSelectedAppsUpdated","type":"event","$contractName":"VeBetterDAO-b3tr-challenges"}]

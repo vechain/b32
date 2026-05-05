@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"getPreferredRelayer","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

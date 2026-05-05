@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_meritCapMultiplier","type":"uint256"}],"name":"setMeritCapMultiplier","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-dynamic-base-allocations-pool"}]

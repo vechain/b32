@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"appsLength","type":"uint256"},{"internalType":"uint256","name":"percentagesLength","type":"uint256"}],"name":"LengthMismatch","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

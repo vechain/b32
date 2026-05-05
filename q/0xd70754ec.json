@@ -1,0 +1,1 @@
+[{"type":"function","name":"node","constant":true,"stateMutability":"view","payable":false,"inputs":[],"outputs":[{"type":"bytes32","name":""}],"$contractName":"veworld-subdomain-claimer"}]

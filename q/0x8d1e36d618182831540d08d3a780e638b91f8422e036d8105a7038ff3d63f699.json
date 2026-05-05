@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"keyHash","type":"bytes32"},{"indexed":false,"internalType":"uint256","name":"pubKeyX","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"pubKeyY","type":"uint256"}],"name":"PublicKeyRemoved","type":"event","$contractName":"passkeyswallet_v1"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"reduceBy","type":"uint256"}],"name":"reduceDelegation","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

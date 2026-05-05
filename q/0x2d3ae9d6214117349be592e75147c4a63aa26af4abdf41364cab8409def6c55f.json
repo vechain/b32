@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint8","name":"levelId","type":"uint8"},{"indexed":false,"internalType":"uint208","name":"oldCirculatingSupply","type":"uint208"},{"indexed":false,"internalType":"uint208","name":"newCirculatingSupply","type":"uint208"}],"name":"LevelCirculatingSupplyUpdated","type":"event","$contractName":"StargateNFT"}]

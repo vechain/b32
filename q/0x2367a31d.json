@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"enum IGrantsManager.MilestoneState","name":"status","type":"uint8"}],"name":"MilestoneStateNotPending","type":"error","$contractName":"VeBetterDAO-grants-manager"}]

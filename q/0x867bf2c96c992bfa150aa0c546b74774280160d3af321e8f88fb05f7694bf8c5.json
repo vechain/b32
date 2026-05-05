@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"address","name":"oldDefaultRecoverer","type":"address"},{"indexed":false,"internalType":"address","name":"newDefaultRecoverer","type":"address"}],"name":"DefaultRecovererChanged","type":"event","$contractName":"DThorswapV2Factory"}]

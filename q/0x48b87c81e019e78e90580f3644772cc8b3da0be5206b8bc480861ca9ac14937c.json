@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"proposalId","type":"uint256"},{"indexed":false,"internalType":"address","name":"canceller","type":"address"},{"indexed":false,"internalType":"string","name":"reason","type":"string"}],"name":"ProposalCanceled","type":"event","$contractName":"vote"}]

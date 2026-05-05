@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"balance","type":"uint256"},{"internalType":"uint256","name":"required","type":"uint256"}],"name":"InsufficientVthoBalanceForRewardsClaim","type":"error","$contractName":"StargateDelegation-Deprecated"}]

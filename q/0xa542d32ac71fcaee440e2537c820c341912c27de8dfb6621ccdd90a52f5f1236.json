@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"navigator","type":"address"},{"indexed":false,"internalType":"uint256","name":"announcedAtRound","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"effectiveDeadline","type":"uint256"}],"name":"ExitAnnounced","type":"event","$contractName":"VeBetterDAO-navigator-registry"}]

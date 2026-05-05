@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getGalaxyMemberContract","outputs":[{"internalType":"contract IGalaxyMember","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

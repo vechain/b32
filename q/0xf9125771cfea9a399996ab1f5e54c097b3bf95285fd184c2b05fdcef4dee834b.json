@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"proposalId","type":"uint256"}],"name":"GrantCanceled","type":"event","$contractName":"VeBetterDAO-grants-manager"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_b3tr","type":"address"}],"name":"setB3trContract","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-grants-manager"}]

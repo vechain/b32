@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"proposalId","type":"uint256"},{"indexed":false,"internalType":"string","name":"newMilestoneMetadataURI","type":"string"}],"name":"MilestoneMetadataURIUpdated","type":"event","$contractName":"VeBetterDAO-grants-manager"}]

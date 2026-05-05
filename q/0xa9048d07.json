@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32[]","name":"ids","type":"bytes32[]"}],"name":"getCurrentVotes","outputs":[{"internalType":"uint8[]","name":"","type":"uint8[]"}],"stateMutability":"view","type":"function","$contractName":"veDelegate-veB3TR"}]

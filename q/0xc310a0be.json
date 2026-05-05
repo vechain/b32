@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"caller","type":"address"},{"internalType":"address","name":"preferredRelayer","type":"address"}],"name":"NotPreferredRelayer","type":"error","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

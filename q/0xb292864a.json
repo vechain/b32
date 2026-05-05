@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"}],"name":"appSecurity","outputs":[{"internalType":"enum PassportTypes.APP_SECURITY","name":"","type":"uint8"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

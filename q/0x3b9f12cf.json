@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"claimedAmount","type":"uint256"},{"internalType":"uint256","name":"totalAmount","type":"uint256"}],"name":"MilestoneClaimedAmountExceedsTotalAmount","type":"error","$contractName":"VeBetterDAO-grants-manager"}]

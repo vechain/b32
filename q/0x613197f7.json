@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"timepoint","type":"uint48"}],"name":"MinimumStakeNotSetAtTimepoint","type":"error","$contractName":"vote"},{"inputs":[{"internalType":"uint48","name":"timepoint","type":"uint48"}],"name":"MinimumStakeNotSetAtTimepoint","type":"error","$contractName":"vote"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_parties","type":"address[]"},{"name":"_dispersal","type":"uint256[]"},{"name":"_funding","type":"uint256[]"},{"name":"_agreementHash","type":"bytes32"}],"name":"createArbitration","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"arbitration-factory"}]

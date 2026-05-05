@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldDefaultPlatformFee","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newDefaultPlatformFee","type":"uint256"}],"name":"DefaultPlatformFeeChanged","type":"event","$contractName":"DThorswapV2Factory"}]

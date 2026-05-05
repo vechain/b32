@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newMinStake","type":"uint256"}],"name":"setMinStake","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

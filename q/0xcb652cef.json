@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"validator","type":"address"}],"name":"signalExit","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"staker"}]

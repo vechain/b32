@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"endTime","type":"uint256"}],"name":"VDTermNotEnded","type":"error","$contractName":"veDelegate-Lock2Earn"}]

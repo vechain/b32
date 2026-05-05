@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"forAgainst","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"abstain","type":"uint256"}],"name":"IntentMultipliersSet","type":"event","$contractName":"VeBetterDAO-voter-rewards"}]

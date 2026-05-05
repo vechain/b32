@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"termCount","type":"uint256"},{"internalType":"uint256","name":"maximumTermCount","type":"uint256"}],"name":"VDMaximumTermCountReached","type":"error","$contractName":"veDelegate-Lock2Earn"}]

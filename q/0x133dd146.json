@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"nodeId","type":"uint256"},{"internalType":"uint256","name":"available","type":"uint256"},{"internalType":"uint256","name":"requested","type":"uint256"}],"name":"InsufficientAvailablePoints","type":"error","$contractName":"VeBetterDAO-x-2-earn-apps"}]

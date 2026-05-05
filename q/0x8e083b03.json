@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"vote2EarnAddress","type":"address"}],"name":"setVote2EarnAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-emissions"}]

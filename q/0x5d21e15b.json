@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"stargateNFT","outputs":[{"internalType":"contract IStargateNFT","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

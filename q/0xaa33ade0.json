@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"reason","type":"string"}],"name":"InvalidParameter","type":"error","$contractName":"VeBetterDAO-navigator-registry"},{"inputs":[{"internalType":"string","name":"parameter","type":"string"}],"name":"InvalidParameter","type":"error","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

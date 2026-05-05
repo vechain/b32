@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"nodeId","type":"uint256"},{"internalType":"bytes32","name":"appId","type":"bytes32"}],"name":"CooldownNotExpired","type":"error","$contractName":"VeBetterDAO-x-2-earn-apps"}]

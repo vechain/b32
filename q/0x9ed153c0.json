@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_self","type":"address"}],"name":"master","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"prototype"}]

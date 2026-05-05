@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_saleAuction","type":"address"}],"name":"ProtocolUpgrade","type":"event","$contractName":"thornode-tokenauction"}]

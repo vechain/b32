@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"nodeId","type":"uint256"},{"indexed":true,"internalType":"address","name":"delegatee","type":"address"},{"indexed":false,"internalType":"bool","name":"delegated","type":"bool"}],"name":"NodeDelegated","type":"event","$contractName":"VeBetterDAO-node-management"}]

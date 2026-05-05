@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"citizen","type":"address"},{"internalType":"uint256","name":"timepoint","type":"uint256"}],"name":"getNavigatorAtTimepoint","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

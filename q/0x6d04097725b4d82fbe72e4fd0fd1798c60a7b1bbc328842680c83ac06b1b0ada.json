@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"proposalId","type":"uint256"},{"indexed":false,"internalType":"enum GovernorTypes.ProposalType","name":"proposalType","type":"uint8"}],"name":"ProposalCreatedWithType","type":"event","$contractName":"VeBetterDAO-b3tr-governor"}]

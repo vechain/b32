@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"proposalId","type":"uint256"},{"internalType":"enum GovernorTypes.ProposalType","name":"proposalType","type":"uint8"}],"name":"GovernorRestrictedProposal","type":"error","$contractName":"VeBetterDAO-b3tr-governor"}]

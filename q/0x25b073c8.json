@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"proposer","type":"address"},{"internalType":"uint256","name":"requiredWeight","type":"uint256"}],"name":"GovernorInvalidProposer","type":"error","$contractName":"VeBetterDAO-b3tr-governor"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"decision","type":"uint8"}],"name":"InvalidDecision","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

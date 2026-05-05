@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"approverCount","outputs":[{"name":"","type":"uint8"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"executor"}]

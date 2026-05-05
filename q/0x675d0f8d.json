@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"newFeePercentage","type":"uint256"}],"name":"setRelayerFeePercentage","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

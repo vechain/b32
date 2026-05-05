@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint8","name":"_levelId","type":"uint8"},{"internalType":"address","name":"_validator","type":"address"}],"name":"stakeAndDelegate","outputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"}],"stateMutability":"payable","type":"function","$contractName":"Stargate"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_tokenId","type":"uint256"}],"name":"maturityPeriodEndBlock","outputs":[{"internalType":"uint64","name":"","type":"uint64"}],"stateMutability":"view","type":"function","$contractName":"StargateNFT"}]

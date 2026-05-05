@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"enum GovernorTypes.ProposalType","name":"proposalTypeValue","type":"uint8"},{"internalType":"uint256","name":"newGMWeight","type":"uint256"}],"name":"setRequiredGMLevelByProposalType","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

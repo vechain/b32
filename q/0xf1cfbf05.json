@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"votingPeriod","type":"uint256"}],"name":"GovernorInvalidVotingPeriod","type":"error","$contractName":"VeBetterDAO-b3tr-governor"},{"inputs":[{"internalType":"uint256","name":"votingPeriod","type":"uint256"}],"name":"GovernorInvalidVotingPeriod","type":"error","$contractName":"VeBetterDAO-x-allocations-voting"}]
