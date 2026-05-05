@@ -70,8 +70,14 @@
     "type": "error"
   },
   {
-    "inputs": [],
-    "name": "CheckpointUnorderedInsertion",
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      }
+    ],
+    "name": "DelegatedToNavigator",
     "type": "error"
   },
   {
@@ -125,22 +131,6 @@
   {
     "inputs": [],
     "name": "GovernorInsufficientVotingPower",
-    "type": "error"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "quorumNumerator",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "quorumDenominator",
-        "type": "uint256"
-      }
-    ],
-    "name": "GovernorInvalidQuorumFraction",
     "type": "error"
   },
   {
@@ -246,6 +236,44 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      }
+    ],
+    "name": "NavigatorCannotEnableAutoVoting",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NavigatorPreferencesNotSet",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      }
+    ],
+    "name": "NotDelegatedToNavigator",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "NotInitializing",
     "type": "error"
@@ -264,6 +292,17 @@
       }
     ],
     "name": "SafeCastOverflowedUintDowncast",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "SkipWindowNotReached",
     "type": "error"
   },
   {
@@ -415,38 +454,37 @@
     "anonymous": false,
     "inputs": [
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "address",
-        "name": "oldContractAddress",
+        "name": "voter",
         "type": "address"
       },
       {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "B3TRGovernorSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
       },
       {
         "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
+        "internalType": "bytes32",
+        "name": "fingerprint",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "lastChangedRound",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "multiplier",
+        "type": "uint256"
       }
     ],
-    "name": "EmissionsSet",
+    "name": "FreshnessMultiplierApplied",
     "type": "event"
   },
   {
@@ -468,6 +506,68 @@
       {
         "indexed": true,
         "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "bytes32[]",
+        "name": "appsIds",
+        "type": "bytes32[]"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256[]",
+        "name": "voteWeights",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "NavigatorVoteCast",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NavigatorVoteSkipped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
         "name": "account",
         "type": "address"
       },
@@ -479,44 +579,6 @@
       }
     ],
     "name": "PreferredAppsUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "oldQuorumNumerator",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "newQuorumNumerator",
-        "type": "uint256"
-      }
-    ],
-    "name": "QuorumNumeratorUpdated",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "RelayerRewardsPoolSet",
     "type": "event"
   },
   {
@@ -645,101 +707,6 @@
     "type": "event"
   },
   {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "VeBetterPassportSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "VoterRewardsSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "oldVotingPeriod",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "newVotingPeriod",
-        "type": "uint256"
-      }
-    ],
-    "name": "VotingPeriodSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "oldVotingThreshold",
-        "type": "uint256"
-      },
-      {
-        "indexed": false,
-        "internalType": "uint256",
-        "name": "newVotingThreshold",
-        "type": "uint256"
-      }
-    ],
-    "name": "VotingThresholdSet",
-    "type": "event"
-  },
-  {
-    "anonymous": false,
-    "inputs": [
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "oldContractAddress",
-        "type": "address"
-      },
-      {
-        "indexed": false,
-        "internalType": "address",
-        "name": "newContractAddress",
-        "type": "address"
-      }
-    ],
-    "name": "X2EarnAppsSet",
-    "type": "event"
-  },
-  {
     "inputs": [],
     "name": "CLOCK_MODE",
     "outputs": [
@@ -763,19 +730,6 @@
       }
     ],
     "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "COUNTING_MODE",
-    "outputs": [
-      {
-        "internalType": "string",
-        "name": "",
-        "type": "string"
-      }
-    ],
-    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -858,19 +812,6 @@
   },
   {
     "inputs": [],
-    "name": "b3trGovernor",
-    "outputs": [
-      {
-        "internalType": "contract IB3TRGovernor",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "baseAllocationPercentage",
     "outputs": [
       {
@@ -880,6 +821,24 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "castNavigatorVote",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -921,6 +880,19 @@
     "name": "castVoteOnBehalfOf",
     "outputs": [],
     "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "citizenSkipWindowBlocks",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -976,16 +948,16 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "emissions",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "contract IEmissions",
-        "name": "",
+        "internalType": "address",
+        "name": "user",
         "type": "address"
       }
     ],
-    "stateMutability": "view",
+    "name": "disableAutoVotingFor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -999,35 +971,6 @@
     "name": "finalizeRound",
     "outputs": [],
     "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      },
-      {
-        "internalType": "uint256",
-        "name": "timepoint",
-        "type": "uint256"
-      }
-    ],
-    "name": "getAndValidateVotingPower",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      },
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   },
   {
@@ -1219,7 +1162,7 @@
             "type": "uint32"
           }
         ],
-        "internalType": "struct RoundsStorageUpgradeable.RoundCore",
+        "internalType": "struct XAllocationVotingStorageTypes.RoundCore",
         "name": "",
         "type": "tuple"
       }
@@ -1417,6 +1360,35 @@
         "internalType": "address",
         "name": "user",
         "type": "address"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "hasUserVotedForApp",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
       }
     ],
     "name": "hasVoted",
@@ -1452,79 +1424,17 @@
   {
     "inputs": [
       {
-        "components": [
-          {
-            "internalType": "contract IVotes",
-            "name": "vot3Token",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "quorumPercentage",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint32",
-            "name": "initialVotingPeriod",
-            "type": "uint32"
-          },
-          {
-            "internalType": "address",
-            "name": "timeLock",
-            "type": "address"
-          },
-          {
-            "internalType": "contract IVoterRewards",
-            "name": "voterRewards",
-            "type": "address"
-          },
-          {
-            "internalType": "contract IEmissions",
-            "name": "emissions",
-            "type": "address"
-          },
-          {
-            "internalType": "address[]",
-            "name": "admins",
-            "type": "address[]"
-          },
-          {
-            "internalType": "address",
-            "name": "upgrader",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "contractsAddressManager",
-            "type": "address"
-          },
-          {
-            "internalType": "contract IX2EarnApps",
-            "name": "x2EarnAppsAddress",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "baseAllocationPercentage",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "appSharesCap",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "votingThreshold",
-            "type": "uint256"
-          }
-        ],
-        "internalType": "struct XAllocationVoting.InitializationData",
-        "name": "data",
-        "type": "tuple"
+        "internalType": "contract INavigatorRegistry",
+        "name": "_navigatorRegistry",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_citizenSkipWindowBlocks",
+        "type": "uint256"
       }
     ],
-    "name": "initialize",
+    "name": "initializeV9",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1698,12 +1608,12 @@
   },
   {
     "inputs": [],
-    "name": "name",
+    "name": "navigatorRegistry",
     "outputs": [
       {
-        "internalType": "string",
+        "internalType": "contract INavigatorRegistry",
         "name": "",
-        "type": "string"
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -1726,7 +1636,7 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "blockNumber",
+        "name": "timepoint",
         "type": "uint256"
       }
     ],
@@ -1751,7 +1661,7 @@
         "type": "uint256"
       }
     ],
-    "stateMutability": "view",
+    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -1787,6 +1697,19 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "quorumPercentage",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -1800,19 +1723,6 @@
         "internalType": "bool",
         "name": "",
         "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "relayerRewardsPool",
-    "outputs": [
-      {
-        "internalType": "contract IRelayerRewardsPool",
-        "name": "",
-        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -1868,25 +1778,6 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "roundId",
-        "type": "uint256"
-      }
-    ],
-    "name": "roundProposer",
-    "outputs": [
-      {
-        "internalType": "address",
-        "name": "",
-        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -1972,12 +1863,38 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "newValue",
+        "type": "uint256"
+      }
+    ],
+    "name": "setCitizenSkipWindowBlocks",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "contract IEmissions",
         "name": "newEmissions",
         "type": "address"
       }
     ],
     "name": "setEmissionsAddress",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract INavigatorRegistry",
+        "name": "newNavigatorRegistry",
+        "type": "address"
+      }
+    ],
+    "name": "setNavigatorRegistry",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2138,19 +2055,6 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "token",
-    "outputs": [
-      {
-        "internalType": "contract IERC5805",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -2259,19 +2163,6 @@
   },
   {
     "inputs": [],
-    "name": "veBetterPassport",
-    "outputs": [
-      {
-        "internalType": "contract IVeBetterPassport",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "version",
     "outputs": [
       {
@@ -2280,20 +2171,7 @@
         "type": "string"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "voterRewards",
-    "outputs": [
-      {
-        "internalType": "contract IVoterRewards",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
+    "stateMutability": "pure",
     "type": "function"
   },
   {
@@ -2317,19 +2195,6 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "x2EarnApps",
-    "outputs": [
-      {
-        "internalType": "contract IX2EarnApps",
-        "name": "",
-        "type": "address"
       }
     ],
     "stateMutability": "view",
