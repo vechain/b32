@@ -614,7 +614,7 @@
             "type": "address"
           }
         ],
-        "internalType": "struct NodeManagementV3.NodeInfo[]",
+        "internalType": "struct INodeManagementV3.NodeInfo[]",
         "name": "",
         "type": "tuple[]"
       }
@@ -656,7 +656,7 @@
           },
           {
             "internalType": "uint48",
-            "name": "lastVthoClaimTimestamp",
+            "name": "lastVetGeneratedVthoClaimTimestamp_deprecated",
             "type": "uint48"
           }
         ],

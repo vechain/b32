@@ -214,6 +214,11 @@
   },
   {
     "inputs": [],
+    "name": "SelfMintNotEnabled",
+    "type": "error"
+  },
+  {
+    "inputs": [],
     "name": "TransfersDisabled",
     "type": "error"
   },
@@ -688,6 +693,19 @@
   {
     "inputs": [
       {
+        "internalType": "bool",
+        "name": "_selfMintEnabled",
+        "type": "bool"
+      }
+    ],
+    "name": "initializeV2",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "owner",
         "type": "address"
@@ -872,6 +890,26 @@
     "name": "safeTransferFrom",
     "outputs": [],
     "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "selfMint",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "selfMintEnabled",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
     "type": "function"
   },
   {

@@ -40,6 +40,17 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      }
+    ],
+    "name": "DelegatedToNavigator",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "implementation",
         "type": "address"
       }
@@ -65,6 +76,39 @@
   {
     "inputs": [],
     "name": "FailedInnerCall",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "gmLevel",
+        "type": "uint256"
+      }
+    ],
+    "name": "GMLevelAboveMaxLevel",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "gmLevel",
+        "type": "uint256"
+      }
+    ],
+    "name": "GMLevelAboveMaxLevel",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "GovernanceSkipWindowNotReached",
     "type": "error"
   },
   {
@@ -150,6 +194,22 @@
       }
     ],
     "name": "GovernorInvalidProposalLength",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "proposer",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "requiredWeight",
+        "type": "uint256"
+      }
+    ],
+    "name": "GovernorInvalidProposer",
     "type": "error"
   },
   {
@@ -290,6 +350,22 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      }
+    ],
+    "name": "GovernorRestrictedProposal",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "proposer",
         "type": "address"
@@ -336,8 +412,46 @@
     "type": "error"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "GranteeCannotDepositOwnGrant",
+    "type": "error"
+  },
+  {
     "inputs": [],
     "name": "InvalidInitialization",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NavigatorDecisionNotSet",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      }
+    ],
+    "name": "NotDelegatedToNavigator",
     "type": "error"
   },
   {
@@ -381,6 +495,56 @@
     "anonymous": false,
     "inputs": [
       {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldDepositThresholdCap",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newDepositThresholdCap",
+        "type": "uint256"
+      }
+    ],
+    "name": "DepositThresholdCapSet",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldDepositThreshold",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newDepositThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "DepositThresholdSetV2",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
         "indexed": true,
         "internalType": "address",
         "name": "target",
@@ -419,6 +583,31 @@
     "anonymous": false,
     "inputs": [
       {
+        "indexed": true,
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "navigator",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "NavigatorGovernanceVoteSkipped",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
         "indexed": false,
         "internalType": "address",
         "name": "account",
@@ -439,6 +628,44 @@
       }
     ],
     "name": "ProposalCanceled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "canceler",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "string",
+        "name": "reason",
+        "type": "string"
+      }
+    ],
+    "name": "ProposalCanceledWithReason",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalCompleted",
     "type": "event"
   },
   {
@@ -507,6 +734,25 @@
     "inputs": [
       {
         "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      }
+    ],
+    "name": "ProposalCreatedWithType",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
         "internalType": "address",
         "name": "depositor",
         "type": "address"
@@ -537,7 +783,33 @@
         "type": "uint256"
       }
     ],
+    "name": "ProposalDevelopmentStateReset",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
     "name": "ProposalExecuted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalInDevelopment",
     "type": "event"
   },
   {
@@ -557,6 +829,31 @@
       }
     ],
     "name": "ProposalQueued",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "withdrawer",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalWithdraw",
     "type": "event"
   },
   {
@@ -589,6 +886,56 @@
       }
     ],
     "name": "QuorumNumeratorUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldNumerator",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newNumerator",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      }
+    ],
+    "name": "QuorumNumeratorUpdatedByType",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldRequiredGMLevel",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newRequiredGMLevel",
+        "type": "uint256"
+      }
+    ],
+    "name": "RequiredGMLevelSet",
     "type": "event"
   },
   {
@@ -774,6 +1121,50 @@
     "type": "event"
   },
   {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "walletAddress",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "deposit",
+        "type": "uint256"
+      }
+    ],
+    "name": "VotingPowerSeeded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalType",
+        "type": "uint8"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldVotingThreshold",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newVotingThreshold",
+        "type": "uint256"
+      }
+    ],
+    "name": "VotingThresholdSetV2",
+    "type": "event"
+  },
+  {
     "inputs": [],
     "name": "CLOCK_MODE",
     "outputs": [
@@ -866,6 +1257,19 @@
   },
   {
     "inputs": [],
+    "name": "PROPOSAL_STATE_MANAGER_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
     "name": "UPGRADE_INTERFACE_VERSION",
     "outputs": [
       {
@@ -924,9 +1328,38 @@
         "internalType": "bytes32",
         "name": "descriptionHash",
         "type": "bytes32"
+      },
+      {
+        "internalType": "string",
+        "name": "reason",
+        "type": "string"
       }
     ],
     "name": "cancel",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      }
+    ],
+    "name": "castNavigatorVote",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1022,8 +1455,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "depositThreshold",
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "depositThresholdByProposalType",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1035,8 +1474,33 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "depositThresholdPercentage",
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "depositThresholdCapByProposalType",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "depositThresholdPercentageByProposalType",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1082,6 +1546,69 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "getActiveProposals",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "account",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timepoint",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDepositVotingPower",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getGalaxyMemberContract",
+    "outputs": [
+      {
+        "internalType": "contract IGalaxyMember",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getGrantsManagerContract",
+    "outputs": [
+      {
+        "internalType": "contract IGrantsManager",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "uint256",
@@ -1114,6 +1641,25 @@
       }
     ],
     "name": "getQuadraticVotingPower",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "getRequiredGMLevelByProposalType",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1200,6 +1746,19 @@
       }
     ],
     "name": "getVotes",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "governanceSkipWindowBlocks",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1332,109 +1891,22 @@
   {
     "inputs": [
       {
-        "components": [
-          {
-            "internalType": "contract IVOT3",
-            "name": "vot3Token",
-            "type": "address"
-          },
-          {
-            "internalType": "contract TimelockControllerUpgradeable",
-            "name": "timelock",
-            "type": "address"
-          },
-          {
-            "internalType": "contract IXAllocationVotingGovernor",
-            "name": "xAllocationVoting",
-            "type": "address"
-          },
-          {
-            "internalType": "contract IB3TR",
-            "name": "b3tr",
-            "type": "address"
-          },
-          {
-            "internalType": "uint256",
-            "name": "quorumPercentage",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "initialDepositThreshold",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "initialMinVotingDelay",
-            "type": "uint256"
-          },
-          {
-            "internalType": "uint256",
-            "name": "initialVotingThreshold",
-            "type": "uint256"
-          },
-          {
-            "internalType": "contract IVoterRewards",
-            "name": "voterRewards",
-            "type": "address"
-          },
-          {
-            "internalType": "bool",
-            "name": "isFunctionRestrictionEnabled",
-            "type": "bool"
-          }
-        ],
-        "internalType": "struct GovernorTypes.InitializationData",
-        "name": "data",
-        "type": "tuple"
+        "internalType": "contract INavigatorRegistry",
+        "name": "_navigatorRegistry",
+        "type": "address"
       },
       {
-        "components": [
-          {
-            "internalType": "address",
-            "name": "governorAdmin",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "pauser",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "contractsAddressManager",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "proposalExecutor",
-            "type": "address"
-          },
-          {
-            "internalType": "address",
-            "name": "governorFunctionSettingsRoleAddress",
-            "type": "address"
-          }
-        ],
-        "internalType": "struct GovernorTypes.InitializationRolesData",
-        "name": "rolesData",
-        "type": "tuple"
-      }
-    ],
-    "name": "initialize",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "contract IVeBetterPassport",
-        "name": "_veBetterPassport",
+        "internalType": "contract IRelayerRewardsPool",
+        "name": "_relayerRewardsPool",
         "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_governanceSkipWindowBlocks",
+        "type": "uint256"
       }
     ],
-    "name": "initializeV4",
+    "name": "initializeV10",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1496,6 +1968,32 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "markAsCompleted",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "markAsInDevelopment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "minVotingDelay",
     "outputs": [
@@ -1516,6 +2014,19 @@
         "internalType": "string",
         "name": "",
         "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "navigatorRegistry",
+    "outputs": [
+      {
+        "internalType": "contract INavigatorRegistry",
+        "name": "",
+        "type": "address"
       }
     ],
     "stateMutability": "view",
@@ -1832,6 +2343,25 @@
         "type": "uint256"
       }
     ],
+    "name": "proposalType",
+    "outputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "",
+        "type": "uint8"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
     "name": "proposalVotes",
     "outputs": [
       {
@@ -1887,6 +2417,60 @@
       }
     ],
     "name": "propose",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "targets",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "values",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "bytes[]",
+        "name": "calldatas",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "string",
+        "name": "description",
+        "type": "string"
+      },
+      {
+        "internalType": "uint256",
+        "name": "startRoundId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "depositAmount",
+        "type": "uint256"
+      },
+      {
+        "internalType": "address",
+        "name": "grantsReceiver",
+        "type": "address"
+      },
+      {
+        "internalType": "string",
+        "name": "milestonesDetailsMetadataURI",
+        "type": "string"
+      }
+    ],
+    "name": "proposeGrant",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1964,6 +2548,30 @@
     "type": "function"
   },
   {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "blockNumber",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "quorumByProposalType",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [],
     "name": "quorumDenominator",
     "outputs": [
@@ -1998,6 +2606,49 @@
   {
     "inputs": [],
     "name": "quorumNumerator",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "quorumNumeratorByProposalType",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timepoint",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "quorumNumeratorByProposalType",
     "outputs": [
       {
         "internalType": "uint256",
@@ -2051,6 +2702,19 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "relayerRewardsPool",
+    "outputs": [
+      {
+        "internalType": "contract IRelayerRewardsPool",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "bytes32",
@@ -2064,6 +2728,19 @@
       }
     ],
     "name": "renounceRole",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "resetDevelopmentState",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2089,12 +2766,38 @@
   {
     "inputs": [
       {
+        "internalType": "contract IGalaxyMember",
+        "name": "newGalaxyMember",
+        "type": "address"
+      }
+    ],
+    "name": "setGalaxyMember",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint256",
-        "name": "newDepositThreshold",
+        "name": "newValue",
         "type": "uint256"
       }
     ],
-    "name": "setDepositThresholdPercentage",
+    "name": "setGovernanceSkipWindowBlocks",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IGrantsManager",
+        "name": "newGrantsManager",
+        "type": "address"
+      }
+    ],
+    "name": "setGrantsManager",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2128,6 +2831,104 @@
   {
     "inputs": [
       {
+        "internalType": "contract INavigatorRegistry",
+        "name": "newNavigatorRegistry",
+        "type": "address"
+      }
+    ],
+    "name": "setNavigatorRegistry",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newDepositThresholdCap",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "setProposalTypeDepositThresholdCap",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newDepositThreshold",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "setProposalTypeDepositThresholdPercentage",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "newVotingThreshold",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "setProposalTypeVotingThreshold",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "contract IRelayerRewardsPool",
+        "name": "newRelayerRewardsPool",
+        "type": "address"
+      }
+    ],
+    "name": "setRelayerRewardsPool",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint256",
+        "name": "newGMWeight",
+        "type": "uint256"
+      }
+    ],
+    "name": "setRequiredGMLevelByProposalType",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "contract IVeBetterPassport",
         "name": "newVeBetterPassport",
         "type": "address"
@@ -2147,19 +2948,6 @@
       }
     ],
     "name": "setVoterRewards",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "newVotingThreshold",
-        "type": "uint256"
-      }
-    ],
-    "name": "setVotingThreshold",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2336,6 +3124,24 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "newQuorumNumerator",
+        "type": "uint256"
+      },
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "updateQuorumNumeratorByType",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "contract TimelockControllerUpgradeable",
         "name": "newTimelock",
         "type": "address"
@@ -2417,8 +3223,14 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "votingThreshold",
+    "inputs": [
+      {
+        "internalType": "enum GovernorTypes.ProposalType",
+        "name": "proposalTypeValue",
+        "type": "uint8"
+      }
+    ],
+    "name": "votingThresholdByProposalType",
     "outputs": [
       {
         "internalType": "uint256",

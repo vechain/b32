@@ -14,6 +14,17 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "X2EarnCreatorAlreadyUsed",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "addr",
         "type": "address"
       }

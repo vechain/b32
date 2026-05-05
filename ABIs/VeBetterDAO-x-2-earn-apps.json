@@ -39,6 +39,33 @@
   {
     "inputs": [
       {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "CooldownNotExpired",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "CreatorNFTAlreadyUsed",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "address",
         "name": "implementation",
         "type": "address"
@@ -75,12 +102,85 @@
   },
   {
     "inputs": [],
+    "name": "EndorsementsPaused",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "current",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ExceedsMaxPointsPerApp",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "max",
+        "type": "uint256"
+      }
+    ],
+    "name": "ExceedsMaxPointsPerNode",
+    "type": "error"
+  },
+  {
+    "inputs": [],
     "name": "FailedInnerCall",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "available",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "requested",
+        "type": "uint256"
+      }
+    ],
+    "name": "InsufficientAvailablePoints",
     "type": "error"
   },
   {
     "inputs": [],
     "name": "InvalidInitialization",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "InvalidPointsAmount",
     "type": "error"
   },
   {
@@ -92,6 +192,11 @@
       }
     ],
     "name": "NodeManagementXAppAlreadyIncluded",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "NodeNotAllowedToEndorse",
     "type": "error"
   },
   {
@@ -200,11 +305,6 @@
       }
     ],
     "name": "X2EarnInvalidAllocationPercentage",
-    "type": "error"
-  },
-  {
-    "inputs": [],
-    "name": "X2EarnInvalidStartIndex",
     "type": "error"
   },
   {
@@ -414,20 +514,26 @@
       {
         "indexed": true,
         "internalType": "bytes32",
-        "name": "id",
+        "name": "appId",
         "type": "bytes32"
       },
       {
-        "indexed": false,
+        "indexed": true,
         "internalType": "uint256",
         "name": "nodeId",
         "type": "uint256"
       },
       {
         "indexed": false,
-        "internalType": "bool",
-        "name": "endorsed",
-        "type": "bool"
+        "internalType": "address",
+        "name": "endorser",
+        "type": "address"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "points",
+        "type": "uint256"
       }
     ],
     "name": "AppEndorsed",
@@ -475,6 +581,50 @@
       }
     ],
     "name": "AppMetadataURIUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "admin",
+        "type": "address"
+      }
+    ],
+    "name": "AppSelfBlacklisted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "indexed": true,
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "points",
+        "type": "uint256"
+      }
+    ],
+    "name": "AppUnendorsed",
     "type": "event"
   },
   {
@@ -621,6 +771,19 @@
     "inputs": [
       {
         "indexed": false,
+        "internalType": "bool",
+        "name": "paused",
+        "type": "bool"
+      }
+    ],
+    "name": "EndorsementsPausedUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
         "internalType": "uint256",
         "name": "oldGracePeriod",
         "type": "uint256"
@@ -646,6 +809,44 @@
       }
     ],
     "name": "Initialized",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldMax",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newMax",
+        "type": "uint256"
+      }
+    ],
+    "name": "MaxPointsPerAppUpdated",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "oldMax",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint256",
+        "name": "newMax",
+        "type": "uint256"
+      }
+    ],
+    "name": "MaxPointsPerNodePerAppUpdated",
     "type": "event"
   },
   {
@@ -728,7 +929,7 @@
           }
         ],
         "indexed": true,
-        "internalType": "struct VechainNodesDataTypes.NodeStrengthScores",
+        "internalType": "struct EndorsementUtils.NodeStrengthScores",
         "name": "nodeStrengthScores",
         "type": "tuple"
       }
@@ -1004,6 +1205,19 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "MIGRATION_ROLE",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
       }
     ],
     "stateMutability": "view",
@@ -1295,19 +1509,6 @@
   },
   {
     "inputs": [],
-    "name": "appsCount",
-    "outputs": [
-      {
-        "internalType": "uint256",
-        "name": "",
-        "type": "uint256"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
     "name": "baseURI",
     "outputs": [
       {
@@ -1325,9 +1526,14 @@
         "internalType": "uint256",
         "name": "nodeId",
         "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
       }
     ],
-    "name": "checkCooldown",
+    "name": "canUnendorse",
     "outputs": [
       {
         "internalType": "bool",
@@ -1426,6 +1632,11 @@
         "internalType": "uint256",
         "name": "nodeId",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "points",
+        "type": "uint256"
       }
     ],
     "name": "endorseApp",
@@ -1441,6 +1652,38 @@
         "internalType": "uint256",
         "name": "",
         "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "endorsementsPaused",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getEndorserNodes",
+    "outputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "",
+        "type": "uint256[]"
       }
     ],
     "stateMutability": "view",
@@ -1473,6 +1716,61 @@
         "type": "uint256"
       }
     ],
+    "name": "getNodeActiveEndorsements",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "bytes32",
+            "name": "appId",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "points",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "endorsedAtRound",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct X2EarnAppsStorageTypes.Endorsement[]",
+        "name": "",
+        "type": "tuple[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getNodeAvailablePoints",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      }
+    ],
     "name": "getNodeEndorsementScore",
     "outputs": [
       {
@@ -1485,13 +1783,24 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getNodeManagementContract",
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getNodePointsForApp",
     "outputs": [
       {
-        "internalType": "contract INodeManagement",
+        "internalType": "uint256",
         "name": "",
-        "type": "address"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1501,38 +1810,57 @@
     "inputs": [
       {
         "internalType": "uint256",
-        "name": "startIndex",
-        "type": "uint256"
-      },
-      {
-        "internalType": "uint256",
-        "name": "count",
+        "name": "nodeId",
         "type": "uint256"
       }
     ],
-    "name": "getPaginatedApps",
+    "name": "getNodePointsInfo",
     "outputs": [
       {
         "components": [
           {
-            "internalType": "bytes32",
-            "name": "id",
-            "type": "bytes32"
-          },
-          {
-            "internalType": "string",
-            "name": "name",
-            "type": "string"
+            "internalType": "uint256",
+            "name": "totalPoints",
+            "type": "uint256"
           },
           {
             "internalType": "uint256",
-            "name": "createdAtTimestamp",
+            "name": "usedPoints",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "availablePoints",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "lockedPoints",
             "type": "uint256"
           }
         ],
-        "internalType": "struct X2EarnAppsDataTypes.App[]",
+        "internalType": "struct X2EarnAppsStorageTypes.NodePointsInfo",
         "name": "",
-        "type": "tuple[]"
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getNodeUsedPoints",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1579,12 +1907,17 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "user",
-        "type": "address"
+        "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "timepoint",
+        "type": "uint256"
       }
     ],
-    "name": "getUsersEndorsementScore",
+    "name": "getScoreAtTimepoint",
     "outputs": [
       {
         "internalType": "uint256",
@@ -1596,26 +1929,19 @@
     "type": "function"
   },
   {
-    "inputs": [],
-    "name": "getVeBetterPassportContract",
-    "outputs": [
+    "inputs": [
       {
-        "internalType": "contract IVeBetterPassport",
-        "name": "",
+        "internalType": "address",
+        "name": "user",
         "type": "address"
       }
     ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "getXAllocationVotingGovernor",
+    "name": "getUsersEndorsementScore",
     "outputs": [
       {
-        "internalType": "contract IXAllocationVotingGovernor",
+        "internalType": "uint256",
         "name": "",
-        "type": "address"
+        "type": "uint256"
       }
     ],
     "stateMutability": "view",
@@ -1698,12 +2024,17 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_x2EarnRewardsPoolContract",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "_maxPointsPerNodePerApp",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "_maxPointsPerApp",
+        "type": "uint256"
       }
     ],
-    "name": "initializeV4",
+    "name": "initializeV8",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -1722,30 +2053,6 @@
       }
     ],
     "name": "isAppAdmin",
-    "outputs": [
-      {
-        "internalType": "bool",
-        "name": "",
-        "type": "bool"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "bytes32",
-        "name": "appId",
-        "type": "bytes32"
-      },
-      {
-        "internalType": "address",
-        "name": "account",
-        "type": "address"
-      }
-    ],
-    "name": "isAppCreator",
     "outputs": [
       {
         "internalType": "bool",
@@ -1808,6 +2115,25 @@
       }
     ],
     "name": "isBlacklisted",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "isCreatorOfAnyApp",
     "outputs": [
       {
         "internalType": "bool",
@@ -1886,6 +2212,39 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "markMigrationComplete",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxPointsPerApp",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "maxPointsPerNodePerApp",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
         "internalType": "bytes32",
@@ -1905,9 +2264,22 @@
     "type": "function"
   },
   {
+    "inputs": [],
+    "name": "migrationCompleted",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
     "inputs": [
       {
-        "internalType": "enum VechainNodesDataTypes.NodeStrengthLevel",
+        "internalType": "uint8",
         "name": "nodeLevel",
         "type": "uint8"
       }
@@ -1924,22 +2296,10 @@
     "type": "function"
   },
   {
-    "inputs": [
-      {
-        "internalType": "uint256",
-        "name": "nodeId",
-        "type": "uint256"
-      }
-    ],
-    "name": "nodeToEndorsedApp",
-    "outputs": [
-      {
-        "internalType": "bytes32",
-        "name": "",
-        "type": "bytes32"
-      }
-    ],
-    "stateMutability": "view",
+    "inputs": [],
+    "name": "pauseEndorsements",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -2099,6 +2459,42 @@
     "inputs": [
       {
         "internalType": "bytes32",
+        "name": "appId",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint256",
+        "name": "nodeId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "points",
+        "type": "uint256"
+      }
+    ],
+    "name": "seedEndorsement",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "_appId",
+        "type": "bytes32"
+      }
+    ],
+    "name": "selfBlacklistApp",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
         "name": "_appId",
         "type": "bytes32"
       },
@@ -2129,12 +2525,25 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_nodeManagementContract",
-        "type": "address"
+        "internalType": "uint256",
+        "name": "maxPoints",
+        "type": "uint256"
       }
     ],
-    "name": "setNodeManagementContract",
+    "name": "setMaxPointsPerApp",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "maxPoints",
+        "type": "uint256"
+      }
+    ],
+    "name": "setMaxPointsPerNodePerApp",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2160,19 +2569,6 @@
   {
     "inputs": [
       {
-        "internalType": "address",
-        "name": "_veBetterPassportContract",
-        "type": "address"
-      }
-    ],
-    "name": "setVeBetterPassportContract",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
         "internalType": "bytes32",
         "name": "_appId",
         "type": "bytes32"
@@ -2184,45 +2580,6 @@
       }
     ],
     "name": "setVotingEligibility",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_x2EarnCreatorContract",
-        "type": "address"
-      }
-    ],
-    "name": "setX2EarnCreatorContract",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_x2EarnRewardsPoolContract",
-        "type": "address"
-      }
-    ],
-    "name": "setX2EarnRewardsPoolContract",
-    "outputs": [],
-    "stateMutability": "nonpayable",
-    "type": "function"
-  },
-  {
-    "inputs": [
-      {
-        "internalType": "address",
-        "name": "_xAllocationVotingGovernor",
-        "type": "address"
-      }
-    ],
-    "name": "setXAllocationVotingGovernor",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"
@@ -2323,6 +2680,11 @@
         "internalType": "uint256",
         "name": "nodeId",
         "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "points",
+        "type": "uint256"
       }
     ],
     "name": "unendorseApp",
@@ -2386,6 +2748,13 @@
       }
     ],
     "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "unpauseEndorsements",
+    "outputs": [],
+    "stateMutability": "nonpayable",
     "type": "function"
   },
   {
@@ -2485,7 +2854,7 @@
             "type": "uint256"
           }
         ],
-        "internalType": "struct VechainNodesDataTypes.NodeStrengthScores",
+        "internalType": "struct EndorsementUtils.NodeStrengthScores",
         "name": "_nodeStrengthScores",
         "type": "tuple"
       }
@@ -2542,32 +2911,6 @@
       }
     ],
     "stateMutability": "pure",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "x2EarnCreatorContract",
-    "outputs": [
-      {
-        "internalType": "contract IX2EarnCreator",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
-    "type": "function"
-  },
-  {
-    "inputs": [],
-    "name": "x2EarnRewardsPoolContract",
-    "outputs": [
-      {
-        "internalType": "contract IX2EarnRewardsPool",
-        "name": "",
-        "type": "address"
-      }
-    ],
-    "stateMutability": "view",
     "type": "function"
   }
 ]
