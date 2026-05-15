@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_manager","type":"address"},{"name":"_companyId","type":"bytes32"}],"name":"init","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"databusV1"}]

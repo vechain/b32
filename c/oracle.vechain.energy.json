@@ -1,0 +1,116 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": false,
+        "internalType": "bytes32",
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "value",
+        "type": "uint128"
+      },
+      {
+        "indexed": false,
+        "internalType": "uint128",
+        "name": "updatedAt",
+        "type": "uint128"
+      }
+    ],
+    "name": "ValueUpdate",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "id",
+        "type": "bytes32"
+      }
+    ],
+    "name": "getLatestValue",
+    "outputs": [
+      {
+        "internalType": "uint128",
+        "name": "value",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint128",
+        "name": "updatedAt",
+        "type": "uint128"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "user",
+        "type": "address"
+      }
+    ],
+    "name": "isReporter",
+    "outputs": [
+      {
+        "internalType": "bool",
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes32",
+        "name": "id",
+        "type": "bytes32"
+      },
+      {
+        "internalType": "uint128",
+        "name": "value",
+        "type": "uint128"
+      },
+      {
+        "internalType": "uint128",
+        "name": "timestamp",
+        "type": "uint128"
+      }
+    ],
+    "name": "updateValue",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "bytes",
+        "name": "message",
+        "type": "bytes"
+      },
+      {
+        "internalType": "bytes",
+        "name": "extraData",
+        "type": "bytes"
+      },
+      {
+        "internalType": "address",
+        "name": "signedFor",
+        "type": "address"
+      }
+    ],
+    "name": "updateValueWithProof",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]

@@ -1,0 +1,1 @@
+[{"name":"factoryAddress","outputs":[{"type":"address","name":"out"}],"inputs":[],"constant":true,"payable":false,"type":"function","gas":1503,"$contractName":"exchange"}]

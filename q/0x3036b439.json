@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"protocolFee","type":"uint256"}],"name":"updateBridgeProtocolFee","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"juicy-finance-pool-proxy"}]

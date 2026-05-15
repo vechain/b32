@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"id","type":"bytes32"}],"name":"getTimestamp","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-timelock"}]

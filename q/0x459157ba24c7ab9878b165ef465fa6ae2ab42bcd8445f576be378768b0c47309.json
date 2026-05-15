@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"tokenId","type":"uint256"},{"indexed":false,"internalType":"string","name":"newMetadata","type":"string"}],"name":"MetadataUpdated","type":"event","$contractName":"DiplomaToken"}]

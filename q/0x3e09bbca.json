@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"depositThreshold","type":"uint256"}],"name":"GovernorDepositThresholdNotInRange","type":"error","$contractName":"VeBetterDAO-b3tr-governor"}]

@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"target","type":"address"},{"indexed":true,"internalType":"bytes4","name":"functionSelector","type":"bytes4"},{"indexed":false,"internalType":"bool","name":"isWhitelisted","type":"bool"}],"name":"FunctionWhitelisted","type":"event","$contractName":"VeBetterDAO-b3tr-governor"}]

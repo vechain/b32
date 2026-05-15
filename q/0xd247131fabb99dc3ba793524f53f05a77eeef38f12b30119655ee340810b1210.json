@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"wallet","type":"address"}],"name":"WalletUnfrozen","type":"event","$contractName":"L2Ev12ListA"}]

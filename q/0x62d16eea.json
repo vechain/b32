@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"voter","type":"address"},{"internalType":"uint256","name":"proposalId","type":"uint256"}],"name":"getVoteReason","outputs":[{"internalType":"string","name":"reason","type":"string"}],"stateMutability":"view","type":"function","$contractName":"veDelegate-ProposalPreference"}]

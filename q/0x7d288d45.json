@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"challengeId","type":"uint256"}],"name":"ChallengeNotPending","type":"error","$contractName":"VeBetterDAO-b3tr-challenges"}]

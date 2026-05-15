@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Signature Collection</title>
+    <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+    <script>
+        function query() {
+            const q = document.querySelector('#q').value
+            if (!q) {
+                return
+            }
+            if (!/^0x[0-9a-f]{8}$/.test(q) && !/^0x[0-9a-f]{64}$/.test(q)) {
+                return
+            }
+
+            window.open(`q/${q}.json`, '_blank')
+        }
+    </script>
+</head>
+
+<body>
+    <div class="hero flex-centered">
+        <h1>
+            Signature Collection of Contract Method & Event
+        </h1>
+        <p><a class="btn btn-primary" href="https://github.com/vechain/b32/new/master/ABIs">Submit JSON ABI</a></p>
+        <div class="input-group" style="width:25rem;">
+            <input id="q" class="form-input" type="text" placeholder="Method/Event signature, e.g. 0x06fdde03">
+            <input class="btn input-group-btn" type="submit" value="Query" onclick="query()">
+        </div>
+    </div>
+</body>
+</html>

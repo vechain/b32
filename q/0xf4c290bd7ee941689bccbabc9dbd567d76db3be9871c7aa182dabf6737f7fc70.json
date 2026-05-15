@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldMax","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newMax","type":"uint256"}],"name":"MaxPointsPerAppUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earn-apps"}]

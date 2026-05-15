@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint64","name":"timeBuffer","type":"uint64"},{"indexed":false,"internalType":"uint96","name":"bidBufferBps","type":"uint96"}],"name":"AuctionBuffersUpdated","type":"event","$contractName":"exoworld-mp"}]

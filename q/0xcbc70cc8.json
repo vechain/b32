@@ -1,0 +1,1 @@
+[{"name":"token_scrape","outputs":[{"type":"uint256","name":"out"}],"inputs":[{"type":"address","name":"token_addr"},{"type":"uint256","name":"min_tokens_bought"},{"type":"uint256","name":"min_eth_bought"},{"type":"uint256","name":"deadline"}],"constant":false,"payable":false,"type":"function","gas":45033,"$contractName":"exchange"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint48","name":"blockNumber","type":"uint48"}],"name":"isQuadraticRewardingDisabledAtBlock","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-voter-rewards"}]

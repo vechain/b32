@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"amount","type":"uint256"},{"internalType":"string","name":"metadataURI","type":"string"}],"name":"register","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

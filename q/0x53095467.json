@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"metadataService","outputs":[{"internalType":"contract IMetadataService","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-nameWrapper"}]

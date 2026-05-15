@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"bytes32","name":"appId","type":"bytes32"}],"name":"RewardsPoolEnabledForNewApp","type":"event","$contractName":"VeBetterDAO-Administration-Utils"}]

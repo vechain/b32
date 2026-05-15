@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint8","name":"oldMaxChoices","type":"uint8"},{"indexed":false,"internalType":"uint8","name":"newMaxChoices","type":"uint8"}],"name":"MaxChoicesSet","type":"event","$contractName":"vote"}]

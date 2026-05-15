@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"currentRound","type":"uint256"},{"internalType":"uint256","name":"requiredRound","type":"uint256"}],"name":"NoticePeriodNotElapsed","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

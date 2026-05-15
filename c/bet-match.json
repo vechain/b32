@@ -1,0 +1,430 @@
+[
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x2e1a7d4d"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "name": "combatant",
+          "type": "uint256"
+        },
+        {
+          "name": "score",
+          "type": "uint256"
+        }
+      ],
+      "name": "updateScore",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x3f0a92fb"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "cancel",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x40e58ee5"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "name": "combatant",
+          "type": "uint256"
+        }
+      ],
+      "name": "repent",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x6ce52790"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "name": "combatant",
+          "type": "uint256"
+        }
+      ],
+      "name": "join",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function",
+      "signature": "0x79e66b46"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "gameName",
+          "type": "string"
+        },
+        {
+          "name": "leftName",
+          "type": "string"
+        },
+        {
+          "name": "rightName",
+          "type": "string"
+        }
+      ],
+      "name": "creat",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xc7c1c2c2"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "finish",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xd353a1cb"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "lock",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0xdd467064"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "combatant",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "stakes",
+          "type": "uint256"
+        }
+      ],
+      "name": "_join",
+      "type": "event",
+      "signature": "0xadd33c52831a0b1c1f1f17c56aa20b5c040473e944e6f3475d38556c779df755"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "combatant",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "stakes",
+          "type": "uint256"
+        }
+      ],
+      "name": "_repent",
+      "type": "event",
+      "signature": "0x73eed075d58172e0b579e14129d5943b894bbc02470e758208ed3cf164b4e7a9"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": true,
+          "name": "player",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "award",
+          "type": "uint256"
+        }
+      ],
+      "name": "_withdraw",
+      "type": "event",
+      "signature": "0x491234459cc5c2ddc7327952ccf826b06930abbe200441971916f5e393da8872"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "gameName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "leftName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "rightName",
+          "type": "string"
+        }
+      ],
+      "name": "_creat",
+      "type": "event",
+      "signature": "0xb8c8322ac4e6ae368af6cfc837a0906e4ee9a35f49ef8b747adcd46dfdac5859"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "_cancel",
+      "type": "event",
+      "signature": "0x4efae47c6e6478ccc4dce1a2eefdbc93ba85a2822602ec18860a9ea5ce841c5b"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "_lock",
+      "type": "event",
+      "signature": "0x8ec22837bcbc063bf52cff498b2e9675cec54e6a3b14d076c920a6c8272f99d0"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "winner",
+          "type": "uint256"
+        }
+      ],
+      "name": "_finish",
+      "type": "event",
+      "signature": "0x0927c65aa785cfbe2fdc3436508df236f9d1ba0b35b6ed3a55e73a3159dca7a8"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getQuiz",
+      "outputs": [
+        {
+          "name": "id",
+          "type": "uint256"
+        },
+        {
+          "name": "stage",
+          "type": "uint8"
+        },
+        {
+          "name": "startTime",
+          "type": "uint256"
+        },
+        {
+          "name": "gameName",
+          "type": "string"
+        },
+        {
+          "name": "leftName",
+          "type": "string"
+        },
+        {
+          "name": "leftBet",
+          "type": "uint256"
+        },
+        {
+          "name": "leftScore",
+          "type": "uint256"
+        },
+        {
+          "name": "rightName",
+          "type": "string"
+        },
+        {
+          "name": "rightBet",
+          "type": "uint256"
+        },
+        {
+          "name": "rightScore",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xa3f7e096"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        },
+        {
+          "name": "combatant",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPlayerCombatantBet",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x3a4164f1"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getPlayerAward",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xff87bcc2"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_id",
+          "type": "uint256"
+        }
+      ],
+      "name": "getQuizWinner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0xd90603d2"
+    }
+  ]

@@ -1,0 +1,719 @@
+[
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "proposerList",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_target",
+        "type": "address"
+      }
+    ],
+    "name": "isToken",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "unpause",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_badGuy",
+        "type": "address"
+      }
+    ],
+    "name": "addToBlackList",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "name": "blackList",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_innocent",
+        "type": "address"
+      }
+    ],
+    "name": "removeFromBlackList",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "paused",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [],
+    "name": "pause",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_proposer",
+        "type": "address"
+      }
+    ],
+    "name": "removeFromWhitelist",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "isOwner",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_proposer",
+        "type": "address"
+      }
+    ],
+    "name": "addToProposerList",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_tokenId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getMetadata",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      },
+      {
+        "name": "",
+        "type": "uint8"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "bool"
+      },
+      {
+        "name": "",
+        "type": "uint64"
+      },
+      {
+        "name": "",
+        "type": "uint64"
+      },
+      {
+        "name": "",
+        "type": "uint64"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_owner",
+        "type": "address"
+      }
+    ],
+    "name": "ownerToId",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [],
+    "name": "tokenAuctionAddress",
+    "outputs": [
+      {
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_target",
+        "type": "address"
+      }
+    ],
+    "name": "getMaster",
+    "outputs": [
+      {
+        "name": "listed",
+        "type": "bool"
+      },
+      {
+        "name": "endorsor",
+        "type": "address"
+      },
+      {
+        "name": "identity",
+        "type": "bytes32"
+      },
+      {
+        "name": "active",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_target",
+        "type": "address"
+      }
+    ],
+    "name": "isMaster",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "name": "_token_auction_address",
+        "type": "address"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": true,
+        "name": "ptype",
+        "type": "uint8"
+      },
+      {
+        "indexed": true,
+        "name": "creator",
+        "type": "address"
+      }
+    ],
+    "name": "NewProposal",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "ProposalCanceled",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "proposalId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "sender",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "endorser",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "tokenId",
+        "type": "uint256"
+      },
+      {
+        "indexed": false,
+        "name": "options",
+        "type": "uint32"
+      }
+    ],
+    "name": "NewVote",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "_proposer",
+        "type": "address"
+      }
+    ],
+    "name": "ProposerList",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "_proposer",
+        "type": "address"
+      }
+    ],
+    "name": "RemoveFromProposerList",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "_badGuy",
+        "type": "address"
+      }
+    ],
+    "name": "BlackList",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "_innocent",
+        "type": "address"
+      }
+    ],
+    "name": "RemoveFromBlackList",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "Paused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [],
+    "name": "Unpaused",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_title",
+        "type": "string"
+      },
+      {
+        "name": "_proposalType",
+        "type": "uint8"
+      },
+      {
+        "name": "_votingStartTime",
+        "type": "uint64"
+      },
+      {
+        "name": "_votingEndTime",
+        "type": "uint64"
+      },
+      {
+        "name": "_minChecked",
+        "type": "uint8"
+      },
+      {
+        "name": "_maxChecked",
+        "type": "uint8"
+      },
+      {
+        "name": "_options",
+        "type": "string[]"
+      },
+      {
+        "name": "_ratio",
+        "type": "uint16[3]"
+      }
+    ],
+    "name": "newProposal",
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      },
+      {
+        "name": "_options",
+        "type": "uint32"
+      },
+      {
+        "name": "_master",
+        "type": "address"
+      }
+    ],
+    "name": "cast",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": false,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "cancelProposal",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getBasicInfo",
+    "outputs": [
+      {
+        "name": "title",
+        "type": "string"
+      },
+      {
+        "name": "pType",
+        "type": "uint8"
+      },
+      {
+        "name": "minChecked",
+        "type": "uint8"
+      },
+      {
+        "name": "maxChecked",
+        "type": "uint8"
+      },
+      {
+        "name": "creator",
+        "type": "address"
+      },
+      {
+        "name": "createTime",
+        "type": "uint64"
+      },
+      {
+        "name": "cancelTime",
+        "type": "uint64"
+      },
+      {
+        "name": "options",
+        "type": "string[]"
+      },
+      {
+        "name": "_ratio",
+        "type": "uint16[3]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getCondition",
+    "outputs": [
+      {
+        "name": "votingStartTime",
+        "type": "uint64"
+      },
+      {
+        "name": "votingEndTime",
+        "type": "uint64"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_target",
+        "type": "address"
+      },
+      {
+        "name": "_master",
+        "type": "address"
+      }
+    ],
+    "name": "accessProposal",
+    "outputs": [
+      {
+        "name": "",
+        "type": "bool"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      },
+      {
+        "name": "_voter",
+        "type": "address"
+      }
+    ],
+    "name": "getVoterOptions",
+    "outputs": [
+      {
+        "name": "option",
+        "type": "uint32"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "getTally",
+    "outputs": [
+      {
+        "name": "tally",
+        "type": "uint64[]"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "constant": true,
+    "inputs": [
+      {
+        "name": "_proposalId",
+        "type": "uint256"
+      }
+    ],
+    "name": "status",
+    "outputs": [
+      {
+        "name": "currentStatus",
+        "type": "uint8"
+      }
+    ],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

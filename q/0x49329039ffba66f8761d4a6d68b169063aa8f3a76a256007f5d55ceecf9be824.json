@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"_voter","type":"address"},{"indexed":false,"name":"_stakedAmount","type":"uint256"},{"indexed":false,"name":"_rewardAmount","type":"uint256"}],"name":"VoterPayout","type":"event","$contractName":"arbitration"}]

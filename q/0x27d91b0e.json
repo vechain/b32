@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"_maxPointsPerNodePerApp","type":"uint256"},{"internalType":"uint256","name":"_maxPointsPerApp","type":"uint256"}],"name":"initializeV8","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-2-earn-apps"}]

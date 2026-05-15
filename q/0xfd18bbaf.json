@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"platformFeeOn","outputs":[{"internalType":"bool","name":"_platformFeeOn","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"DThorswapV2Pair"}]

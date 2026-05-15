@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"proposalId","type":"uint256"},{"internalType":"address","name":"citizen","type":"address"}],"name":"castNavigatorVote","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

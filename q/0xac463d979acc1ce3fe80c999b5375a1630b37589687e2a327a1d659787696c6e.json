@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"newWeight","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"oldWeight","type":"uint256"}],"name":"ClaimWeightUpdated","type":"event","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_b3trGovernor","type":"address"}],"name":"setB3trGovernorAddress","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

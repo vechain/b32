@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bool","name":"isPaused","type":"bool"}],"name":"PublicMintingPaused","type":"event","$contractName":"VeBetterDAO-galaxy-member"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"nickname","type":"string"}],"name":"isValidNickname","outputs":[{"internalType":"bool","name":"valid","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"profile.vechain.energy"}]

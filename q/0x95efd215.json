@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"caller","type":"address"},{"internalType":"address","name":"recipient","type":"address"}],"name":"CallerIsNotTheGrantReceiver","type":"error","$contractName":"VeBetterDAO-grants-manager"}]

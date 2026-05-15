@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getActiveTokens","outputs":[{"components":[{"internalType":"address","name":"tokenContractAddress","type":"address"},{"internalType":"uint256","name":"tokenId","type":"uint256"}],"internalType":"struct L2Ev12ListA.TokenIdentifier[]","name":"","type":"tuple[]"}],"stateMutability":"view","type":"function","$contractName":"L2Ev12ListA"}]

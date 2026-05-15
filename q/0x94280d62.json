@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"spender","type":"address"}],"name":"ERC20InvalidSpender","type":"error","$contractName":"VeBetterDAO-b3tr"},{"inputs":[{"internalType":"address","name":"spender","type":"address"}],"name":"ERC20InvalidSpender","type":"error","$contractName":"VeBetterDAO-vot3"}]

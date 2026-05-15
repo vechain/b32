@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getPriceList","outputs":[{"internalType":"uint256[11]","name":"","type":"uint256[11]"}],"stateMutability":"view","type":"function","constant":true,"$contractName":"vpunks"}]

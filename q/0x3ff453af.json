@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"nodeId","type":"uint256"}],"name":"getNodeLevelOf","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

@@ -1,0 +1,291 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            }
+        ],
+        "name": "VoteCast",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            },
+            {
+                "indexed": false,
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+            }
+        ],
+        "name": "VoteCastWithReason",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            }
+        ],
+        "name": "castVote",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            },
+            {
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+            }
+        ],
+        "name": "castVoteWithReason",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "b3trgovAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "govAddress",
+                "type": "address"
+            }
+        ],
+        "name": "getActiveProposals",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "tokenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getLockedSupportedB3TRBalance",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "totalDeposits",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "tbaAddress",
+                "type": "address"
+            }
+        ],
+        "name": "getLockedSupportedB3TRBalanceByAddress",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "totalDeposits",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "b3trgovAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "govAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "roundId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "bool",
+                "name": "onlyActive",
+                "type": "bool"
+            }
+        ],
+        "name": "getRoundProposals",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "b3trgovAddress",
+                "type": "address"
+            },
+            {
+                "internalType": "address",
+                "name": "govAddress",
+                "type": "address"
+            }
+        ],
+        "name": "getSupportedProposals",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getVote",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getVoteReason",
+        "outputs": [
+            {
+                "internalType": "string",
+                "name": "reason",
+                "type": "string"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "voters",
+                "type": "address[]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "proposalId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getVoteWithFallback",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "support",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

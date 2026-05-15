@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"voter","type":"address"}],"name":"validatePersonhoodForCurrentRound","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

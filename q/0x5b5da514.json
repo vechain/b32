@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bool","name":"isPaused","type":"bool"}],"name":"setIsPublicMintingPaused","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

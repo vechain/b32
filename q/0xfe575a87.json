@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_user","type":"address"}],"name":"isBlacklisted","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

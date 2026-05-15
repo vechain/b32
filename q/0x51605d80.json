@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"imageHash","outputs":[{"internalType":"string","name":"","type":"string"}],"stateMutability":"view","type":"function","constant":true,"$contractName":"vpunks"}]

@@ -1,0 +1,92 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "userId_hashed",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "verified_employment",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "company_pubKey",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "verified_employment_encrypted",
+        "type": "string"
+      }
+    ],
+    "name": "addEmployment",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "userId_hashed",
+        "type": "string"
+      }
+    ],
+    "name": "getCompanyPubKeysOf",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "userId_hashed",
+        "type": "string"
+      }
+    ],
+    "name": "getEmploymentsOf",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "userId_hashed",
+        "type": "string"
+      }
+    ],
+    "name": "getEncryptedEmploymentsOf",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      },
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]

@@ -1,0 +1,1 @@
+[{"name":"setMaxPlatformFee","outputs":[],"inputs":[{"type":"uint256","name":"_default_max_platform_fee"}],"constant":false,"payable":false,"type":"function","gas":36279,"$contractName":"factory"}]

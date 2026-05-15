@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"opIndex","type":"uint256"},{"internalType":"string","name":"reason","type":"string"}],"name":"FailedOp","type":"error","$contractName":"entrypoint_v0.6"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_start","type":"uint256"},{"name":"_end","type":"uint256"}],"name":"payoutVoter","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"arbitration"}]

@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"firstQueued","outputs":[{"internalType":"address","name":"first","type":"address"}],"stateMutability":"view","type":"function","$contractName":"staker"}]

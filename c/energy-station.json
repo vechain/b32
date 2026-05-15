@@ -1,0 +1,419 @@
+[{
+    "constant": false,
+    "inputs": [{
+        "name": "_amount",
+        "type": "uint256"
+    }],
+    "name": "fillEnergy",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_sellAmount",
+        "type": "uint256"
+    }],
+    "name": "getVETReturn",
+    "outputs": [{
+        "name": "canAcquire",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "energyVirtualBalance",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "currentSponsor",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "sponsor",
+        "type": "address"
+    }],
+    "name": "isSponsor",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "user",
+        "type": "address"
+    }],
+    "name": "userCredit",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "user",
+        "type": "address"
+    }],
+    "name": "isUser",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "user",
+        "type": "address"
+    }],
+    "name": "addUser",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "credit",
+        "type": "uint256"
+    }, {
+        "name": "recoveryRate",
+        "type": "uint256"
+    }],
+    "name": "setCreditPlan",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "energyToken",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "conversionFee",
+    "outputs": [{
+        "name": "",
+        "type": "uint32"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "fillVET",
+    "outputs": [],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_amount",
+        "type": "uint256"
+    }],
+    "name": "getFinalAmount",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "creditPlan",
+    "outputs": [{
+        "name": "credit",
+        "type": "uint256"
+    }, {
+        "name": "recoveryRate",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [{
+        "name": "_sellAmount",
+        "type": "uint256"
+    }],
+    "name": "getEnergyReturn",
+    "outputs": [{
+        "name": "canAcquire",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "acceptOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_enabled",
+        "type": "bool"
+    }],
+    "name": "changeConversionStatus",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "vetVirtualBalance",
+    "outputs": [{
+        "name": "",
+        "type": "uint104"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "owner",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "another",
+        "type": "address"
+    }],
+    "name": "unsponsorOthers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "withdrawProfit",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "user",
+        "type": "address"
+    }],
+    "name": "removeUser",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_minReturn",
+        "type": "uint256"
+    }],
+    "name": "convertForEnergy",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": true,
+    "stateMutability": "payable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "conversionsEnabled",
+    "outputs": [{
+        "name": "",
+        "type": "bool"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [],
+    "name": "closeMarket",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "another",
+        "type": "address"
+    }],
+    "name": "sponsorOthers",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_sellAmount",
+        "type": "uint256"
+    }, {
+        "name": "_minReturn",
+        "type": "uint256"
+    }],
+    "name": "convertForVET",
+    "outputs": [{
+        "name": "",
+        "type": "uint256"
+    }],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": true,
+    "inputs": [],
+    "name": "newOwner",
+    "outputs": [{
+        "name": "",
+        "type": "address"
+    }],
+    "payable": false,
+    "stateMutability": "view",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "sponsor",
+        "type": "address"
+    }],
+    "name": "selectSponsor",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_conversionFee",
+        "type": "uint32"
+    }],
+    "name": "setConversionFee",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "constant": false,
+    "inputs": [{
+        "name": "_newOwner",
+        "type": "address"
+    }],
+    "name": "transferOwnership",
+    "outputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "function"
+}, {
+    "inputs": [],
+    "payable": false,
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "name": "tradeType",
+        "type": "int8"
+    }, {
+        "indexed": true,
+        "name": "_trader",
+        "type": "address"
+    }, {
+        "indexed": false,
+        "name": "_sellAmount",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "name": "_return",
+        "type": "uint256"
+    }, {
+        "indexed": false,
+        "name": "_conversionFee",
+        "type": "uint256"
+    }],
+    "name": "Conversion",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": false,
+        "name": "_prevFee",
+        "type": "uint32"
+    }, {
+        "indexed": false,
+        "name": "_newFee",
+        "type": "uint32"
+    }],
+    "name": "ConversionFeeUpdate",
+    "type": "event"
+}, {
+    "anonymous": false,
+    "inputs": [{
+        "indexed": true,
+        "name": "_prevOwner",
+        "type": "address"
+    }, {
+        "indexed": true,
+        "name": "_newOwner",
+        "type": "address"
+    }],
+    "name": "OwnerUpdate",
+    "type": "event"
+}]

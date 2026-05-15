@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"_name","type":"string"}],"name":"NameChanged","type":"event","$contractName":"vip180-mintable"},{"anonymous":false,"inputs":[{"indexed":false,"internalType":"string","name":"_name","type":"string"}],"name":"NameChanged","type":"event","$contractName":"vip181-simple"}]

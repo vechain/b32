@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_jurToken","type":"address"}],"name":"changeToken","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"arbitration-factory"}]

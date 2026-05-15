@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"forAgainst","type":"uint256"},{"internalType":"uint256","name":"abstain","type":"uint256"}],"name":"setIntentMultipliers","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-voter-rewards"}]

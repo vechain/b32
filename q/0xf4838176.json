@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_newPercent","type":"uint8"}],"name":"setFeePercent","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"thornode-clockauction"}]

@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"","type":"uint256"}],"name":"arbirations","outputs":[{"name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"arbitration-factory"}]

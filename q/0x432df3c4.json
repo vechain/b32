@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes4","name":"selector","type":"bytes4"}],"name":"InvalidFunctionSelector","type":"error","$contractName":"VeBetterDAO-grants-manager"}]

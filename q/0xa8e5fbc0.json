@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"nameWrapper","outputs":[{"internalType":"contract INameWrapper","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vet-domains-registrarController"}]

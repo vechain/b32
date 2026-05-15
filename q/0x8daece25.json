@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"uint8","name":"datasetId","type":"uint8"},{"internalType":"bytes32","name":"key","type":"bytes32"},{"internalType":"bytes","name":"value","type":"bytes"}],"name":"set","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"databusV5"}]

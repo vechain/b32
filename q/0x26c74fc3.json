@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getTreasuryContract","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-grants-manager"}]

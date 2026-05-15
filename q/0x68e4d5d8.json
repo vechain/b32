@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"citizen","type":"address"}],"name":"NotDelegatedToNavigator","type":"error","$contractName":"VeBetterDAO-b3tr-governor"},{"inputs":[{"internalType":"address","name":"citizen","type":"address"}],"name":"NotDelegatedToNavigator","type":"error","$contractName":"VeBetterDAO-x-allocations-voting"}]

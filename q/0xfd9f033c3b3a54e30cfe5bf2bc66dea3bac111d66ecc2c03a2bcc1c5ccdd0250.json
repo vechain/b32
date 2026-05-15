@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bool","name":"paused","type":"bool"}],"name":"EndorsementsPausedUpdated","type":"event","$contractName":"VeBetterDAO-x-2-earn-apps"}]

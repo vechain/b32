@@ -1,0 +1,131 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            },
+            {
+                "indexed": false,
+                "internalType": "bytes32[]",
+                "name": "appsIds",
+                "type": "bytes32[]"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint8[]",
+                "name": "voteWeights",
+                "type": "uint8[]"
+            }
+        ],
+        "name": "VoteCast",
+        "type": "event"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "availableVotes",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8[]",
+                "name": "percentages",
+                "type": "uint8[]"
+            }
+        ],
+        "name": "calculateVoteWeights",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "voteWeights",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32[]",
+                "name": "_appIds",
+                "type": "bytes32[]"
+            },
+            {
+                "internalType": "uint8[]",
+                "name": "_percentages",
+                "type": "uint8[]"
+            }
+        ],
+        "name": "castVotes",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "voter",
+                "type": "address"
+            }
+        ],
+        "name": "getVotes",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes32[]",
+                        "name": "ids",
+                        "type": "bytes32[]"
+                    },
+                    {
+                        "internalType": "uint8[]",
+                        "name": "percentages",
+                        "type": "uint8[]"
+                    }
+                ],
+                "internalType": "struct Votes.Vote",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address[]",
+                "name": "voters",
+                "type": "address[]"
+            }
+        ],
+        "name": "getVotesWithFallback",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "bytes32[]",
+                        "name": "ids",
+                        "type": "bytes32[]"
+                    },
+                    {
+                        "internalType": "uint8[]",
+                        "name": "percentages",
+                        "type": "uint8[]"
+                    }
+                ],
+                "internalType": "struct Votes.Vote",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    }
+]

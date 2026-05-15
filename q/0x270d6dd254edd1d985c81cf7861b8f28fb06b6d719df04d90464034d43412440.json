@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"navigator","type":"address"},{"indexed":false,"internalType":"uint256","name":"amount","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newTotal","type":"uint256"}],"name":"StakeAdded","type":"event","$contractName":"VeBetterDAO-navigator-registry"}]

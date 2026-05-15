@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"maxEntities","type":"uint256"}],"name":"setMaxEntitiesPerPassport","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

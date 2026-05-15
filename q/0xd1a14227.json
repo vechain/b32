@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"count","type":"uint256"}],"name":"TooManyApps","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_sender","type":"address"},{"name":"_voteAddress","type":"address"},{"name":"_voteAmount","type":"uint256"}],"name":"voteJUR","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"arbitration"}]

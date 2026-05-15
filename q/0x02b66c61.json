@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"nodeMaster","type":"address"},{"name":"endorsor","type":"address"},{"name":"identity","type":"bytes32"}],"name":"native_add","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"authority-native"}]

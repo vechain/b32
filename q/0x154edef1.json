@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_stargateNFT","type":"address"}],"name":"initializeV6","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-galaxy-member"}]

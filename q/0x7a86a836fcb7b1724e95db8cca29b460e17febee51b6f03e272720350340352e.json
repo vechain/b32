@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"name":"_oldState","type":"uint8"},{"indexed":false,"name":"_newState","type":"uint8"},{"indexed":false,"name":"_timestamp","type":"uint256"}],"name":"StateChange","type":"event","$contractName":"arbitration"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"appSharesCap_","type":"uint256"}],"name":"setAppSharesCap","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

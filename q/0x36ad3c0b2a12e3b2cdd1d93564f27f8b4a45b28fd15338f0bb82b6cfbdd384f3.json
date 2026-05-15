@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"newPeriod","type":"uint256"},{"indexed":true,"internalType":"uint256","name":"oldPeriod","type":"uint256"}],"name":"XAllocationsDecayPeriodUpdated","type":"event","$contractName":"VeBetterDAO-emissions"}]

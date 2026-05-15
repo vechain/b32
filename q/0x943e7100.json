@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"app","type":"bytes32"},{"internalType":"address","name":"user","type":"address"}],"name":"assignSignalerToAppByAppAdmin","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

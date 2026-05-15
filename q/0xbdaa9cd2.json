@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"VTHO_CONTRACT_ADDRESS","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"uniswap-v2-pair"}]

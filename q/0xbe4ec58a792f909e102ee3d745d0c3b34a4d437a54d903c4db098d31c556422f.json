@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"profileAddress","type":"address"}],"name":"ProfileUpdated","type":"event","$contractName":"vesea_profiles"}]

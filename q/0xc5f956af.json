@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"treasuryAddress","outputs":[{"internalType":"address","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-dynamic-base-allocations-pool"}]

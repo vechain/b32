@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"voter","type":"address"},{"indexed":false,"internalType":"bytes32[]","name":"appsIds","type":"bytes32[]"},{"indexed":false,"internalType":"uint8[]","name":"voteWeights","type":"uint8[]"}],"name":"VoteCast","type":"event","$contractName":"veDelegate-VotePreference"}]

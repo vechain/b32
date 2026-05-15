@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint8","name":"levelId","type":"uint8"},{"indexed":false,"internalType":"uint256","name":"oldBoostPricePerBlock","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newBoostPricePerBlock","type":"uint256"}],"name":"LevelBoostPricePerBlockUpdated","type":"event","$contractName":"StargateNFT"}]

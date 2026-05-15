@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"targets","type":"uint256"},{"internalType":"uint256","name":"payloads","type":"uint256"},{"internalType":"uint256","name":"values","type":"uint256"}],"name":"TimelockInvalidOperationLength","type":"error","$contractName":"VeBetterDAO-timelock"}]

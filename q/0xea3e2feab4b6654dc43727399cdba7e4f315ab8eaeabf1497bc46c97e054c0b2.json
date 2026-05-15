@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"roundId","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"totalEndorsersRewards","type":"uint256"},{"indexed":false,"internalType":"address[]","name":"endorsers","type":"address[]"}],"name":"EndorsersRewardsDistributed","type":"event","$contractName":"vbd-endorsers-distributor"}]

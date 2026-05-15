@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"model","type":"bytes32"},{"name":"irt","type":"uint8"}],"name":"setIRt","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"carbon-reduction-calc"}]

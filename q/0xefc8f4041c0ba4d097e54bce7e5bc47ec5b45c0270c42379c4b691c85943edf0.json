@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"bytes32","name":"id","type":"bytes32"},{"indexed":false,"internalType":"uint128","name":"value","type":"uint128"},{"indexed":false,"internalType":"uint128","name":"updatedAt","type":"uint128"}],"name":"ValueUpdate","type":"event","$contractName":"oracle.vechain.energy"}]

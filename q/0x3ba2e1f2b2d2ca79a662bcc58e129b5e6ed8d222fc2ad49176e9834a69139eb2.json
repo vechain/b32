@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"limit","type":"uint256"}],"name":"TransferLimitVETUpdated","type":"event","$contractName":"VeBetterDAO-treasury"}]

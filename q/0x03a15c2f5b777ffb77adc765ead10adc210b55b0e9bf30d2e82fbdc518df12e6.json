@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"setId","type":"uint8"},{"indexed":true,"name":"uid","type":"bytes32"},{"indexed":true,"name":"key","type":"bytes32"},{"indexed":false,"name":"value","type":"uint256"}],"name":"UInt256KeyChanged","type":"event","$contractName":"databusV2"}]

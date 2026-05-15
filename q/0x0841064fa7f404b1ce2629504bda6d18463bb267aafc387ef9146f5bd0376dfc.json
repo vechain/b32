@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"delegationID","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"stake","type":"uint256"}],"name":"DelegationWithdrawn","type":"event","$contractName":"staker"}]

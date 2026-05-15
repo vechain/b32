@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"navigator","type":"address"},{"internalType":"uint256","name":"slashPercentage","type":"uint256"},{"internalType":"bool","name":"slashFees","type":"bool"}],"name":"deactivateNavigator","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"contract INavigatorRegistry","name":"_navigatorRegistry","type":"address"},{"internalType":"uint256","name":"_citizenSkipWindowBlocks","type":"uint256"}],"name":"initializeV9","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

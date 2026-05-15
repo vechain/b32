@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"internalType":"address","name":"receiver","type":"address"}],"name":"claimGeneratedVTHO","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"uniswap-v2-pair"}]

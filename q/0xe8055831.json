@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[],"name":"txBlockRef","outputs":[{"name":"","type":"bytes8"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"extension"}]

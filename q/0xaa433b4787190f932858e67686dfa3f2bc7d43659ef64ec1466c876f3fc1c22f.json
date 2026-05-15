@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"name":"proposalId","type":"uint256"}],"name":"ProposalConditionChanged","type":"event","$contractName":"vevote"}]

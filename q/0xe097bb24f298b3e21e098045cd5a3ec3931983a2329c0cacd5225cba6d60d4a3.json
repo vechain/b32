@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"oldDefaultSwapFee","type":"uint256"},{"indexed":false,"internalType":"uint256","name":"newDefaultSwapFee","type":"uint256"}],"name":"DefaultSwapFeeChanged","type":"event","$contractName":"DThorswapV2Factory"}]

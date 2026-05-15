@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_id","type":"uint256"},{"name":"startTime","type":"uint256"},{"name":"gameName","type":"string"},{"name":"leftName","type":"string"},{"name":"rightName","type":"string"}],"name":"creat","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0xc7c1c2c2","$contractName":"bet-match"}]

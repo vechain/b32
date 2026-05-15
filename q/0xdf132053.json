@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_proposalId","type":"uint256"},{"name":"_voter","type":"address"}],"name":"hasCast","outputs":[{"name":"isCasted","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"vevote"}]

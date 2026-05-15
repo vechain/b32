@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"labelHash","type":"bytes32"},{"internalType":"bytes32","name":"expectedLabelhash","type":"bytes32"}],"name":"LabelMismatch","type":"error","$contractName":"vet-domains-nameWrapper"}]

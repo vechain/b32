@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"}],"name":"DuplicateApp","type":"error","$contractName":"VeBetterDAO-b3tr-challenges"},{"inputs":[{"internalType":"bytes32","name":"appId","type":"bytes32"}],"name":"DuplicateApp","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

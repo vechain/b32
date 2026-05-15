@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"fromAddress","type":"address"},{"indexed":false,"internalType":"uint256","name":"messageId","type":"uint256"}],"name":"Confirmation","type":"event","$contractName":"vesea_broadcast"}]

@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"tokenId","type":"uint256"},{"internalType":"address","name":"student","type":"address"}],"name":"transferDegreeToStudent","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"DiplomaToken"}]

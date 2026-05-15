@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"_keyHash","type":"bytes32"},{"internalType":"uint256","name":"_pubKeyX","type":"uint256"},{"internalType":"uint256","name":"_pubKeyY","type":"uint256"}],"name":"initialize","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"passkeyswallet_v1"}]

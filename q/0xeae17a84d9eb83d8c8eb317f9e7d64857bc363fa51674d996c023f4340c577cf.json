@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"contract NameResolver","name":"resolver","type":"address"}],"name":"DefaultResolverChanged","type":"event","$contractName":"vet-domains-reverseRegistrar"}]

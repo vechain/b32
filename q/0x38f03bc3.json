@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"model","type":"bytes32"},{"name":"DD","type":"uint256"},{"name":"SEC","type":"uint256"},{"name":"SFC","type":"uint256"}],"name":"calc","outputs":[{"name":"res","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"carbon-reduction-calc"}]

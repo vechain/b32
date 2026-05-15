@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"nodeMaster","type":"address"}],"name":"native_revoke","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"authority-native"}]

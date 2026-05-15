@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"string","name":"reportURI","type":"string"}],"name":"submitReport","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

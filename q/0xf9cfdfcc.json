@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"getPendingLinkings","outputs":[{"internalType":"address[]","name":"incoming","type":"address[]"},{"internalType":"address","name":"outgoing","type":"address"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-ve-better-passport"}]

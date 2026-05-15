@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"getStatus","outputs":[{"internalType":"uint8","name":"","type":"uint8"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-navigator-registry"}]

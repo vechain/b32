@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"timepoint","type":"uint256"},{"internalType":"enum GovernorTypes.ProposalType","name":"proposalTypeValue","type":"uint8"}],"name":"quorumNumeratorByProposalType","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-b3tr-governor"}]

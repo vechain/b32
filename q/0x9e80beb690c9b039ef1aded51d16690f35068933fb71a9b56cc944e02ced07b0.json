@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":false,"internalType":"uint256","name":"baseGasPrice","type":"uint256"}],"name":"FetchGas","type":"event","$contractName":"vearn-trader"}]

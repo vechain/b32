@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"getMaxClaimablePeriods","outputs":[{"internalType":"uint32","name":"","type":"uint32"}],"stateMutability":"view","type":"function","$contractName":"Stargate"}]

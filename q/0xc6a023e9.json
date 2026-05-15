@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_min","type":"uint256"},{"name":"_max","type":"uint256"}],"name":"setAmount","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"lucky-airdrop"}]

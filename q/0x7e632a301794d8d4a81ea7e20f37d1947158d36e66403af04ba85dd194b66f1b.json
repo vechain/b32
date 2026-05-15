@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"uint256","name":"wovIndex","type":"uint256"},{"indexed":false,"internalType":"string","name":"newName","type":"string"}],"name":"NameChange","type":"event","$contractName":"WOVsSpecialCard"}]

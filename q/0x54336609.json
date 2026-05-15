@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"delay","type":"uint256"},{"internalType":"uint256","name":"minDelay","type":"uint256"}],"name":"TimelockInsufficientDelay","type":"error","$contractName":"VeBetterDAO-timelock"}]

@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"_id","type":"uint256"},{"name":"combatant","type":"uint256"},{"name":"score","type":"uint256"}],"name":"updateScore","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function","signature":"0x3f0a92fb","$contractName":"bet-match"}]

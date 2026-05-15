@@ -1,0 +1,120 @@
+[
+    {
+      "inputs": [
+        {
+          "internalType": "contract IEntryPoint",
+          "name": "entryPoint",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [],
+      "name": "accountImplementation",
+      "outputs": [
+        {
+          "internalType": "contract PassKeysAccount",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "contractName",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "salt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "keyHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubKeyX",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubKeyY",
+          "type": "uint256"
+        }
+      ],
+      "name": "createAccount",
+      "outputs": [
+        {
+          "internalType": "contract PassKeysAccount",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "salt",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "keyHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubKeyX",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pubKeyY",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "version",
+      "outputs": [
+        {
+          "internalType": "uint8",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ]

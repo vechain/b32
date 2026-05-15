@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"SelfDelegationNotAllowed","type":"error","$contractName":"VeBetterDAO-navigator-registry"}]

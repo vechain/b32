@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"_navigatorRegistry","type":"address"}],"name":"initializeV2","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-vot3"}]

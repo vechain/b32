@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"cycle","type":"uint256"}],"name":"getXAllocationAmount","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-emissions"}]

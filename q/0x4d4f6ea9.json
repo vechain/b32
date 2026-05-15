@@ -1,0 +1,1 @@
+[{"constant":true,"inputs":[{"name":"_tokenId","type":"uint256"}],"name":"canTransfer","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function","$contractName":"thornode-tokenauction"}]

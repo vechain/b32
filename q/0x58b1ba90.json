@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"uint256","name":"sigType","type":"uint256"},{"internalType":"string","name":"reason","type":"string"}],"name":"SigInvalid","type":"error","$contractName":"passkeyswallet_v1"}]

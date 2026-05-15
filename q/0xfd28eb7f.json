@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"tokenAddress","type":"address"},{"internalType":"address","name":"sender","type":"address"}],"name":"tokenSenderConfiguration","outputs":[{"internalType":"address","name":"recipient","type":"address"}],"stateMutability":"view","type":"function","$contractName":"veDelegate-AutoDeposit"}]

@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"startNewRound","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"nonpayable","type":"function","$contractName":"VeBetterDAO-x-allocations-voting"}]

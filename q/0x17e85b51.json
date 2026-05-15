@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"bytes32","name":"keyHash","type":"bytes32"}],"name":"removePassKey","outputs":[],"stateMutability":"nonpayable","type":"function","$contractName":"passkeyswallet_v1"}]

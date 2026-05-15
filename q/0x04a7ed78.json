@@ -1,0 +1,1 @@
+[{"constant":false,"inputs":[{"name":"self","type":"address"},{"name":"sponsor","type":"address"}],"name":"native_unsponsor","outputs":[{"name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function","$contractName":"prototype-native"}]

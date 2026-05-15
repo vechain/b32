@@ -1,0 +1,1 @@
+[{"inputs":[],"name":"params","outputs":[{"internalType":"contract IParams","name":"","type":"address"}],"stateMutability":"view","type":"function","$contractName":"vearn-trader"}]

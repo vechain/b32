@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"wallet","type":"address"},{"indexed":false,"internalType":"uint256","name":"freezeDuration","type":"uint256"}],"name":"WalletFrozen","type":"event","$contractName":"L2Ev12ListA"}]

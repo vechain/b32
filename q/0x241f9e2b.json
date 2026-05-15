@@ -1,0 +1,1 @@
+[{"inputs":[{"internalType":"address","name":"relayer","type":"address"},{"internalType":"uint256","name":"roundId","type":"uint256"}],"name":"totalRelayerActions","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function","$contractName":"VeBetterDAO-relayer-rewards-pool"}]

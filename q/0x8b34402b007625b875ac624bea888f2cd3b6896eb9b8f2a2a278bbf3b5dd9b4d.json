@@ -1,0 +1,1 @@
+[{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"citizen","type":"address"},{"indexed":true,"internalType":"address","name":"navigator","type":"address"},{"indexed":true,"internalType":"uint256","name":"proposalId","type":"uint256"}],"name":"NavigatorGovernanceVoteSkipped","type":"event","$contractName":"VeBetterDAO-b3tr-governor"}]
