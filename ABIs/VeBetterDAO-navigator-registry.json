@@ -290,6 +290,27 @@
   {
     "inputs": [
       {
+        "internalType": "address",
+        "name": "citizen",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "requested",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "available",
+        "type": "uint256"
+      }
+    ],
+    "name": "InsufficientUnlockedBalance",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
         "internalType": "uint8",
         "name": "decision",
         "type": "uint8"
@@ -1310,6 +1331,19 @@
       }
     ],
     "name": "claimFee",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address[]",
+        "name": "citizens",
+        "type": "address[]"
+      }
+    ],
+    "name": "correctOverDelegations",
     "outputs": [],
     "stateMutability": "nonpayable",
     "type": "function"

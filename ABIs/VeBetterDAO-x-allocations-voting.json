@@ -325,6 +325,22 @@
     "inputs": [
       {
         "internalType": "address",
+        "name": "voter",
+        "type": "address"
+      },
+      {
+        "internalType": "uint256",
+        "name": "roundId",
+        "type": "uint256"
+      }
+    ],
+    "name": "VoteAlreadyProcessed",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
         "name": "person",
         "type": "address"
       }
